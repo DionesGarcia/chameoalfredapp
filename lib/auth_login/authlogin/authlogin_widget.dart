@@ -92,10 +92,9 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                       child: Container(
                         width: 600.0,
                         height: double.infinity,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: const BorderRadius.only(
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFECBBBB),
+                          borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(40.0),
