@@ -448,8 +448,11 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                           await EstabelecimentoTable().update(
                                             data: {
                                               'numeroPedidoatual':
-                                                  columnEstabelecimentoRow
-                                                      .numeroPedidoatual,
+                                                  valueOrDefault<int>(
+                                                columnEstabelecimentoRow
+                                                    .numeroPedidoatual,
+                                                1,
+                                              ),
                                             },
                                             matchingRows: (rows) => rows.eq(
                                               'id',
