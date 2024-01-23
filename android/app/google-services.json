@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984193594535",
+    "project_id": "restaurante-zw70ik",
+    "storage_bucket": "restaurante-zw70ik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984193594535:android:5c18551aabc06a90029782",
+        "android_client_info": {
+          "package_name": "com.chameoalfred.restaurante"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV5AhP5zauiRLSaT_Iy7l8aHhmY_5-imk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
