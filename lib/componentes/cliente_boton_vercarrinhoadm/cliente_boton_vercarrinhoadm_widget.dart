@@ -3,19 +3,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente_boton_vercarrinhoadm_model.dart';
 export 'cliente_boton_vercarrinhoadm_model.dart';
 
 class ClienteBotonVercarrinhoadmWidget extends StatefulWidget {
   const ClienteBotonVercarrinhoadmWidget({
-    Key? key,
+    super.key,
     double? valorCarrinho,
     required this.mesa,
     required this.restaurante,
@@ -24,8 +21,7 @@ class ClienteBotonVercarrinhoadmWidget extends StatefulWidget {
     required this.cover,
     required this.embalagem,
     required this.garcom,
-  })  : this.valorCarrinho = valorCarrinho ?? 0.0,
-        super(key: key);
+  })  : valorCarrinho = valorCarrinho ?? 0.0;
 
   final double valorCarrinho;
   final String? mesa;
@@ -81,20 +77,20 @@ class _ClienteBotonVercarrinhoadmWidgetState
     context.watch<FFAppState>();
 
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 600.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4.0,
               color: Color(0x25090F13),
               offset: Offset(0.0, 2.0),
             )
           ],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
@@ -102,7 +98,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 16.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -123,7 +119,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                 child: Text(
                   'Carrinho',
                   style: FlutterFlowTheme.of(context).headlineSmall,
@@ -175,7 +171,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                         final listViewItensDoPedidoRow =
                             listViewItensDoPedidoRowList[listViewIndex];
                         return Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 8.0),
                           child: Container(
                             width: double.infinity,
@@ -189,7 +185,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 8.0, 12.0, 8.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -204,7 +200,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 5.0, 0.0),
                                               child: Text(
                                                 valueOrDefault<String>(
@@ -218,7 +214,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                     .bodyLarge
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF15981B),
+                                                      color: const Color(0xFF15981B),
                                                       fontSize: 14.0,
                                                     ),
                                               ),
@@ -238,7 +234,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -252,7 +248,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 3.0, 0.0),
                                                     child: Text(
@@ -269,7 +265,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 3.0, 0.0),
                                                     child: Text(
@@ -323,7 +319,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
@@ -338,15 +334,14 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                 ),
                                               ),
                                               if (listViewItensDoPedidoRow
-                                                      .adicionais.length >=
-                                                  1)
+                                                      .adicionais.isNotEmpty)
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -364,7 +359,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   4.0,
                                                                   4.0,
@@ -404,8 +399,8 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                     builder:
                                                         (alertDialogContext) {
                                                       return AlertDialog(
-                                                        title: Text('Atenção!'),
-                                                        content: Text(
+                                                        title: const Text('Atenção!'),
+                                                        content: const Text(
                                                             'Deseja retirar o item do carrinho?'),
                                                         actions: [
                                                           TextButton(
@@ -413,14 +408,14 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                                 Navigator.pop(
                                                                     alertDialogContext,
                                                                     false),
-                                                            child: Text('Não'),
+                                                            child: const Text('Não'),
                                                           ),
                                                           TextButton(
                                                             onPressed: () =>
                                                                 Navigator.pop(
                                                                     alertDialogContext,
                                                                     true),
-                                                            child: Text('Sim'),
+                                                            child: const Text('Sim'),
                                                           ),
                                                         ],
                                                       );
@@ -529,14 +524,14 @@ class _ClienteBotonVercarrinhoadmWidgetState
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 15.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -552,7 +547,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 3.0, 5.0, 3.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -564,7 +559,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFFDA2E1A),
+                                                    color: const Color(0xFFDA2E1A),
                                                     fontSize: 14.0,
                                                     fontWeight:
                                                         FontWeight.normal,
@@ -586,7 +581,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFFDA2E1A),
+                                                    color: const Color(0xFFDA2E1A),
                                                     fontSize: 14.0,
                                                     fontWeight:
                                                         FontWeight.normal,
@@ -598,7 +593,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                     ),
                                   if (widget.garcom != 0.0)
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Container(
                                         decoration: BoxDecoration(
@@ -611,7 +606,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 3.0, 5.0, 3.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -623,7 +618,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFFDA2E1A),
+                                                      color: const Color(0xFFDA2E1A),
                                                       fontSize: 14.0,
                                                       fontWeight:
                                                           FontWeight.normal,
@@ -646,7 +641,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFFDA2E1A),
+                                                      color: const Color(0xFFDA2E1A),
                                                       fontSize: 14.0,
                                                       fontWeight:
                                                           FontWeight.normal,
@@ -668,7 +663,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 3.0, 5.0, 3.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -680,7 +675,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFFDA2E1A),
+                                                    color: const Color(0xFFDA2E1A),
                                                     fontSize: 14.0,
                                                     fontWeight:
                                                         FontWeight.normal,
@@ -699,7 +694,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFFDA2E1A),
+                                                    color: const Color(0xFFDA2E1A),
                                                     fontSize: 14.0,
                                                     fontWeight:
                                                         FontWeight.normal,
@@ -716,14 +711,14 @@ class _ClienteBotonVercarrinhoadmWidgetState
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 15.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -737,7 +732,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 3.0, 5.0, 3.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -748,7 +743,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFFDA2E1A),
+                                                  color: const Color(0xFFDA2E1A),
                                                   fontSize: 22.0,
                                                   fontWeight: FontWeight.normal,
                                                 ),
@@ -765,7 +760,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFFDA2E1A),
+                                                  color: const Color(0xFFDA2E1A),
                                                   fontSize: 22.0,
                                                   fontWeight: FontWeight.normal,
                                                 ),
@@ -781,7 +776,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 4.0, 15.0, 24.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -789,7 +784,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                           children: [
                             Flexible(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 24.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -808,9 +803,9 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                   options: FFButtonOptions(
                                     width: 200.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color:
                                         FlutterFlowTheme.of(context).primaria,
@@ -821,7 +816,7 @@ class _ClienteBotonVercarrinhoadmWidgetState
                                           color: Colors.white,
                                         ),
                                     elevation: 2.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),

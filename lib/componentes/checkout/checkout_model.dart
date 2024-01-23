@@ -1,14 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'checkout_widget.dart' show CheckoutWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CheckoutModel extends FlutterFlowModel<CheckoutWidget> {
   ///  Local state fields for this component.
@@ -36,8 +29,10 @@ class CheckoutModel extends FlutterFlowModel<CheckoutWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {
     textFieldSBFocusNode1?.dispose();
     textFieldSBController1?.dispose();

@@ -6,17 +6,15 @@ import '/componentes/editestsis/editestsis_widget.dart';
 import '/componentes/headeradmsis/headeradmsis_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sislista_model.dart';
 export 'sislista_model.dart';
 
 class SislistaWidget extends StatefulWidget {
-  const SislistaWidget({Key? key}) : super(key: key);
+  const SislistaWidget({super.key});
 
   @override
   _SislistaWidgetState createState() => _SislistaWidgetState();
@@ -127,23 +125,23 @@ class _SislistaWidgetState extends State<SislistaWidget> {
               child: wrapWithModel(
                 model: _model.drawerADMsisModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMsisWidget(),
+                child: const DrawerADMsisWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: wrapWithModel(
                       model: _model.headeradmsisModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderadmsisWidget(),
+                      child: const HeaderadmsisWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -155,7 +153,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 500.0,
                   decoration: BoxDecoration(
@@ -165,14 +163,14 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 0.0, 15.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -185,7 +183,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                       onTap: () async {
                                         context.safePop();
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.arrow_back,
                                         color: Color(0xFFDA2E1A),
                                         size: 25.0,
@@ -193,7 +191,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           'Empresas',
@@ -218,7 +216,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Container(
+                                  SizedBox(
                                     width: 100.0,
                                     child: TextFormField(
                                       controller: _model.textFieldSBController1,
@@ -297,7 +295,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                   ),
                                   Flexible(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: TextFormField(
                                         controller:
@@ -447,7 +445,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                           children: [
                             Flexible(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 25.0, 15.0, 25.0),
                                 child: FutureBuilder<List<EstabelecimentoRow>>(
                                   future: EstabelecimentoTable().queryRows(
@@ -525,7 +523,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                             children: [
                                               Flexible(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Column(
@@ -539,7 +537,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           5.0,
@@ -573,7 +571,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           5.0,
@@ -601,7 +599,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           5.0,
@@ -624,7 +622,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           5.0,
@@ -663,7 +661,7 @@ class _SislistaWidgetState extends State<SislistaWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Column(

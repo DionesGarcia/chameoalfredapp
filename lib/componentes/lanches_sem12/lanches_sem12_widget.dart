@@ -5,21 +5,19 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'lanches_sem12_model.dart';
 export 'lanches_sem12_model.dart';
 
 class LanchesSem12Widget extends StatefulWidget {
   const LanchesSem12Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.prato,
     required this.restaurante,
     required this.pedido,
     required this.categoria,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final PratosRow? prato;
@@ -74,11 +72,11 @@ class _LanchesSem12WidgetState extends State<LanchesSem12Widget> {
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.pop(alertDialogContext, false),
-                      child: Text('Opções'),
+                      child: const Text('Opções'),
                     ),
                     TextButton(
                       onPressed: () => Navigator.pop(alertDialogContext, true),
-                      child: Text('Adicionar ao carrinho'),
+                      child: const Text('Adicionar ao carrinho'),
                     ),
                   ],
                 );

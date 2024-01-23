@@ -1,13 +1,7 @@
 import '/backend/supabase/supabase.dart';
-import '/componentes/popup_sucesso_categoria/popup_sucesso_categoria_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/upload_data.dart';
 import 'e01_pedido_cat_widget.dart' show E01PedidoCatWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class E01PedidoCatModel extends FlutterFlowModel<E01PedidoCatWidget> {
   ///  State fields for stateful widgets in this component.
@@ -44,8 +38,10 @@ class E01PedidoCatModel extends FlutterFlowModel<E01PedidoCatWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {
     textFieldFocusNode1?.dispose();
     textController1?.dispose();

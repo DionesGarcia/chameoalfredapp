@@ -10,17 +10,16 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'e01_mesas_model.dart';
 export 'e01_mesas_model.dart';
 
 class E01MesasWidget extends StatefulWidget {
   const E01MesasWidget({
-    Key? key,
+    super.key,
     required this.mesas,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final MesasRow? mesas;
   final EstabelecimentoRow? restaurante;
@@ -79,8 +78,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
             true,
           ) as List)
               .map<String>((s) => s.toString())
-              .toList()!
-              .toList()
+              .toList().toList()
               .cast<String>();
         });
       } else {
@@ -88,11 +86,11 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
           context: context,
           builder: (alertDialogContext) {
             return AlertDialog(
-              title: Text('Erro'),
+              title: const Text('Erro'),
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(alertDialogContext),
-                  child: Text('Ok'),
+                  child: const Text('Ok'),
                 ),
               ],
             );
@@ -175,16 +173,16 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                   child: wrapWithModel(
                     model: _model.drawerADMModel,
                     updateCallback: () => setState(() {}),
-                    child: DrawerADMWidget(),
+                    child: const DrawerADMWidget(),
                   ),
                 ),
                 appBar: PreferredSize(
-                  preferredSize: Size.fromHeight(100.0),
+                  preferredSize: const Size.fromHeight(100.0),
                   child: AppBar(
                     backgroundColor:
                         FlutterFlowTheme.of(context).primaryBackground,
                     automaticallyImplyLeading: false,
-                    actions: [],
+                    actions: const [],
                     flexibleSpace: FlexibleSpaceBar(
                       title: Container(
                         width: 600.0,
@@ -195,7 +193,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                         child: wrapWithModel(
                           model: _model.headerEmpresaModel,
                           updateCallback: () => setState(() {}),
-                          child: HeaderEmpresaWidget(),
+                          child: const HeaderEmpresaWidget(),
                         ),
                       ),
                       centerTitle: true,
@@ -209,7 +207,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           width: 600.0,
                           height: double.infinity,
@@ -221,7 +219,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -233,7 +231,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                       onTap: () async {
                                         context.safePop();
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.arrow_back,
                                         color: Color(0xFFDA2E1A),
                                         size: 25.0,
@@ -245,7 +243,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 20.0, 0.0),
                                             child: Text(
                                               'Mesas',
@@ -266,12 +264,12 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                   ],
                                 ),
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0x83DA2E1A),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 20.0, 15.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -282,7 +280,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 30.0, 0.0, 0.0),
                                               child: Row(
@@ -292,7 +290,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Text(
@@ -307,7 +305,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 30.0, 0.0, 0.0),
                                               child: Row(
@@ -342,7 +340,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -394,7 +392,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Text(
@@ -432,7 +430,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -536,7 +534,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                             ),
                                             Builder(
                                               builder: (context) => Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 30.0, 0.0, 30.0),
                                                 child: FFButtonWidget(
@@ -575,7 +573,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -594,7 +592,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                                           context)
                                                                       .unfocus(),
                                                               child:
-                                                                  PopupSucessoMesasWidget(),
+                                                                  const PopupSucessoMesasWidget(),
                                                             ),
                                                           );
                                                         },
@@ -634,7 +632,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -653,7 +651,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                                           context)
                                                                       .unfocus(),
                                                               child:
-                                                                  PopupSucessoMesasWidget(),
+                                                                  const PopupSucessoMesasWidget(),
                                                             ),
                                                           );
                                                         },
@@ -685,12 +683,12 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                     width: 160.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsets.all(0.0),
+                                                        const EdgeInsets.all(0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: Color(0xFFA70000),
+                                                    color: const Color(0xFFA70000),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -701,7 +699,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                           fontSize: 19.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -724,7 +722,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 30.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -732,7 +730,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 20.0, 0.0),
                                               child: InkWell(
@@ -757,7 +755,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       builder:
                                                           (alertDialogContext) {
                                                         return AlertDialog(
-                                                          title: Text('true'),
+                                                          title: const Text('true'),
                                                           content:
                                                               Text(getJsonField(
                                                             (_model.listaPedidos
@@ -770,7 +768,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                               onPressed: () =>
                                                                   Navigator.pop(
                                                                       alertDialogContext),
-                                                              child: Text('Ok'),
+                                                              child: const Text('Ok'),
                                                             ),
                                                           ],
                                                         );
@@ -787,8 +785,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       ) as List)
                                                               .map<String>((s) =>
                                                                   s.toString())
-                                                              .toList()!
-                                                              .toList()
+                                                              .toList().toList()
                                                               .cast<String>();
                                                     });
                                                     await showDialog(
@@ -796,7 +793,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       builder:
                                                           (alertDialogContext) {
                                                         return AlertDialog(
-                                                          title: Text('errrrr'),
+                                                          title: const Text('errrrr'),
                                                           content: Text(_model
                                                               .listamesas.length
                                                               .toString()),
@@ -805,7 +802,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                               onPressed: () =>
                                                                   Navigator.pop(
                                                                       alertDialogContext),
-                                                              child: Text('Ok'),
+                                                              child: const Text('Ok'),
                                                             ),
                                                           ],
                                                         );
@@ -817,13 +814,13 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                       builder:
                                                           (alertDialogContext) {
                                                         return AlertDialog(
-                                                          title: Text('Erro'),
+                                                          title: const Text('Erro'),
                                                           actions: [
                                                             TextButton(
                                                               onPressed: () =>
                                                                   Navigator.pop(
                                                                       alertDialogContext),
-                                                              child: Text('Ok'),
+                                                              child: const Text('Ok'),
                                                             ),
                                                           ],
                                                         );
@@ -853,7 +850,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 30.0, 0.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -878,7 +875,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 5.0, 30.0, 10.0),
                                                 child: Text(
@@ -893,7 +890,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.all(15.0),
+                                        padding: const EdgeInsets.all(15.0),
                                         child: Builder(
                                           builder: (context) {
                                             final listapgstate = _model.listaNum
@@ -902,7 +899,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                             return GridView.builder(
                                               padding: EdgeInsets.zero,
                                               gridDelegate:
-                                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                                  const SliverGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 5,
                                                 crossAxisSpacing: 10.0,
                                                 mainAxisSpacing: 10.0,
@@ -932,23 +929,23 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: Text(
+                                                                  title: const Text(
                                                                       'Abrir mesa'),
                                                                   content: Text(
-                                                                      'Deseja abrir a mesa ${listapgstateItem}?'),
+                                                                      'Deseja abrir a mesa $listapgstateItem?'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed: () => Navigator.pop(
                                                                           alertDialogContext,
                                                                           false),
-                                                                      child: Text(
+                                                                      child: const Text(
                                                                           'Cancelar'),
                                                                     ),
                                                                     TextButton(
                                                                       onPressed: () => Navigator.pop(
                                                                           alertDialogContext,
                                                                           true),
-                                                                      child: Text(
+                                                                      child: const Text(
                                                                           'Confirmar'),
                                                                     ),
                                                                   ],
@@ -962,7 +959,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                             listapgstateItem;
                                                         _model.mesaID =
                                                             e01MesasMesasRow?.id
-                                                                ?.toString();
+                                                                .toString();
                                                       });
                                                       setState(() {
                                                         FFAppState().mesa =
@@ -1016,19 +1013,19 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                                     .listamesas
                                                                     .toList(),
                                                                 listapgstateItem)
-                                                            ? Color(0xFFFFE7E7)
-                                                            : Color(0xFFE8FFEA),
+                                                            ? const Color(0xFFFFE7E7)
+                                                            : const Color(0xFFE8FFEA),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(15.0),
                                                         border: Border.all(
                                                           color:
-                                                              Color(0xFF007300),
+                                                              const Color(0xFF007300),
                                                         ),
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           valueOrDefault<
@@ -1042,7 +1039,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF007300),
                                                               ),
                                                         ),

@@ -1,15 +1,9 @@
-import '/backend/supabase/supabase.dart';
 import '/componentes/drawer_a_d_msis/drawer_a_d_msis_widget.dart';
 import '/componentes/headeradmsis/headeradmsis_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'financeiro03_widget.dart' show Financeiro03Widget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 
 class Financeiro03Model extends FlutterFlowModel<Financeiro03Widget> {
   ///  State fields for stateful widgets in this page.
@@ -44,11 +38,13 @@ class Financeiro03Model extends FlutterFlowModel<Financeiro03Widget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     drawerADMsisModel = createModel(context, () => DrawerADMsisModel());
     headeradmsisModel = createModel(context, () => HeaderadmsisModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     drawerADMsisModel.dispose();

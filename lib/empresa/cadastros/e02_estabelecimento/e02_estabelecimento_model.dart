@@ -2,22 +2,12 @@ import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/componentes/drawer_a_d_m/drawer_a_d_m_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
-import '/componentes/popup_sucesso_estab/popup_sucesso_estab_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_radio_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/upload_data.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
 import 'e02_estabelecimento_widget.dart' show E02EstabelecimentoWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 
 class E02EstabelecimentoModel
     extends FlutterFlowModel<E02EstabelecimentoWidget> {
@@ -179,11 +169,13 @@ class E02EstabelecimentoModel
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     drawerADMModel = createModel(context, () => DrawerADMModel());
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     drawerADMModel.dispose();
@@ -262,7 +254,7 @@ class E02EstabelecimentoModel
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(Duration(milliseconds: 50));
+      await Future.delayed(const Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

@@ -1,14 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cozinhapop_up_model.dart';
 export 'cozinhapop_up_model.dart';
 
 class CozinhapopUpWidget extends StatefulWidget {
-  const CozinhapopUpWidget({Key? key}) : super(key: key);
+  const CozinhapopUpWidget({super.key});
 
   @override
   _CozinhapopUpWidgetState createState() => _CozinhapopUpWidgetState();
@@ -55,7 +53,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -70,13 +68,13 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                     child: TextFormField(
                       controller: _model.textController,
                       focusNode: _model.textFieldFocusNode,
@@ -127,7 +125,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                   child: Icon(
                     Icons.add,
                     color: FlutterFlowTheme.of(context).secundria,
@@ -138,7 +136,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -153,7 +151,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -163,7 +161,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -173,9 +171,9 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 30.0, 0.0),
                                   child: Icon(
                                     Icons.delete_outline,
@@ -191,7 +189,7 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -201,9 +199,9 @@ class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 30.0, 0.0),
                                   child: Icon(
                                     Icons.delete_outline,

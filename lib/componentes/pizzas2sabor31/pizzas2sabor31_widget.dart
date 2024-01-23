@@ -4,15 +4,13 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pizzas2sabor31_model.dart';
 export 'pizzas2sabor31_model.dart';
 
 class Pizzas2sabor31Widget extends StatefulWidget {
   const Pizzas2sabor31Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.prato,
     required this.restaurante,
@@ -21,7 +19,7 @@ class Pizzas2sabor31Widget extends StatefulWidget {
     required this.itemPedido,
     required this.sabores,
     required this.sabores2,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final PratosRow? prato;
@@ -81,11 +79,11 @@ class _Pizzas2sabor31WidgetState extends State<Pizzas2sabor31Widget> {
           context: context,
           builder: (alertDialogContext) {
             return AlertDialog(
-              content: Text('Pizza adicionada ao carrinho!'),
+              content: const Text('Pizza adicionada ao carrinho!'),
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(alertDialogContext),
-                  child: Text('Ok'),
+                  child: const Text('Ok'),
                 ),
               ],
             );

@@ -10,16 +10,15 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sisuser_model.dart';
 export 'sisuser_model.dart';
 
 class SisuserWidget extends StatefulWidget {
   const SisuserWidget({
-    Key? key,
+    super.key,
     required this.resraurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? resraurante;
 
@@ -93,15 +92,15 @@ class _SisuserWidgetState extends State<SisuserWidget>
               child: wrapWithModel(
                 model: _model.drawerADMsisModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMsisWidget(),
+                child: const DrawerADMsisWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
@@ -112,7 +111,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -124,7 +123,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: 500.0,
                   decoration: BoxDecoration(
@@ -134,18 +133,18 @@ class _SisuserWidgetState extends State<SisuserWidget>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.arrow_back,
                               color: Color(0xFFDA2E1A),
                               size: 25.0,
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 20.0, 0.0),
                                 child: Text(
                                   'Usuários',
@@ -162,7 +161,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0x83DA2E1A),
                       ),
@@ -170,7 +169,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                         child: Column(
                           children: [
                             Align(
-                              alignment: Alignment(0.0, 0),
+                              alignment: const Alignment(0.0, 0),
                               child: TabBar(
                                 labelColor:
                                     FlutterFlowTheme.of(context).primaria,
@@ -182,11 +181,11 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                       fontFamily: 'Readex Pro',
                                       fontSize: 14.0,
                                     ),
-                                unselectedLabelStyle: TextStyle(),
+                                unselectedLabelStyle: const TextStyle(),
                                 indicatorColor:
                                     FlutterFlowTheme.of(context).primaria,
-                                padding: EdgeInsets.all(4.0),
-                                tabs: [
+                                padding: const EdgeInsets.all(4.0),
+                                tabs: const [
                                   Tab(
                                     text: 'CADASTRAR',
                                   ),
@@ -208,7 +207,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -324,7 +323,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -441,7 +440,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -574,7 +573,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -709,7 +708,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                       Flexible(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 15.0, 15.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -721,7 +720,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                           .dropDownValueController ??=
                                                       FormFieldController<
                                                           String>(null),
-                                                  options: [
+                                                  options: const [
                                                     'Administrador',
                                                     'Garçom',
                                                     'Cozinha',
@@ -762,7 +761,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                           .terceira,
                                                   borderWidth: 1.0,
                                                   borderRadius: 8.0,
-                                                  margin: EdgeInsetsDirectional
+                                                  margin: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -775,7 +774,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                           ),
                                         ),
                                       ),
-                                      Flexible(
+                                      const Flexible(
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -787,7 +786,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 25.0, 0.0, 0.0),
                                         child: FutureBuilder<
                                             List<EstabelecimentoRow>>(
@@ -844,7 +843,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                         .text) {
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
-                                                    SnackBar(
+                                                    const SnackBar(
                                                       content: Text(
                                                         'Passwords don\'t match!',
                                                       ),
@@ -888,7 +887,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                                 .primaryText,
                                                       ),
                                                     ),
-                                                    duration: Duration(
+                                                    duration: const Duration(
                                                         milliseconds: 4000),
                                                     backgroundColor:
                                                         FlutterFlowTheme.of(
@@ -919,7 +918,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                   }.withoutNulls,
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        TransitionInfo(
+                                                        const TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -934,11 +933,11 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                               options: FFButtonOptions(
                                                 width: 200.0,
                                                 height: 40.0,
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:
@@ -953,7 +952,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                           color: Colors.white,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: BorderSide(
+                                                borderSide: const BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
@@ -971,7 +970,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                     children: [
                                       Flexible(
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child:
                                               FutureBuilder<List<UsuariosRow>>(
                                             future: UsuariosTable().queryRows(
@@ -1016,7 +1015,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                           listViewIndex];
                                                   return Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 8.0),
                                                     child: Row(
@@ -1025,7 +1024,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1038,7 +1037,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                             children: [
                                                               Container(
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Stack(
                                                                   children: [
                                                                     if (listViewUsuariosRow.imagem ==
@@ -1065,7 +1064,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                                         clipBehavior:
                                                                             Clip.antiAlias,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           shape:
                                                                               BoxShape.circle,
                                                                         ),
@@ -1120,7 +1119,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1150,12 +1149,12 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
-                                                                                color: Color(0xFF15981B),
+                                                                                color: const Color(0xFF15981B),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w300,
                                                                               ),
                                                                         ),
-                                                                        SizedBox(
+                                                                        const SizedBox(
                                                                           height:
                                                                               10.0,
                                                                           child:
@@ -1167,7 +1166,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               25.0,
@@ -1180,7 +1179,7 @@ class _SisuserWidgetState extends State<SisuserWidget>
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Readex Pro',
-                                                                                  color: Color(0xFF15981B),
+                                                                                  color: const Color(0xFF15981B),
                                                                                   fontSize: 12.0,
                                                                                   fontWeight: FontWeight.w300,
                                                                                 ),

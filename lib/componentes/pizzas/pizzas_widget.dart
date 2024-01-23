@@ -5,21 +5,19 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pizzas_model.dart';
 export 'pizzas_model.dart';
 
 class PizzasWidget extends StatefulWidget {
   const PizzasWidget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.prato,
     required this.restaurante,
     required this.pedido,
     required this.categoria,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final PratosRow? prato;
@@ -63,7 +61,7 @@ class _PizzasWidgetState extends State<PizzasWidget> {
       options: ['1', '1/2', '1/3'].toList(),
       onChanged: (val) async {
         setState(() {});
-        var _shouldSetState = false;
+        var shouldSetState = false;
         _model.updatePage(() {
           _model.pizzaretorno = _model.radioButtonValue!;
         });
@@ -72,18 +70,18 @@ class _PizzasWidgetState extends State<PizzasWidget> {
                 context: context,
                 builder: (alertDialogContext) {
                   return AlertDialog(
-                    title: Text('Pizza 1 sabor.'),
-                    content: Text('Deseja adicionar ao carrinho?'),
+                    title: const Text('Pizza 1 sabor.'),
+                    content: const Text('Deseja adicionar ao carrinho?'),
                     actions: [
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, false),
-                        child: Text('Opções'),
+                        child: const Text('Opções'),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, true),
-                        child: Text('Adicionar ao carrinho'),
+                        child: const Text('Adicionar ao carrinho'),
                       ),
                     ],
                   );
@@ -112,16 +110,16 @@ class _PizzasWidgetState extends State<PizzasWidget> {
               'qtd': '1',
               '1/2': false,
             });
-            _shouldSetState = true;
+            shouldSetState = true;
             await showDialog(
               context: context,
               builder: (alertDialogContext) {
                 return AlertDialog(
-                  content: Text('Pizza adicionada ao carrinho!'),
+                  content: const Text('Pizza adicionada ao carrinho!'),
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.pop(alertDialogContext),
-                      child: Text('Ok'),
+                      child: const Text('Ok'),
                     ),
                   ],
                 );
@@ -183,19 +181,19 @@ class _PizzasWidgetState extends State<PizzasWidget> {
                 context: context,
                 builder: (alertDialogContext) {
                   return AlertDialog(
-                    title: Text('Pizza 2 sabores'),
+                    title: const Text('Pizza 2 sabores'),
                     content:
-                        Text('Escolha mais 1 sabor para completar a pizza.'),
+                        const Text('Escolha mais 1 sabor para completar a pizza.'),
                     actions: [
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, false),
-                        child: Text('Cancelar'),
+                        child: const Text('Cancelar'),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, true),
-                        child: Text('Adicionar ao carrinho'),
+                        child: const Text('Adicionar ao carrinho'),
                       ),
                     ],
                   );
@@ -221,7 +219,7 @@ class _PizzasWidgetState extends State<PizzasWidget> {
               'qtd': '1',
               '1/2': false,
             });
-            _shouldSetState = true;
+            shouldSetState = true;
 
             context.pushNamed(
               'Cliente3pizzas2',
@@ -253,7 +251,7 @@ class _PizzasWidgetState extends State<PizzasWidget> {
               }.withoutNulls,
             );
           } else {
-            if (_shouldSetState) setState(() {});
+            if (shouldSetState) setState(() {});
             return;
           }
         } else if (_model.pizzaretorno == '1/3') {
@@ -261,19 +259,19 @@ class _PizzasWidgetState extends State<PizzasWidget> {
                 context: context,
                 builder: (alertDialogContext) {
                   return AlertDialog(
-                    title: Text('Pizza 3 sabores'),
+                    title: const Text('Pizza 3 sabores'),
                     content:
-                        Text('Escolha mais 2 sabores para completar a pizza.'),
+                        const Text('Escolha mais 2 sabores para completar a pizza.'),
                     actions: [
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, false),
-                        child: Text('Cancelar'),
+                        child: const Text('Cancelar'),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, true),
-                        child: Text('Adicionar ao carrinho'),
+                        child: const Text('Adicionar ao carrinho'),
                       ),
                     ],
                   );
@@ -281,7 +279,7 @@ class _PizzasWidgetState extends State<PizzasWidget> {
               ) ??
               false;
           if (!confirmDialogResponse) {
-            if (_shouldSetState) setState(() {});
+            if (shouldSetState) setState(() {});
             return;
           }
           setState(() {
@@ -302,7 +300,7 @@ class _PizzasWidgetState extends State<PizzasWidget> {
             'qtd': '1',
             '1/2': false,
           });
-          _shouldSetState = true;
+          shouldSetState = true;
 
           context.pushNamed(
             'Cliente3pizzas3',
@@ -334,11 +332,11 @@ class _PizzasWidgetState extends State<PizzasWidget> {
             }.withoutNulls,
           );
         } else {
-          if (_shouldSetState) setState(() {});
+          if (shouldSetState) setState(() {});
           return;
         }
 
-        if (_shouldSetState) setState(() {});
+        if (shouldSetState) setState(() {});
       },
       controller: _model.radioButtonValueController ??=
           FormFieldController<String>(null),

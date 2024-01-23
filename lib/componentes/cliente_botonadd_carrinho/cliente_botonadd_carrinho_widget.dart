@@ -6,23 +6,21 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente_botonadd_carrinho_model.dart';
 export 'cliente_botonadd_carrinho_model.dart';
 
 class ClienteBotonaddCarrinhoWidget extends StatefulWidget {
   const ClienteBotonaddCarrinhoWidget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.categoria,
     required this.prato,
     required this.pedido,
     required this.valor,
     this.meia,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final CategoriaRow? categoria;
@@ -76,13 +74,13 @@ class _ClienteBotonaddCarrinhoWidgetState
     context.watch<FFAppState>();
 
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 650.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
@@ -90,13 +88,13 @@ class _ClienteBotonaddCarrinhoWidgetState
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -117,13 +115,13 @@ class _ClienteBotonaddCarrinhoWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 5.0, 0.0),
                             child: Text(
                               valueOrDefault<String>(
@@ -134,7 +132,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF15981B),
+                                    color: const Color(0xFF15981B),
                                     fontSize: 22.0,
                                     fontStyle: FontStyle.italic,
                                   ),
@@ -157,7 +155,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -228,7 +226,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -242,7 +240,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 0.0, 0.0),
                           child: TextFormField(
                             controller: _model.textField1Controller,
@@ -270,14 +268,14 @@ class _ClienteBotonaddCarrinhoWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -295,7 +293,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                       child: FutureBuilder<List<GuarnicaoRow>>(
                         future: GuarnicaoTable().queryRows(
                           queryFn: (q) => q
@@ -339,12 +337,12 @@ class _ClienteBotonaddCarrinhoWidgetState
                               final wrapGuarnicaoRow =
                                   wrapGuarnicaoRowList[wrapIndex];
                               return Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           3.0, 5.0, 0.0, 5.0),
                                       child: Text(
                                         valueOrDefault<String>(
@@ -355,12 +353,12 @@ class _ClienteBotonaddCarrinhoWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF007300),
+                                              color: const Color(0xFF007300),
                                             ),
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 1.0, 5.0),
                                       child: Text(
                                         ',',
@@ -368,7 +366,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF007300),
+                                              color: const Color(0xFF007300),
                                             ),
                                       ),
                                     ),
@@ -384,13 +382,13 @@ class _ClienteBotonaddCarrinhoWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -411,13 +409,13 @@ class _ClienteBotonaddCarrinhoWidgetState
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 5.0, 0.0),
                           child: FutureBuilder<List<GuarnicaoRow>>(
                             future: GuarnicaoTable().queryRows(
@@ -449,7 +447,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                               List<GuarnicaoRow> listViewGuarnicaoRowList =
                                   snapshot.data!;
                               if (listViewGuarnicaoRowList.isEmpty) {
-                                return VazioSemitemWidget();
+                                return const VazioSemitemWidget();
                               }
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
@@ -459,7 +457,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                   final listViewGuarnicaoRow =
                                       listViewGuarnicaoRowList[listViewIndex];
                                   return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -630,14 +628,14 @@ class _ClienteBotonaddCarrinhoWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 25.0, 15.0, 25.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 25.0, 15.0, 25.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -649,7 +647,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 3.0, 5.0, 3.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -660,7 +658,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFFDA2E1A),
+                                          color: const Color(0xFFDA2E1A),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.normal,
                                         ),
@@ -680,7 +678,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFFDA2E1A),
+                                          color: const Color(0xFFDA2E1A),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.normal,
                                         ),
@@ -719,10 +717,10 @@ class _ClienteBotonaddCarrinhoWidgetState
                       text: 'Adicionar ao carrinho',
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 15.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaria,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -730,7 +728,7 @@ class _ClienteBotonaddCarrinhoWidgetState
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

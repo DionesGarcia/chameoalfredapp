@@ -9,7 +9,7 @@ class GaronTable extends SupabaseTable<GaronRow> {
 }
 
 class GaronRow extends SupabaseDataRow {
-  GaronRow(Map<String, dynamic> data) : super(data);
+  GaronRow(super.data);
 
   @override
   SupabaseTable get table => GaronTable();

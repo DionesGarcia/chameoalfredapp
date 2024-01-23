@@ -1,22 +1,11 @@
 import '/backend/supabase/supabase.dart';
-import '/componentes/cliente_boton_vercarrinhoadm/cliente_boton_vercarrinhoadm_widget.dart';
 import '/componentes/drawer_a_d_m/drawer_a_d_m_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
-import '/componentes/vazio_fila/vazio_fila_widget.dart';
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:async';
 import 'pedidos_widget.dart' show PedidosWidget;
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PedidosModel extends FlutterFlowModel<PedidosWidget> {
   ///  Local state fields for this page.
@@ -70,11 +59,13 @@ class PedidosModel extends FlutterFlowModel<PedidosWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     drawerADMModel = createModel(context, () => DrawerADMModel());
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     drawerADMModel.dispose();
@@ -104,7 +95,7 @@ class PedidosModel extends FlutterFlowModel<PedidosWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(Duration(milliseconds: 50));
+      await Future.delayed(const Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

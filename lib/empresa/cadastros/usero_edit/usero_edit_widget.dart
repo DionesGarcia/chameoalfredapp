@@ -10,16 +10,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'usero_edit_model.dart';
 export 'usero_edit_model.dart';
 
 class UseroEditWidget extends StatefulWidget {
   const UseroEditWidget({
-    Key? key,
+    super.key,
     this.userID,
-  }) : super(key: key);
+  });
 
   final UsuariosRow? userID;
 
@@ -80,11 +79,11 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -95,11 +94,11 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                         child: Container(
                           width: 600.0,
                           height: double.infinity,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: wrapWithModel(
                             model: _model.headerEmpresaModel,
                             updateCallback: () => setState(() {}),
-                            child: HeaderEmpresaWidget(),
+                            child: const HeaderEmpresaWidget(),
                           ),
                         ),
                       ),
@@ -114,7 +113,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: 600.0,
                   decoration: BoxDecoration(
@@ -153,7 +152,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -161,7 +160,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 25.0, 0.0, 0.0),
                                   child: Text(
                                     'Editar Usuário',
@@ -179,7 +178,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -199,12 +198,12 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                       if (columnUsuariosRow?.imagem == null ||
                                           columnUsuariosRow?.imagem == '')
                                         Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: Container(
                                             width: 90.0,
                                             height: 90.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.asset(
@@ -216,12 +215,12 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                       if (columnUsuariosRow?.imagem != null &&
                                           columnUsuariosRow?.imagem != '')
                                         Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: Container(
                                             width: 90.0,
                                             height: 90.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -316,7 +315,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 16.0),
                             child: TextFormField(
                               controller: _model.yourNameController ??=
@@ -364,7 +363,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 24.0, 0.0, 24.0),
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
@@ -373,7 +372,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 16.0),
                             child: TextFormField(
                               controller: _model.cityController ??=
@@ -421,7 +420,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 24.0, 0.0, 24.0),
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
@@ -430,14 +429,14 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 12.0),
                             child: FlutterFlowDropDown<String>(
                               controller: _model.stateValueController ??=
                                   FormFieldController<String>(
                                 _model.stateValue ??= columnUsuariosRow?.tipo,
                               ),
-                              options: [
+                              options: const [
                                 'Administrador',
                                 'Garçom',
                                 'Cozinha',
@@ -463,7 +462,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                   FlutterFlowTheme.of(context).alternate,
                               borderWidth: 2.0,
                               borderRadius: 8.0,
-                              margin: EdgeInsetsDirectional.fromSTEB(
+                              margin: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 4.0, 12.0, 4.0),
                               hidesUnderline: true,
                               isSearchable: false,
@@ -471,9 +470,9 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.05),
+                            alignment: const AlignmentDirectional(0.0, 0.05),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 30.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -496,7 +495,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                   context.pushNamed(
                                     'E01user01',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 0),
@@ -510,10 +509,10 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                 options: FFButtonOptions(
                                   width: 270.0,
                                   height: 50.0,
-                                  padding: EdgeInsets.all(0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsets.all(0.0),
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFFA70000),
+                                  color: const Color(0xFFA70000),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -522,7 +521,7 @@ class _UseroEditWidgetState extends State<UseroEditWidget> {
                                         fontSize: 19.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

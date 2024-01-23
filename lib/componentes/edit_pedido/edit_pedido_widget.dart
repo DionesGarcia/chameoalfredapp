@@ -3,18 +3,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'edit_pedido_model.dart';
 export 'edit_pedido_model.dart';
 
 class EditPedidoWidget extends StatefulWidget {
   const EditPedidoWidget({
-    Key? key,
+    super.key,
     required this.pedidoid,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final PratosRow? pedidoid;
   final EstabelecimentoRow? restaurante;
@@ -54,7 +52,7 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
     return Container(
       width: double.infinity,
       height: 270.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -71,7 +69,7 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -95,8 +93,8 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
               options: FFButtonOptions(
                 width: double.infinity,
                 height: 60.0,
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                 color: FlutterFlowTheme.of(context).success,
                 textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                       fontFamily: 'Red Hat Display',
@@ -112,25 +110,25 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   var confirmDialogResponse = await showDialog<bool>(
                         context: context,
                         builder: (alertDialogContext) {
                           return AlertDialog(
-                            title: Text('Atenção!'),
-                            content: Text('Deseja excluir o cadastro?'),
+                            title: const Text('Atenção!'),
+                            content: const Text('Deseja excluir o cadastro?'),
                             actions: [
                               TextButton(
                                 onPressed: () =>
                                     Navigator.pop(alertDialogContext, false),
-                                child: Text('Não'),
+                                child: const Text('Não'),
                               ),
                               TextButton(
                                 onPressed: () =>
                                     Navigator.pop(alertDialogContext, true),
-                                child: Text('Sim'),
+                                child: const Text('Sim'),
                               ),
                             ],
                           );
@@ -153,9 +151,9 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).error,
                   textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                         fontFamily: 'Red Hat Display',
@@ -164,7 +162,7 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
                         fontWeight: FontWeight.w600,
                       ),
                   elevation: 2.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Color(0xFFFF000F),
                     width: 1.0,
                   ),
@@ -172,7 +170,7 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   context.pop();
@@ -181,13 +179,13 @@ class _EditPedidoWidgetState extends State<EditPedidoWidget> {
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: Color(0xFFF1F4F8),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  color: const Color(0xFFF1F4F8),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0xFF57636C),
+                        color: const Color(0xFF57636C),
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
                       ),

@@ -2,14 +2,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'headeradmsis_model.dart';
 export 'headeradmsis_model.dart';
 
 class HeaderadmsisWidget extends StatefulWidget {
-  const HeaderadmsisWidget({Key? key}) : super(key: key);
+  const HeaderadmsisWidget({super.key});
 
   @override
   _HeaderadmsisWidgetState createState() => _HeaderadmsisWidgetState();
@@ -61,7 +59,7 @@ class _HeaderadmsisWidgetState extends State<HeaderadmsisWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Stack(
               children: [
                 Stack(
@@ -83,22 +81,22 @@ class _HeaderadmsisWidgetState extends State<HeaderadmsisWidget> {
                   ],
                 ),
                 Align(
-                  alignment: AlignmentDirectional(1.0, 0.0),
+                  alignment: const AlignmentDirectional(1.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Container(
                       width: 80.0,
                       height: 30.0,
-                      decoration: BoxDecoration(),
-                      child: Stack(
+                      decoration: const BoxDecoration(),
+                      child: const Stack(
                         children: [],
                       ),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.92, 0.87),
+                  alignment: const AlignmentDirectional(0.92, 0.87),
                   child: Text(
                     FFAppState().nomeUser,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

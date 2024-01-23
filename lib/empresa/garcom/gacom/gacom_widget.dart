@@ -12,16 +12,15 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'gacom_model.dart';
 export 'gacom_model.dart';
 
 class GacomWidget extends StatefulWidget {
   const GacomWidget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -83,16 +82,16 @@ class _GacomWidgetState extends State<GacomWidget>
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor:
                     FlutterFlowTheme.of(context).secondaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -103,7 +102,7 @@ class _GacomWidgetState extends State<GacomWidget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -119,7 +118,7 @@ class _GacomWidgetState extends State<GacomWidget>
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -131,7 +130,7 @@ class _GacomWidgetState extends State<GacomWidget>
                           onTap: () async {
                             context.safePop();
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back,
                             color: Color(0xFFDA2E1A),
                             size: 25.0,
@@ -139,7 +138,7 @@ class _GacomWidgetState extends State<GacomWidget>
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 20.0, 0.0),
                             child: Text(
                               'Garçom',
@@ -174,13 +173,13 @@ class _GacomWidgetState extends State<GacomWidget>
                       ),
                     ],
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1.0,
                     color: Color(0x83DA2E1A),
                   ),
                   Flexible(
                     child: Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -225,7 +224,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                   return Column(
                                     children: [
                                       Align(
-                                        alignment: Alignment(0.0, 0),
+                                        alignment: const Alignment(0.0, 0),
                                         child: FlutterFlowButtonTabBar(
                                           useToggleButtonStyle: false,
                                           labelStyle:
@@ -235,7 +234,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                     fontFamily: 'Readex Pro',
                                                     fontSize: 12.0,
                                                   ),
-                                          unselectedLabelStyle: TextStyle(),
+                                          unselectedLabelStyle: const TextStyle(),
                                           labelColor:
                                               FlutterFlowTheme.of(context)
                                                   .primaria,
@@ -258,9 +257,9 @@ class _GacomWidgetState extends State<GacomWidget>
                                           borderRadius: 8.0,
                                           elevation: 0.0,
                                           buttonMargin:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 0.0, 8.0, 0.0),
-                                          padding: EdgeInsets.all(4.0),
+                                          padding: const EdgeInsets.all(4.0),
                                           tabs: [
                                             FutureBuilder<
                                                 List<GaronsAtendimentoRow>>(
@@ -299,15 +298,15 @@ class _GacomWidgetState extends State<GacomWidget>
                                                 List<GaronsAtendimentoRow>
                                                     tabGaronsAtendimentoRowList =
                                                     snapshot.data!;
-                                                return Tab(
+                                                return const Tab(
                                                   text: 'ATENDIMENTO',
                                                 );
                                               },
                                             ),
-                                            Tab(
+                                            const Tab(
                                               text: 'FAZER PEDIDO',
                                             ),
-                                            Tab(
+                                            const Tab(
                                               text: 'PEDIDOS',
                                             ),
                                           ],
@@ -388,7 +387,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                     snapshot.data!;
                                                 if (listViewGaronsAtendimentoRowList
                                                     .isEmpty) {
-                                                  return VazioSemitemWidget();
+                                                  return const VazioSemitemWidget();
                                                 }
                                                 return ListView.builder(
                                                   padding: EdgeInsets.zero,
@@ -408,7 +407,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       15.0,
@@ -439,7 +438,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             0.0,
@@ -467,7 +466,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Mesa:',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -498,7 +497,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -518,7 +517,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -530,7 +529,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                             children: [
                                                                                               Expanded(
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                                   child: Text(
                                                                                                     'Chamou às: ',
                                                                                                     textAlign: TextAlign.center,
@@ -540,7 +539,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                               ),
                                                                                               Expanded(
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                                   child: Text(
                                                                                                     dateTimeFormat(
                                                                                                       'jm',
@@ -565,7 +564,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             10.0,
@@ -605,15 +604,15 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                               options: FFButtonOptions(
                                                                                 width: 120.0,
                                                                                 height: 45.0,
-                                                                                padding: EdgeInsets.all(0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                color: Color(0xFFE8FFEA),
+                                                                                padding: const EdgeInsets.all(0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                color: const Color(0xFFE8FFEA),
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF15981B),
+                                                                                      color: const Color(0xFF15981B),
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Color(0xFF15981B),
                                                                                   width: 1.0,
                                                                                 ),
@@ -624,7 +623,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                   child: Text(
                                                                                     dateTimeFormat(
                                                                                       'm',
@@ -635,7 +634,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                   child: Text(
                                                                                     ' min.',
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium,
@@ -743,7 +742,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                             snapshot.data!;
                                                         if (listViewFila01PedidosRowList
                                                             .isEmpty) {
-                                                          return VazioFilaWidget();
+                                                          return const VazioFilaWidget();
                                                         }
                                                         return ListView.builder(
                                                           padding:
@@ -765,7 +764,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -844,18 +843,18 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                   children: [
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 40.0,
                                                                                         height: 40.0,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           color: Color(0xFF058812),
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Visibility(
                                                                                           visible: !widget.restaurante!.shopping!,
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Text(
                                                                                               valueOrDefault<String>(
                                                                                                 listViewFila01PedidosRow.mesa,
@@ -873,7 +872,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                     ),
                                                                                     Flexible(
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsets.all(3.0),
+                                                                                        padding: const EdgeInsets.all(3.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.min,
                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -912,7 +911,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                         crossAxisAlignment: CrossAxisAlignment.center,
                                                                                         children: [
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -933,7 +932,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                             ),
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -955,7 +954,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                             ),
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.start,
@@ -991,7 +990,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                   child: Column(
                                                                                     mainAxisSize: MainAxisSize.min,
                                                                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -1036,15 +1035,15 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                         options: FFButtonOptions(
                                                                                           width: 120.0,
                                                                                           height: 45.0,
-                                                                                          padding: EdgeInsets.all(0.0),
-                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsets.all(0.0),
+                                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                           color: FlutterFlowTheme.of(context).secundria,
                                                                                           textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                 fontFamily: 'Readex Pro',
                                                                                                 color: Colors.white,
                                                                                               ),
                                                                                           elevation: 3.0,
-                                                                                          borderSide: BorderSide(
+                                                                                          borderSide: const BorderSide(
                                                                                             color: Colors.transparent,
                                                                                             width: 1.0,
                                                                                           ),
@@ -1055,7 +1054,7 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                             child: InkWell(
                                                                                               splashColor: Colors.transparent,
                                                                                               focusColor: Colors.transparent,
@@ -1066,12 +1065,12 @@ class _GacomWidgetState extends State<GacomWidget>
                                                                                                   context: context,
                                                                                                   builder: (alertDialogContext) {
                                                                                                     return AlertDialog(
-                                                                                                      title: Text('Atenção!'),
-                                                                                                      content: Text('A impressora não foi configurada corretamente.'),
+                                                                                                      title: const Text('Atenção!'),
+                                                                                                      content: const Text('A impressora não foi configurada corretamente.'),
                                                                                                       actions: [
                                                                                                         TextButton(
                                                                                                           onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                          child: Text('Ok'),
+                                                                                                          child: const Text('Ok'),
                                                                                                         ),
                                                                                                       ],
                                                                                                     );

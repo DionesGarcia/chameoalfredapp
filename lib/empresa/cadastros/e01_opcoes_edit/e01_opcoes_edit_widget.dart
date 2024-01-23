@@ -9,17 +9,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'e01_opcoes_edit_model.dart';
 export 'e01_opcoes_edit_model.dart';
 
 class E01OpcoesEditWidget extends StatefulWidget {
   const E01OpcoesEditWidget({
-    Key? key,
+    super.key,
     required this.refprato,
     required this.restaurate,
-  }) : super(key: key);
+  });
 
   final PratosRow? refprato;
   final EstabelecimentoRow? restaurate;
@@ -153,15 +152,15 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -172,7 +171,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -184,7 +183,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: 600.0,
                   decoration: BoxDecoration(
@@ -194,7 +193,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -206,7 +205,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                               onTap: () async {
                                 context.safePop();
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 color: Color(0xFFDA2E1A),
                                 size: 25.0,
@@ -214,7 +213,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 20.0, 0.0),
                                 child: Text(
                                   'Conf. Opções',
@@ -231,7 +230,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0x83DA2E1A),
                       ),
@@ -239,7 +238,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                         child: Column(
                           children: [
                             Align(
-                              alignment: Alignment(0.0, 0),
+                              alignment: const Alignment(0.0, 0),
                               child: TabBar(
                                 labelColor:
                                     FlutterFlowTheme.of(context).primaria,
@@ -251,11 +250,11 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                       fontFamily: 'Readex Pro',
                                       fontSize: 14.0,
                                     ),
-                                unselectedLabelStyle: TextStyle(),
+                                unselectedLabelStyle: const TextStyle(),
                                 indicatorColor:
                                     FlutterFlowTheme.of(context).primaria,
-                                padding: EdgeInsets.all(4.0),
-                                tabs: [
+                                padding: const EdgeInsets.all(4.0),
+                                tabs: const [
                                   Tab(
                                     text: 'EDITAR',
                                   ),
@@ -285,7 +284,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   15.0,
@@ -416,7 +415,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   15.0,
@@ -557,7 +556,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             .refprato!.pizza!)
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         15.0,
@@ -570,7 +569,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                               children: [
                                                                 Flexible(
                                                                   child:
-                                                                      Container(
+                                                                      SizedBox(
                                                                     width:
                                                                         150.0,
                                                                     child:
@@ -679,7 +678,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             .refprato!.pizza!)
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         15.0,
@@ -700,7 +699,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Container(
+                                                                        SizedBox(
                                                                           width:
                                                                               200.0,
                                                                           child:
@@ -711,7 +710,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                               SwitchListTile.adaptive(
                                                                                 value: _model.switchListTileValue ??= widget.refprato!.aceitaMeia!,
                                                                                 onChanged: (newValue) async {
-                                                                                  setState(() => _model.switchListTileValue = newValue!);
+                                                                                  setState(() => _model.switchListTileValue = newValue);
                                                                                 },
                                                                                 title: Text(
                                                                                   'Permitir',
@@ -751,9 +750,9 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            BoxDecoration(),
+                                                                            const BoxDecoration(),
                                                                         child:
-                                                                            Container(
+                                                                            SizedBox(
                                                                           width:
                                                                               100.0,
                                                                           child:
@@ -824,7 +823,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             true)
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         15.0,
@@ -841,14 +840,14 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                 Expanded(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             15.0,
                                                                             0.0),
                                                                     child:
-                                                                        Container(
+                                                                        SizedBox(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -936,14 +935,14 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                 Expanded(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             15.0,
                                                                             0.0),
                                                                     child:
-                                                                        Container(
+                                                                        SizedBox(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1031,14 +1030,14 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                 Expanded(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     child:
-                                                                        Container(
+                                                                        SizedBox(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1138,7 +1137,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 20.0, 15.0, 0.0),
                                               child: Row(
@@ -1165,12 +1164,12 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                 ],
                                               ),
                                             ),
-                                            Divider(
+                                            const Divider(
                                               thickness: 1.0,
                                               color: Color(0x83DA2E1A),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 0.0, 0.0),
                                               child: Column(
@@ -1178,7 +1177,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(15.0, 0.0,
                                                                 15.0, 15.0),
                                                     child: Row(
@@ -1205,7 +1204,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -1254,7 +1253,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       15.0,
                                                                       0.0,
@@ -1280,7 +1279,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                         .transparent,
                                                                 onTap:
                                                                     () async {
-                                                                  var _shouldSetState =
+                                                                  var shouldSetState =
                                                                       false;
                                                                   setState(() {
                                                                     _model.hideguarnicao =
@@ -1294,8 +1293,6 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                             .text;
                                                                   });
                                                                   if (_model.descrip !=
-                                                                          null &&
-                                                                      _model.descrip !=
                                                                           '') {
                                                                     _model.apiResultInserirGarnicao =
                                                                         await GuarnicaoTable()
@@ -1309,7 +1306,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                       'adicional':
                                                                           false,
                                                                     });
-                                                                    _shouldSetState =
+                                                                    shouldSetState =
                                                                         true;
                                                                     setState(
                                                                         () {
@@ -1327,9 +1324,10 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                             null);
                                                                     await _model
                                                                         .waitForRequestCompleted2();
-                                                                    if (_shouldSetState)
+                                                                    if (shouldSetState) {
                                                                       setState(
                                                                           () {});
+                                                                    }
                                                                     return;
                                                                   } else {
                                                                     await showDialog(
@@ -1339,27 +1337,29 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                           (alertDialogContext) {
                                                                         return AlertDialog(
                                                                           content:
-                                                                              Text('Preencha o nome da guarnição.'),
+                                                                              const Text('Preencha o nome da guarnição.'),
                                                                           actions: [
                                                                             TextButton(
                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                              child: Text('Ok'),
+                                                                              child: const Text('Ok'),
                                                                             ),
                                                                           ],
                                                                         );
                                                                       },
                                                                     );
-                                                                    if (_shouldSetState)
+                                                                    if (shouldSetState) {
                                                                       setState(
                                                                           () {});
+                                                                    }
                                                                     return;
                                                                   }
 
-                                                                  if (_shouldSetState)
+                                                                  if (shouldSetState) {
                                                                     setState(
                                                                         () {});
+                                                                  }
                                                                 },
-                                                                child: Icon(
+                                                                child: const Icon(
                                                                   Icons
                                                                       .add_circle_outline,
                                                                   color: Color(
@@ -1377,7 +1377,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.all(16.0),
+                                              padding: const EdgeInsets.all(16.0),
                                               child: FutureBuilder<
                                                   List<GuarnicaoRow>>(
                                                 future: (_model
@@ -1440,7 +1440,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                       return Container(
                                                         height: 40.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -1461,7 +1461,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF007300),
                                                                   ),
                                                             ),
@@ -1484,16 +1484,16 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Atenção!'),
-                                                                              content: Text('Deseja excluir este item?'),
+                                                                              title: const Text('Atenção!'),
+                                                                              content: const Text('Deseja excluir este item?'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                  child: Text('Não'),
+                                                                                  child: const Text('Não'),
                                                                                 ),
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                  child: Text('Sim'),
+                                                                                  child: const Text('Sim'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -1544,7 +1544,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 20.0, 15.0, 0.0),
                                                 child: Row(
@@ -1574,12 +1574,12 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                   ],
                                                 ),
                                               ),
-                                              Divider(
+                                              const Divider(
                                                 thickness: 1.0,
                                                 color: Color(0x83DA2E1A),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 15.0, 0.0, 0.0),
                                                 child: Column(
@@ -1588,7 +1588,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   0.0,
@@ -1619,7 +1619,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             0.0,
@@ -1673,7 +1673,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             flex: 1,
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -1694,7 +1694,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                   ),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -1749,7 +1749,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             flex: 1,
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -1770,7 +1770,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                   ),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -1834,7 +1834,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        var _shouldSetState =
+                                                        var shouldSetState =
                                                             false;
                                                         setState(() {
                                                           _model.desc = _model
@@ -1849,8 +1849,6 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                               .text;
                                                         });
                                                         if (_model.descrip !=
-                                                                null &&
-                                                            _model.descrip !=
                                                                 '') {
                                                           _model.apiResultInserirGarnicaoAd =
                                                               await GuarnicaoTable()
@@ -1870,7 +1868,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             'prato_id': widget
                                                                 .refprato?.id,
                                                           });
-                                                          _shouldSetState =
+                                                          shouldSetState =
                                                               true;
                                                           setState(() {
                                                             _model.hideLit =
@@ -1892,8 +1890,9 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                               null);
                                                           await _model
                                                               .waitForRequestCompleted1();
-                                                          if (_shouldSetState)
+                                                          if (shouldSetState) {
                                                             setState(() {});
+                                                          }
                                                           return;
                                                         } else {
                                                           await showDialog(
@@ -1901,29 +1900,31 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                             builder:
                                                                 (alertDialogContext) {
                                                               return AlertDialog(
-                                                                content: Text(
+                                                                content: const Text(
                                                                     'Preencha o campo descrição.'),
                                                                 actions: [
                                                                   TextButton(
                                                                     onPressed: () =>
                                                                         Navigator.pop(
                                                                             alertDialogContext),
-                                                                    child: Text(
+                                                                    child: const Text(
                                                                         'Ok'),
                                                                   ),
                                                                 ],
                                                               );
                                                             },
                                                           );
-                                                          if (_shouldSetState)
+                                                          if (shouldSetState) {
                                                             setState(() {});
+                                                          }
                                                           return;
                                                         }
 
-                                                        if (_shouldSetState)
+                                                        if (shouldSetState) {
                                                           setState(() {});
+                                                        }
                                                       },
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons
                                                             .add_circle_outline,
                                                         color:
@@ -1944,7 +1945,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                         MainAxisSize.min,
                                                     children: [
                                                       Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             16.0),
                                                         child: FutureBuilder<
                                                             List<GuarnicaoRow>>(
@@ -2012,7 +2013,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                 return Container(
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -2034,7 +2035,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
-                                                                                color: Color(0xFF007300),
+                                                                                color: const Color(0xFF007300),
                                                                               ),
                                                                         ),
                                                                       ),
@@ -2045,7 +2046,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                             MainAxisAlignment.end,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 10.0,
@@ -2064,12 +2065,12 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Readex Pro',
-                                                                                    color: Color(0xFF007300),
+                                                                                    color: const Color(0xFF007300),
                                                                                   ),
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 10.0,
@@ -2082,7 +2083,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Readex Pro',
-                                                                                    color: Color(0xFF007300),
+                                                                                    color: const Color(0xFF007300),
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2101,16 +2102,16 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                                                     context: context,
                                                                                     builder: (alertDialogContext) {
                                                                                       return AlertDialog(
-                                                                                        title: Text('Atenção!'),
-                                                                                        content: Text('Deseja excluir este item?'),
+                                                                                        title: const Text('Atenção!'),
+                                                                                        content: const Text('Deseja excluir este item?'),
                                                                                         actions: [
                                                                                           TextButton(
                                                                                             onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                            child: Text('Não'),
+                                                                                            child: const Text('Não'),
                                                                                           ),
                                                                                           TextButton(
                                                                                             onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                            child: Text('Sim'),
+                                                                                            child: const Text('Sim'),
                                                                                           ),
                                                                                         ],
                                                                                       );
@@ -2152,7 +2153,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 30.0, 0.0, 30.0),
                                                 child: FFButtonWidget(
@@ -2303,12 +2304,12 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                     width: 160.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsets.all(0.0),
+                                                        const EdgeInsets.all(0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: Color(0xFFA70000),
+                                                    color: const Color(0xFFA70000),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -2319,7 +2320,7 @@ class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>
                                                           fontSize: 19.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),

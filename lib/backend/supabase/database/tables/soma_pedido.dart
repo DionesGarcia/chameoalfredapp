@@ -9,7 +9,7 @@ class SomaPedidoTable extends SupabaseTable<SomaPedidoRow> {
 }
 
 class SomaPedidoRow extends SupabaseDataRow {
-  SomaPedidoRow(Map<String, dynamic> data) : super(data);
+  SomaPedidoRow(super.data);
 
   @override
   SupabaseTable get table => SomaPedidoTable();

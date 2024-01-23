@@ -3,17 +3,15 @@ import '/componentes/drawer_a_d_msis/drawer_a_d_msis_widget.dart';
 import '/componentes/headeradmsis/headeradmsis_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sis_menu_model.dart';
 export 'sis_menu_model.dart';
 
 class SisMenuWidget extends StatefulWidget {
-  const SisMenuWidget({Key? key}) : super(key: key);
+  const SisMenuWidget({super.key});
 
   @override
   _SisMenuWidgetState createState() => _SisMenuWidgetState();
@@ -67,23 +65,23 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
               child: wrapWithModel(
                 model: _model.drawerADMsisModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMsisWidget(),
+                child: const DrawerADMsisWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: wrapWithModel(
                       model: _model.headeradmsisModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderadmsisWidget(),
+                      child: const HeaderadmsisWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -97,7 +95,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Container(
                       width: 500.0,
                       height: double.infinity,
@@ -105,14 +103,14 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 0.0, 15.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 30.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -224,7 +222,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                       },
                                       child: Container(
                                         width: 150.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -273,7 +271,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 30.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -290,7 +288,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                       },
                                       child: Container(
                                         width: 150.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -343,7 +341,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                       },
                                       child: Container(
                                         width: 150.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -361,7 +359,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Icon(
                                                   Icons.bar_chart_sharp,
@@ -394,7 +392,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 30.0, 20.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -408,7 +406,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                             BorderRadius.circular(16.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(10.0),
+                                        padding: const EdgeInsets.all(10.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -421,7 +419,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                                         .secondaryBackground,
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: FaIcon(
                                                   FontAwesomeIcons.creditCard,
@@ -453,7 +451,7 @@ class _SisMenuWidgetState extends State<SisMenuWidget> {
                                     ),
                                     Container(
                                       width: 150.0,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [

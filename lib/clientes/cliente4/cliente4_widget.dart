@@ -10,19 +10,18 @@ import '/actions/actions.dart' as action_blocks;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente4_model.dart';
 export 'cliente4_model.dart';
 
 class Cliente4Widget extends StatefulWidget {
   const Cliente4Widget({
-    Key? key,
+    super.key,
     required this.valorCarrinho,
     required this.mesa,
     required this.restaurante,
     required this.pedido,
-  }) : super(key: key);
+  });
 
   final double? valorCarrinho;
   final String? mesa;
@@ -89,15 +88,15 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
               child: wrapWithModel(
                 model: _model.drawerUserModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerUserWidget(),
+                child: const DrawerUserWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -108,7 +107,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -120,7 +119,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Stack(
                   children: [
                     Container(
@@ -136,7 +135,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -154,9 +153,9 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                               .secundria,
                                         ),
                                       ),
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 3.0, 5.0, 3.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
@@ -164,7 +163,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 5.0, 0.0),
                                               child: Text(
                                                 'Mesa',
@@ -211,9 +210,9 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                               .secundria,
                                         ),
                                       ),
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 3.0, 5.0, 3.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
@@ -221,7 +220,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 5.0, 0.0),
                                               child: Text(
                                                 'Pedido# ',
@@ -264,12 +263,12 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                   ],
                                 ),
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0xA3DA2E1A),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.end,
@@ -278,11 +277,11 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                       value: _model.switchValue ??= false,
                                       onChanged: (newValue) async {
                                         setState(() =>
-                                            _model.switchValue = newValue!);
+                                            _model.switchValue = newValue);
                                       },
                                       activeColor: FlutterFlowTheme.of(context)
                                           .secundria,
-                                      activeTrackColor: Color(0x77FF1B00),
+                                      activeTrackColor: const Color(0x77FF1B00),
                                       inactiveTrackColor:
                                           FlutterFlowTheme.of(context)
                                               .alternate,
@@ -298,7 +297,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                   ],
                                 ),
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0xA3DA2E1A),
                               ),
@@ -343,7 +342,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       5.0, 0.0, 15.0, 0.0),
                                               child: Row(
@@ -354,7 +353,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                   Flexible(
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -382,7 +381,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                                           .max,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           3.0,
@@ -443,7 +442,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                                       Card(
                                                                         clipBehavior:
                                                                             Clip.antiAliasWithSaveLayer,
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFE8FFEA),
                                                                         elevation:
                                                                             4.0,
@@ -454,7 +453,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               5.0,
                                                                               0.0,
                                                                               5.0,
@@ -528,7 +527,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         40.0,
                                                                         0.0,
@@ -559,7 +558,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                                           fontFamily:
                                                                               'Readex Pro',
                                                                           color:
-                                                                              Color(0xFF15981B),
+                                                                              const Color(0xFF15981B),
                                                                         ),
                                                                   ),
                                                               ],
@@ -567,7 +566,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         40.0,
                                                                         5.0,
@@ -599,7 +598,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                 ],
                                               ),
                                             ),
-                                            Divider(
+                                            const Divider(
                                               thickness: 1.0,
                                               color: Color(0xA3DA2E1A),
                                             ),
@@ -611,14 +610,14 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 5.0, 15.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         'Total',
@@ -686,14 +685,14 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                               ),
                               if (_model.switchValue == true)
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
                                         child: Text(
                                           'incluir taxa embalagem',
@@ -765,7 +764,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                   ),
                                 ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 30.0, 15.0, 85.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -773,7 +772,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                   children: [
                                     if (!widget.restaurante!.shopping!)
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 10.0, 0.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -812,7 +811,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: Text('Ok'),
+                                                      child: const Text('Ok'),
                                                     ),
                                                   ],
                                                 );
@@ -823,7 +822,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                   widget.restaurante?.id,
                                               'mesa': widget.mesa,
                                               'pedido':
-                                                  widget.pedido?.id?.toString(),
+                                                  widget.pedido?.id.toString(),
                                               'ação':
                                                   'Pedido # ${widget.pedido?.pedido?.toString()}enviado a cozinha.',
                                               'data': supaSerialize<DateTime>(
@@ -871,11 +870,11 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                           options: FFButtonOptions(
                                             width: 150.0,
                                             height: 45.0,
-                                            padding: EdgeInsets.all(0.0),
+                                            padding: const EdgeInsets.all(0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: Color(0xFFA70000),
+                                            color: const Color(0xFFA70000),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -885,7 +884,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                       fontSize: 18.0,
                                                     ),
                                             elevation: 3.0,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -895,7 +894,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                         ),
                                       ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
@@ -934,7 +933,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: Text('Ok'),
+                                                    child: const Text('Ok'),
                                                   ),
                                                 ],
                                               );
@@ -945,7 +944,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                 widget.restaurante?.id,
                                             'mesa': widget.mesa,
                                             'pedido':
-                                                widget.pedido?.id?.toString(),
+                                                widget.pedido?.id.toString(),
                                             'ação':
                                                 'Pedido # ${widget.pedido?.pedido?.toString()}enviado a cozinha.',
                                             'data': supaSerialize<DateTime>(
@@ -1044,11 +1043,11 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                         options: FFButtonOptions(
                                           width: 150.0,
                                           height: 45.0,
-                                          padding: EdgeInsets.all(0.0),
+                                          padding: const EdgeInsets.all(0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: Color(0xFFA70000),
+                                          color: const Color(0xFFA70000),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -1058,7 +1057,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                                                     fontSize: 18.0,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -1073,7 +1072,7 @@ class _Cliente4WidgetState extends State<Cliente4Widget> {
                             ],
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.end,

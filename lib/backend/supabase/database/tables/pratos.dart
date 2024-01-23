@@ -9,7 +9,7 @@ class PratosTable extends SupabaseTable<PratosRow> {
 }
 
 class PratosRow extends SupabaseDataRow {
-  PratosRow(Map<String, dynamic> data) : super(data);
+  PratosRow(super.data);
 
   @override
   SupabaseTable get table => PratosTable();

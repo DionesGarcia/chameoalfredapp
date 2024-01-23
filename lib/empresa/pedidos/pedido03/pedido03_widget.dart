@@ -4,22 +4,19 @@ import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pedido03_model.dart';
 export 'pedido03_model.dart';
 
 class Pedido03Widget extends StatefulWidget {
   const Pedido03Widget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -81,9 +78,9 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                       FlutterFlowTheme.of(context).accent3,
                       FlutterFlowTheme.of(context).primaryBackground
                     ],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
@@ -101,7 +98,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -120,7 +117,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 250.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.home,
@@ -130,7 +127,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 240.0, 0.0, 0.0),
                               child: Text(
                                 'Inicio',
@@ -147,14 +144,14 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 15.0, 0.0, 0.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.clock,
@@ -164,7 +161,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 10.0, 0.0, 0.0),
                                 child: Text(
                                   'Pedidos',
@@ -182,14 +179,14 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 7.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.attach_money,
@@ -199,7 +196,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 0.0, 0.0, 5.0),
                                 child: Text(
                                   'Pagamentos',
@@ -221,7 +218,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 15.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.settings,
@@ -231,7 +228,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 5.0, 0.0, 0.0),
                               child: Text(
                                 'Configurações',
@@ -254,10 +251,10 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(70.0),
+              preferredSize: const Size.fromHeight(70.0),
               child: AppBar(
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -277,7 +274,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Stack(
                             children: [
                               Stack(
@@ -300,19 +297,19 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                 ],
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: Container(
                                     width: 80.0,
                                     height: 30.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Stack(
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderColor: Colors.transparent,
                                             borderRadius: 20.0,
@@ -362,7 +359,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -374,7 +371,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                 onTap: () async {
                                   context.safePop();
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_back,
                                   color: Color(0xFFDA2E1A),
                                   size: 25.0,
@@ -382,7 +379,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
                                   child: Text(
                                     'Pedidos/Histórico',
@@ -399,7 +396,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                             ],
                           ),
                         ),
-                        Divider(
+                        const Divider(
                           thickness: 1.0,
                           color: Color(0x83DA2E1A),
                         ),
@@ -411,7 +408,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -424,7 +421,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            final _datePicked1Date =
+                                            final datePicked1Date =
                                                 await showDatePicker(
                                               context: context,
                                               initialDate:
@@ -438,12 +435,12 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                           .secondsSinceEpoch),
                                             );
 
-                                            if (_datePicked1Date != null) {
+                                            if (datePicked1Date != null) {
                                               safeSetState(() {
                                                 _model.datePicked1 = DateTime(
-                                                  _datePicked1Date.year,
-                                                  _datePicked1Date.month,
-                                                  _datePicked1Date.day,
+                                                  datePicked1Date.year,
+                                                  datePicked1Date.month,
+                                                  datePicked1Date.day,
                                                 );
                                               });
                                             }
@@ -468,7 +465,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 dateTimeFormat(
@@ -487,7 +484,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 20.0, 0.0),
                                           child: Text(
                                             'a ',
@@ -501,7 +498,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            final _datePicked2Date =
+                                            final datePicked2Date =
                                                 await showDatePicker(
                                               context: context,
                                               initialDate: getCurrentTimestamp,
@@ -509,12 +506,12 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                               lastDate: DateTime(2050),
                                             );
 
-                                            if (_datePicked2Date != null) {
+                                            if (datePicked2Date != null) {
                                               safeSetState(() {
                                                 _model.datePicked2 = DateTime(
-                                                  _datePicked2Date.year,
-                                                  _datePicked2Date.month,
-                                                  _datePicked2Date.day,
+                                                  datePicked2Date.year,
+                                                  datePicked2Date.month,
+                                                  datePicked2Date.day,
                                                 );
                                               });
                                             }
@@ -538,7 +535,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 dateTimeFormat(
@@ -559,7 +556,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 10.0, 15.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -611,7 +608,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                       .bodyMedium,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child:
@@ -620,7 +617,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                         .dropDownValueController1 ??=
                                                     FormFieldController<String>(
                                                         null),
-                                                options: [
+                                                options: const [
                                                   'Cozinha 1',
                                                   'Cozinha 2',
                                                   'Cozinha 3'
@@ -651,7 +648,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                         .alternate,
                                                 borderWidth: 2.0,
                                                 borderRadius: 8.0,
-                                                margin: EdgeInsetsDirectional
+                                                margin: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 4.0, 16.0, 4.0),
                                                 hidesUnderline: true,
@@ -711,7 +708,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 10.0, 15.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -763,7 +760,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                       .bodyMedium,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child:
@@ -772,7 +769,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                         .dropDownValueController2 ??=
                                                     FormFieldController<String>(
                                                         null),
-                                                options: [
+                                                options: const [
                                                   'Cozinha 1',
                                                   'Cozinha 2',
                                                   'Cozinha 3'
@@ -803,7 +800,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                         .alternate,
                                                 borderWidth: 2.0,
                                                 borderRadius: 8.0,
-                                                margin: EdgeInsetsDirectional
+                                                margin: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 4.0, 16.0, 4.0),
                                                 hidesUnderline: true,
@@ -817,7 +814,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -829,7 +826,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 15.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -911,7 +908,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                             listViewHistricoRowList =
                                             snapshot.data!;
                                         if (listViewHistricoRowList.isEmpty) {
-                                          return VazioSemitemWidget();
+                                          return const VazioSemitemWidget();
                                         }
                                         return ListView.builder(
                                           padding: EdgeInsets.zero,
@@ -925,7 +922,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                 listViewHistricoRowList[
                                                     listViewIndex];
                                             return Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 0.0, 15.0, 0.0),
                                               child: Row(
@@ -941,7 +938,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                       Container(
                                                         width: 80.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Text(
                                                           valueOrDefault<
                                                               String>(
@@ -1064,7 +1061,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                             listViewHistricoRowList =
                                             snapshot.data!;
                                         if (listViewHistricoRowList.isEmpty) {
-                                          return VazioSemitemWidget();
+                                          return const VazioSemitemWidget();
                                         }
                                         return ListView.builder(
                                           padding: EdgeInsets.zero,
@@ -1078,7 +1075,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                 listViewHistricoRowList[
                                                     listViewIndex];
                                             return Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 0.0, 15.0, 0.0),
                                               child: Row(
@@ -1094,7 +1091,7 @@ class _Pedido03WidgetState extends State<Pedido03Widget> {
                                                       Container(
                                                         width: 80.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Text(
                                                           valueOrDefault<
                                                               String>(

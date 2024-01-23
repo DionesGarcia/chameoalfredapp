@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '/backend/schema/structs/index.dart';
-import 'backend/api_requests/api_manager.dart';
 import 'backend/supabase/supabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -43,90 +41,90 @@ class FFAppState extends ChangeNotifier {
 
   String _token = '';
   String get token => _token;
-  set token(String _value) {
-    _token = _value;
-    prefs.setString('ff_token', _value);
+  set token(String value) {
+    _token = value;
+    prefs.setString('ff_token', value);
   }
 
   int _restauranteID = 0;
   int get restauranteID => _restauranteID;
-  set restauranteID(int _value) {
-    _restauranteID = _value;
-    prefs.setInt('ff_restauranteID', _value);
+  set restauranteID(int value) {
+    _restauranteID = value;
+    prefs.setInt('ff_restauranteID', value);
   }
 
   int _userID = 0;
   int get userID => _userID;
-  set userID(int _value) {
-    _userID = _value;
-    prefs.setInt('ff_userID', _value);
+  set userID(int value) {
+    _userID = value;
+    prefs.setInt('ff_userID', value);
   }
 
   String _tipoUser = '';
   String get tipoUser => _tipoUser;
-  set tipoUser(String _value) {
-    _tipoUser = _value;
+  set tipoUser(String value) {
+    _tipoUser = value;
   }
 
   String _nomeUser = '';
   String get nomeUser => _nomeUser;
-  set nomeUser(String _value) {
-    _nomeUser = _value;
+  set nomeUser(String value) {
+    _nomeUser = value;
   }
 
   double _cover = 0.0;
   double get cover => _cover;
-  set cover(double _value) {
-    _cover = _value;
+  set cover(double value) {
+    _cover = value;
   }
 
   double _taxa = 0.0;
   double get taxa => _taxa;
-  set taxa(double _value) {
-    _taxa = _value;
+  set taxa(double value) {
+    _taxa = value;
   }
 
   double _embalagem = 0.0;
   double get embalagem => _embalagem;
-  set embalagem(double _value) {
-    _embalagem = _value;
+  set embalagem(double value) {
+    _embalagem = value;
   }
 
   String _nomeRstaurante = '';
   String get nomeRstaurante => _nomeRstaurante;
-  set nomeRstaurante(String _value) {
-    _nomeRstaurante = _value;
-    prefs.setString('ff_nomeRstaurante', _value);
+  set nomeRstaurante(String value) {
+    _nomeRstaurante = value;
+    prefs.setString('ff_nomeRstaurante', value);
   }
 
   String _mesa = '';
   String get mesa => _mesa;
-  set mesa(String _value) {
-    _mesa = _value;
+  set mesa(String value) {
+    _mesa = value;
   }
 
   LatLng? _locationUser;
   LatLng? get locationUser => _locationUser;
-  set locationUser(LatLng? _value) {
-    _locationUser = _value;
+  set locationUser(LatLng? value) {
+    _locationUser = value;
   }
 
   LatLng? _locationEst;
   LatLng? get locationEst => _locationEst;
-  set locationEst(LatLng? _value) {
-    _locationEst = _value;
+  set locationEst(LatLng? value) {
+    _locationEst = value;
   }
 
   String _pagina = '';
   String get pagina => _pagina;
-  set pagina(String _value) {
-    _pagina = _value;
+  set pagina(String value) {
+    _pagina = value;
   }
 
   int _mesaInt = 0;
   int get mesaInt => _mesaInt;
-  set mesaInt(int _value) {
-    _mesaInt = _value;
+  set mesaInt(int value) {
+    _mesaInt = value;
   }
 }
 

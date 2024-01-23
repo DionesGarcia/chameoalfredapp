@@ -7,13 +7,12 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'authlogin_model.dart';
 export 'authlogin_model.dart';
 
 class AuthloginWidget extends StatefulWidget {
-  const AuthloginWidget({Key? key}) : super(key: key);
+  const AuthloginWidget({super.key});
 
   @override
   _AuthloginWidgetState createState() => _AuthloginWidgetState();
@@ -71,7 +70,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 600.0,
                   height: double.infinity,
@@ -79,24 +78,24 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     image: DecorationImage(
                       fit: BoxFit.fitWidth,
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       image: Image.asset(
                         'assets/images/001.png',
                       ).image,
                     ),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 110.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 110.0, 0.0, 0.0),
                       child: Container(
                         width: 600.0,
                         height: double.infinity,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(40.0),
@@ -111,7 +110,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 60.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -119,7 +118,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
                                             child: TextFormField(
                                               controller:
@@ -147,13 +146,13 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                     .labelMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0x8357636C),
+                                                      color: const Color(0x8357636C),
                                                       fontStyle:
                                                           FontStyle.italic,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0x83DA2E1A),
                                                     width: 1.0,
                                                   ),
@@ -163,7 +162,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFA70000),
                                                     width: 1.0,
                                                   ),
@@ -194,7 +193,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
-                                                suffixIcon: Icon(
+                                                suffixIcon: const Icon(
                                                   Icons.email,
                                                   color: Color(0x81A70000),
                                                 ),
@@ -214,7 +213,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 5.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -222,7 +221,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 30.0, 8.0, 0.0),
                                             child: TextFormField(
                                               controller:
@@ -251,13 +250,13 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                     .labelMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0x8357636C),
+                                                      color: const Color(0x8357636C),
                                                       fontStyle:
                                                           FontStyle.italic,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0x83DA2E1A),
                                                     width: 1.0,
                                                   ),
@@ -267,7 +266,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFA70000),
                                                     width: 1.0,
                                                   ),
@@ -313,7 +312,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                             .visibility_outlined
                                                         : Icons
                                                             .visibility_off_outlined,
-                                                    color: Color(0x7EA70000),
+                                                    color: const Color(0x7EA70000),
                                                     size: 22.0,
                                                   ),
                                                 ),
@@ -333,7 +332,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 20.0, 30.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -346,7 +345,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF6A051D),
+                                                  color: const Color(0xFF6A051D),
                                                   fontSize: 18.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -356,7 +355,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 20.0, 15.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -407,7 +406,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 20.0, 15.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -513,12 +512,12 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                 options: FFButtonOptions(
                                                   width: 300.0,
                                                   height: 50.0,
-                                                  padding: EdgeInsets.all(0.0),
+                                                  padding: const EdgeInsets.all(0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
-                                                  color: Color(0xFFA70000),
+                                                  color: const Color(0xFFA70000),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -532,7 +531,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                             fontSize: 20.0,
                                                           ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -548,7 +547,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 50.0, 15.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -564,10 +563,10 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                             options: FFButtonOptions(
                                               width: 300.0,
                                               height: 50.0,
-                                              padding: EdgeInsets.all(0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              padding: const EdgeInsets.all(0.0),
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Color(0xFFDA2E1A),
+                                              color: const Color(0xFFDA2E1A),
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .titleSmall
@@ -579,7 +578,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                     fontSize: 20.0,
                                                   ),
                                               elevation: 3.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -592,7 +591,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 20.0, 15.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -615,12 +614,12 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF017667),
+                                                  color: const Color(0xFF017667),
                                                   fontSize: 18.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),
-                                          Padding(
+                                          const Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     7.0, 0.0, 0.0, 0.0),
@@ -635,7 +634,7 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 20.0, 15.0, 30.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,

@@ -7,13 +7,12 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'entregador1_model.dart';
 export 'entregador1_model.dart';
 
 class Entregador1Widget extends StatefulWidget {
-  const Entregador1Widget({Key? key}) : super(key: key);
+  const Entregador1Widget({super.key});
 
   @override
   _Entregador1WidgetState createState() => _Entregador1WidgetState();
@@ -79,9 +78,9 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                       FlutterFlowTheme.of(context).accent3,
                       FlutterFlowTheme.of(context).primaryBackground
                     ],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
@@ -99,7 +98,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -126,7 +125,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 265.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.home,
@@ -136,7 +135,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 275.0, 0.0, 0.0),
                                 child: Text(
                                   'Inicio',
@@ -154,14 +153,14 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.clock,
@@ -171,7 +170,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Pedidos',
@@ -189,14 +188,14 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.attach_money,
@@ -206,7 +205,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Pagamentos',
@@ -224,14 +223,14 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.settings,
@@ -241,7 +240,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Configurações',
@@ -265,10 +264,10 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(70.0),
+              preferredSize: const Size.fromHeight(70.0),
               child: AppBar(
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -288,7 +287,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Stack(
                             children: [
                               Stack(
@@ -311,19 +310,19 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ],
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: Container(
                                     width: 80.0,
                                     height: 30.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Stack(
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderColor: Colors.transparent,
                                             borderRadius: 20.0,
@@ -378,18 +377,18 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.arrow_back,
                                       color: Color(0xFFDA2E1A),
                                       size: 25.0,
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           'Entregador',
@@ -423,12 +422,12 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                   ),
                                 ],
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0x83DA2E1A),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(20.0),
+                                padding: const EdgeInsets.all(20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -443,7 +442,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                         child: Column(
                                           children: [
                                             Align(
-                                              alignment: Alignment(0.0, 0),
+                                              alignment: const Alignment(0.0, 0),
                                               child: TabBar(
                                                 labelColor:
                                                     FlutterFlowTheme.of(context)
@@ -460,12 +459,12 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                           fontSize: 14.0,
                                                         ),
                                                 unselectedLabelStyle:
-                                                    TextStyle(),
+                                                    const TextStyle(),
                                                 indicatorColor:
                                                     FlutterFlowTheme.of(context)
                                                         .primaria,
-                                                padding: EdgeInsets.all(4.0),
-                                                tabs: [
+                                                padding: const EdgeInsets.all(4.0),
+                                                tabs: const [
                                                   Tab(
                                                     text: 'ROTA',
                                                   ),
@@ -506,7 +505,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   20.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -523,7 +522,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Option 1'
                                                                 ],
                                                                 onChanged: (val) =>
@@ -557,7 +556,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     10.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -575,7 +574,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       60.0,
                                                                       30.0,
@@ -638,7 +637,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       60.0,
                                                                       30.0,
@@ -701,7 +700,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   20.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -718,7 +717,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Option 1'
                                                                 ],
                                                                 onChanged: (val) =>
@@ -752,7 +751,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     10.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -770,7 +769,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       15.0,
@@ -805,7 +804,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 10.0,
                                                                                 0.0,
@@ -814,12 +813,12 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                 Container(
                                                                               width: 40.0,
                                                                               height: 40.0,
-                                                                              decoration: BoxDecoration(
+                                                                              decoration: const BoxDecoration(
                                                                                 color: Color(0xFF058812),
                                                                                 shape: BoxShape.circle,
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   '1',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -842,7 +841,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                             CrossAxisAlignment.end,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 5.0,
                                                                                 5.0,
@@ -871,7 +870,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                 MainAxisAlignment.center,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Entregue às 19:40',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -883,7 +882,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                             ],
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -906,7 +905,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                         ],
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             0.0,
@@ -926,15 +925,15 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                               options: FFButtonOptions(
                                                                                 width: 120.0,
                                                                                 height: 30.0,
-                                                                                padding: EdgeInsets.all(0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsets.all(0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).secundria,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Readex Pro',
                                                                                       color: Colors.white,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -942,7 +941,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 ' 00:10',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium,
@@ -960,7 +959,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       15.0,
@@ -987,7 +986,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             15.0,
@@ -1009,7 +1008,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                               CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.min,
                                                                                 children: [
@@ -1034,14 +1033,14 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                                                 crossAxisAlignment: CrossAxisAlignment.end,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1063,7 +1062,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                     mainAxisAlignment: MainAxisAlignment.center,
                                                                                     children: [
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           'Entregue às 19:40',
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1075,7 +1074,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                     ],
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1095,7 +1094,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                             ),
                                                                             Expanded(
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1108,15 +1107,15 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                       options: FFButtonOptions(
                                                                                         width: 120.0,
                                                                                         height: 30.0,
-                                                                                        padding: EdgeInsets.all(0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsets.all(0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                         color: FlutterFlowTheme.of(context).secundria,
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Readex Pro',
                                                                                               color: Colors.white,
                                                                                             ),
                                                                                         elevation: 3.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 1.0,
                                                                                         ),
@@ -1124,7 +1123,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         ' 00:10',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1137,7 +1136,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                           ],
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               15.0,
                                                                               30.0,
                                                                               15.0,
@@ -1167,15 +1166,15 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                                                                       options: FFButtonOptions(
                                                                                         width: 120.0,
                                                                                         height: 30.0,
-                                                                                        padding: EdgeInsets.all(0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0xFF058812),
+                                                                                        padding: const EdgeInsets.all(0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        color: const Color(0xFF058812),
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Readex Pro',
                                                                                               color: Colors.white,
                                                                                             ),
                                                                                         elevation: 3.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 1.0,
                                                                                         ),
@@ -1234,7 +1233,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -1255,11 +1254,11 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                               children: [
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1278,7 +1277,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Início',
@@ -1300,11 +1299,11 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1323,7 +1322,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Pedidos',
@@ -1345,11 +1344,11 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1388,11 +1387,11 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1411,7 +1410,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 2.0, 0.0, 0.0),
                                               child: Text(
                                                 'Ranking',
@@ -1437,11 +1436,11 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1460,7 +1459,7 @@ class _Entregador1WidgetState extends State<Entregador1Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Opções',

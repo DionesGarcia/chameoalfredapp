@@ -3,14 +3,12 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'drawer_user_model.dart';
 export 'drawer_user_model.dart';
 
 class DrawerUserWidget extends StatefulWidget {
-  const DrawerUserWidget({Key? key}) : super(key: key);
+  const DrawerUserWidget({super.key});
 
   @override
   _DrawerUserWidgetState createState() => _DrawerUserWidgetState();
@@ -87,7 +85,7 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -112,7 +110,7 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 150.0, 15.0, 15.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 150.0, 15.0, 15.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -147,20 +145,20 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(10.0),
                                 bottomRight: Radius.circular(0.0),
                                 topLeft: Radius.circular(10.0),
                                 topRight: Radius.circular(10.0),
                               ),
                               border: Border.all(
-                                color: Color(0xFFDA2E1A),
+                                color: const Color(0xFFDA2E1A),
                               ),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 0.0, 0.0),
                                   child: Icon(
@@ -171,7 +169,7 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Home',
@@ -193,7 +191,15 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [],
+                  ),
+                ),
+                const Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                   child: Row(
@@ -203,15 +209,7 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [],
-                  ),
-                ),
-                Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -233,7 +231,7 @@ class _DrawerUserWidgetState extends State<DrawerUserWidget> {
                               'Authlogin',
                               context.mounted,
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),

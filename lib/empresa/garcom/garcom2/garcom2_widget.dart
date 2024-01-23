@@ -1,17 +1,15 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'garcom2_model.dart';
 export 'garcom2_model.dart';
 
 class Garcom2Widget extends StatefulWidget {
-  const Garcom2Widget({Key? key}) : super(key: key);
+  const Garcom2Widget({super.key});
 
   @override
   _Garcom2WidgetState createState() => _Garcom2WidgetState();
@@ -74,9 +72,9 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                       FlutterFlowTheme.of(context).accent3,
                       FlutterFlowTheme.of(context).primaryBackground
                     ],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
@@ -94,7 +92,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -121,7 +119,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 265.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.home,
@@ -131,7 +129,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 275.0, 0.0, 0.0),
                                 child: Text(
                                   'Inicio',
@@ -149,14 +147,14 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.clock,
@@ -166,7 +164,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Pedidos',
@@ -184,14 +182,14 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.attach_money,
@@ -201,7 +199,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Pagamentos',
@@ -219,14 +217,14 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     31.0, 10.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.settings,
@@ -236,7 +234,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 5.0, 0.0, 0.0),
                                 child: Text(
                                   'Configurações',
@@ -260,10 +258,10 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(70.0),
+              preferredSize: const Size.fromHeight(70.0),
               child: AppBar(
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -283,7 +281,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Stack(
                             children: [
                               Stack(
@@ -306,19 +304,19 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ],
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: Container(
                                     width: 80.0,
                                     height: 30.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Stack(
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderColor: Colors.transparent,
                                             borderRadius: 20.0,
@@ -373,7 +371,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -385,7 +383,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                       onTap: () async {
                                         context.safePop();
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.arrow_back,
                                         color: Color(0xFFDA2E1A),
                                         size: 25.0,
@@ -393,7 +391,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           'Garçom',
@@ -427,18 +425,18 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                   ),
                                 ],
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0x83DA2E1A),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(20.0),
+                                padding: const EdgeInsets.all(20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 0.0, 8.0, 0.0),
                                         child: TextFormField(
                                           controller: _model.textController,
@@ -505,7 +503,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                             fillColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primaryBackground,
-                                            prefixIcon: Icon(
+                                            prefixIcon: const Icon(
                                               Icons.search,
                                               size: 15.0,
                                             ),
@@ -522,7 +520,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -533,7 +531,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -565,7 +563,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                 width: 40.0,
                                                 height: 40.0,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.network(
@@ -580,7 +578,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -628,7 +626,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -663,7 +661,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                                       .end,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -718,7 +716,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -729,7 +727,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -761,7 +759,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                 width: 40.0,
                                                 height: 40.0,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.network(
@@ -776,7 +774,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -824,7 +822,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -864,7 +862,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 15.0, 16.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -875,7 +873,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -907,7 +905,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                 width: 40.0,
                                                 height: 40.0,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.network(
@@ -922,7 +920,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -970,7 +968,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -1010,7 +1008,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 15.0, 16.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1026,7 +1024,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                 width: 40.0,
                                                 height: 40.0,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.network(
@@ -1041,7 +1039,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -1089,7 +1087,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -1135,7 +1133,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -1156,11 +1154,11 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                               children: [
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1179,7 +1177,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Início',
@@ -1201,11 +1199,11 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1224,7 +1222,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Pedidos',
@@ -1246,7 +1244,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -1290,11 +1288,11 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1313,7 +1311,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 2.0, 0.0, 0.0),
                                               child: Text(
                                                 'Ranking',
@@ -1339,11 +1337,11 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1362,7 +1360,7 @@ class _Garcom2WidgetState extends State<Garcom2Widget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Opções',

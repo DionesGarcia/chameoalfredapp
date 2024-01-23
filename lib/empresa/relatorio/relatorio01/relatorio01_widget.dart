@@ -6,21 +6,18 @@ import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'relatorio01_model.dart';
 export 'relatorio01_model.dart';
 
 class Relatorio01Widget extends StatefulWidget {
   const Relatorio01Widget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -82,16 +79,16 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor:
                     FlutterFlowTheme.of(context).secondaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -102,7 +99,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -125,7 +122,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -137,7 +134,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                 onTap: () async {
                                   context.safePop();
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_back,
                                   color: Color(0xFFDA2E1A),
                                   size: 25.0,
@@ -145,7 +142,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
                                   child: Text(
                                     'Relatórios',
@@ -162,7 +159,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                             ],
                           ),
                         ),
-                        Divider(
+                        const Divider(
                           thickness: 1.0,
                           color: Color(0x83DA2E1A),
                         ),
@@ -170,12 +167,12 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                           child: Column(
                             children: [
                               Align(
-                                alignment: Alignment(0.0, 0),
+                                alignment: const Alignment(0.0, 0),
                                 child: FlutterFlowButtonTabBar(
                                   useToggleButtonStyle: false,
                                   labelStyle:
                                       FlutterFlowTheme.of(context).titleMedium,
-                                  unselectedLabelStyle: TextStyle(),
+                                  unselectedLabelStyle: const TextStyle(),
                                   labelColor:
                                       FlutterFlowTheme.of(context).primaryText,
                                   unselectedLabelColor:
@@ -192,10 +189,10 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                   borderWidth: 2.0,
                                   borderRadius: 8.0,
                                   elevation: 0.0,
-                                  buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                                  buttonMargin: const EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 8.0, 0.0),
-                                  padding: EdgeInsets.all(4.0),
-                                  tabs: [
+                                  padding: const EdgeInsets.all(4.0),
+                                  tabs: const [
                                     Tab(
                                       text: 'pedido',
                                     ),
@@ -221,7 +218,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                   controller: _model.tabBarController,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -237,7 +234,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -261,7 +258,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked1Date =
+                                                                final datePicked1Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -277,17 +274,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           .secondsSinceEpoch),
                                                                 );
 
-                                                                if (_datePicked1Date !=
+                                                                if (datePicked1Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked1 =
                                                                         DateTime(
-                                                                      _datePicked1Date
+                                                                      datePicked1Date
                                                                           .year,
-                                                                      _datePicked1Date
+                                                                      datePicked1Date
                                                                           .month,
-                                                                      _datePicked1Date
+                                                                      datePicked1Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -325,7 +322,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -349,7 +346,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -373,7 +370,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked2Date =
+                                                                final datePicked2Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -387,17 +384,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           2050),
                                                                 );
 
-                                                                if (_datePicked2Date !=
+                                                                if (datePicked2Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked2 =
                                                                         DateTime(
-                                                                      _datePicked2Date
+                                                                      datePicked2Date
                                                                           .year,
-                                                                      _datePicked2Date
+                                                                      datePicked2Date
                                                                           .month,
-                                                                      _datePicked2Date
+                                                                      datePicked2Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -431,7 +428,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -458,7 +455,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -518,7 +515,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -532,7 +529,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Cozinha 1',
                                                                   'Cozinha 2',
                                                                   'Cozinha 3'
@@ -568,7 +565,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -587,7 +584,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     15.0,
@@ -605,7 +602,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -715,7 +712,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -734,7 +731,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -754,7 +751,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,
@@ -856,7 +853,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -875,7 +872,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -895,7 +892,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,
@@ -956,7 +953,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -972,7 +969,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -996,7 +993,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked3Date =
+                                                                final datePicked3Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -1012,17 +1009,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           .secondsSinceEpoch),
                                                                 );
 
-                                                                if (_datePicked3Date !=
+                                                                if (datePicked3Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked3 =
                                                                         DateTime(
-                                                                      _datePicked3Date
+                                                                      datePicked3Date
                                                                           .year,
-                                                                      _datePicked3Date
+                                                                      datePicked3Date
                                                                           .month,
-                                                                      _datePicked3Date
+                                                                      datePicked3Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -1060,7 +1057,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -1084,7 +1081,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1108,7 +1105,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked4Date =
+                                                                final datePicked4Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -1122,17 +1119,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           2050),
                                                                 );
 
-                                                                if (_datePicked4Date !=
+                                                                if (datePicked4Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked4 =
                                                                         DateTime(
-                                                                      _datePicked4Date
+                                                                      datePicked4Date
                                                                           .year,
-                                                                      _datePicked4Date
+                                                                      datePicked4Date
                                                                           .month,
-                                                                      _datePicked4Date
+                                                                      datePicked4Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -1166,7 +1163,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -1193,7 +1190,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -1253,7 +1250,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -1267,7 +1264,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Abertas',
                                                                   'Fechadas',
                                                                   'Todas'
@@ -1303,7 +1300,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -1322,7 +1319,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     15.0,
@@ -1340,7 +1337,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -1450,7 +1447,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -1469,7 +1466,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -1489,7 +1486,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,
@@ -1596,7 +1593,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -1615,7 +1612,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -1635,7 +1632,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,
@@ -1701,7 +1698,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1717,7 +1714,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -1741,7 +1738,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked5Date =
+                                                                final datePicked5Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -1757,17 +1754,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           .secondsSinceEpoch),
                                                                 );
 
-                                                                if (_datePicked5Date !=
+                                                                if (datePicked5Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked5 =
                                                                         DateTime(
-                                                                      _datePicked5Date
+                                                                      datePicked5Date
                                                                           .year,
-                                                                      _datePicked5Date
+                                                                      datePicked5Date
                                                                           .month,
-                                                                      _datePicked5Date
+                                                                      datePicked5Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -1805,7 +1802,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -1829,7 +1826,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1853,7 +1850,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                   Colors
                                                                       .transparent,
                                                               onTap: () async {
-                                                                final _datePicked6Date =
+                                                                final datePicked6Date =
                                                                     await showDatePicker(
                                                                   context:
                                                                       context,
@@ -1867,17 +1864,17 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           2050),
                                                                 );
 
-                                                                if (_datePicked6Date !=
+                                                                if (datePicked6Date !=
                                                                     null) {
                                                                   safeSetState(
                                                                       () {
                                                                     _model.datePicked6 =
                                                                         DateTime(
-                                                                      _datePicked6Date
+                                                                      datePicked6Date
                                                                           .year,
-                                                                      _datePicked6Date
+                                                                      datePicked6Date
                                                                           .month,
-                                                                      _datePicked6Date
+                                                                      datePicked6Date
                                                                           .day,
                                                                     );
                                                                   });
@@ -1911,7 +1908,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
@@ -1938,7 +1935,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     15.0,
@@ -1956,7 +1953,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -2066,7 +2063,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -2085,7 +2082,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -2105,7 +2102,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,
@@ -2207,7 +2204,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       .data!;
                                                               if (listViewHistricoRowList
                                                                   .isEmpty) {
-                                                                return VazioSemitemWidget();
+                                                                return const VazioSemitemWidget();
                                                               }
                                                               return ListView
                                                                   .builder(
@@ -2226,7 +2223,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                       listViewHistricoRowList[
                                                                           listViewIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -2246,7 +2243,7 @@ class _Relatorio01WidgetState extends State<Relatorio01Widget>
                                                                           children: [
                                                                             Container(
                                                                               width: 80.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
                                                                                   listViewHistricoRow.usuario,

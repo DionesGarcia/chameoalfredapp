@@ -1,17 +1,15 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'mensagem01_model.dart';
 export 'mensagem01_model.dart';
 
 class Mensagem01Widget extends StatefulWidget {
-  const Mensagem01Widget({Key? key}) : super(key: key);
+  const Mensagem01Widget({super.key});
 
   @override
   _Mensagem01WidgetState createState() => _Mensagem01WidgetState();
@@ -71,9 +69,9 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                       FlutterFlowTheme.of(context).accent3,
                       FlutterFlowTheme.of(context).primaryBackground
                     ],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
@@ -91,7 +89,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -110,7 +108,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 250.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.home,
@@ -120,7 +118,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 240.0, 0.0, 0.0),
                               child: Text(
                                 'Inicio',
@@ -137,14 +135,14 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 15.0, 0.0, 0.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.clock,
@@ -154,7 +152,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 10.0, 0.0, 0.0),
                                 child: Text(
                                   'Pedidos',
@@ -172,14 +170,14 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 7.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.attach_money,
@@ -189,7 +187,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 0.0, 0.0, 5.0),
                                 child: Text(
                                   'Pagamentos',
@@ -211,7 +209,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 15.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.settings,
@@ -221,7 +219,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 5.0, 0.0, 0.0),
                               child: Text(
                                 'Configurações',
@@ -244,10 +242,10 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(70.0),
+              preferredSize: const Size.fromHeight(70.0),
               child: AppBar(
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -267,7 +265,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Stack(
                             children: [
                               Stack(
@@ -290,19 +288,19 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                 ],
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: Container(
                                     width: 80.0,
                                     height: 30.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Stack(
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderColor: Colors.transparent,
                                             borderRadius: 20.0,
@@ -353,7 +351,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(15.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -365,7 +363,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                   onTap: () async {
                                     context.safePop();
                                   },
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_back,
                                     color: Color(0xFFDA2E1A),
                                     size: 25.0,
@@ -373,7 +371,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 20.0, 0.0),
                                     child: Text(
                                       'Mensagem',
@@ -390,19 +388,19 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                               ],
                             ),
                           ),
-                          Divider(
+                          const Divider(
                             thickness: 1.0,
                             color: Color(0x83DA2E1A),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 20.0, 15.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 30.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -411,7 +409,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -501,7 +499,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -511,7 +509,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                         width: 25.0,
                                                         height: 25.0,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           color:
                                                               Color(0xFFF95E06),
                                                           shape:
@@ -519,7 +517,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                         ),
                                                         child: Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
                                                             '3',
@@ -541,7 +539,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -562,13 +560,13 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                             ],
                                           ),
                                         ),
-                                        Divider(
+                                        const Divider(
                                           thickness: 1.0,
                                           color: Color(0x83DA2E1A),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -659,11 +657,11 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -686,13 +684,13 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                             ],
                                           ),
                                         ),
-                                        Divider(
+                                        const Divider(
                                           thickness: 1.0,
                                           color: Color(0x83DA2E1A),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -782,7 +780,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -803,7 +801,7 @@ class _Mensagem01WidgetState extends State<Mensagem01Widget> {
                                             ],
                                           ),
                                         ),
-                                        Divider(
+                                        const Divider(
                                           thickness: 1.0,
                                           color: Color(0x83DA2E1A),
                                         ),

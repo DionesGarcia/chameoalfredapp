@@ -14,17 +14,15 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'e02_estabelecimento_model.dart';
 export 'e02_estabelecimento_model.dart';
 
 class E02EstabelecimentoWidget extends StatefulWidget {
   const E02EstabelecimentoWidget({
-    Key? key,
+    super.key,
     required this.estabelecimentoID,
-  }) : super(key: key);
+  });
 
   final int? estabelecimentoID;
 
@@ -148,15 +146,15 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -167,7 +165,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -179,7 +177,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 600.0,
                   decoration: BoxDecoration(
@@ -221,7 +219,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(15.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -233,7 +231,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                     onTap: () async {
                                       context.safePop();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.arrow_back,
                                       color: Color(0xFFDA2E1A),
                                       size: 25.0,
@@ -241,7 +239,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: Text(
                                         'Dados Empresa',
@@ -258,14 +256,14 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               thickness: 1.0,
                               color: Color(0x83DA2E1A),
                             ),
                             if (_model.hide == '0')
                               Flexible(
                                 child: Padding(
-                                  padding: EdgeInsets.all(15.0),
+                                  padding: const EdgeInsets.all(15.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -304,7 +302,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -325,7 +323,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           fontFamily:
                                                               'Readex Pro',
                                                           color:
-                                                              Color(0xFFA70000),
+                                                              const Color(0xFFA70000),
                                                           fontSize: 20.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -334,7 +332,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -454,7 +452,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                                     .primaryText,
                                                               ),
                                                             ),
-                                                            duration: Duration(
+                                                            duration: const Duration(
                                                                 milliseconds:
                                                                     4000),
                                                             backgroundColor:
@@ -489,7 +487,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   30.0,
                                                                   0.0,
@@ -556,7 +554,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -661,7 +659,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -669,7 +667,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: TextFormField(
@@ -789,7 +787,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: TextFormField(
@@ -911,13 +909,13 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Flexible(
-                                                  child: Container(
+                                                  child: SizedBox(
                                                     width: 150.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -1031,7 +1029,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           25.0, 0.0, 0.0, 0.0),
                                                   child: FlutterFlowIconButton(
@@ -1096,16 +1094,16 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: Text(
+                                                              title: const Text(
                                                                   'Atenção!'),
-                                                              content: Text(
+                                                              content: const Text(
                                                                   'CEP inválido.'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Ok'),
                                                                 ),
                                                               ],
@@ -1126,7 +1124,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(15.0, 15.0,
                                                           15.0, 0.0),
                                                   child: Row(
@@ -1248,7 +1246,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(15.0, 15.0,
                                                           15.0, 0.0),
                                                   child: Row(
@@ -1257,13 +1255,13 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     10.0,
                                                                     0.0),
-                                                        child: Container(
+                                                        child: SizedBox(
                                                           width: 100.0,
                                                           child: TextFormField(
                                                             controller: _model
@@ -1492,7 +1490,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(15.0, 15.0,
                                                           15.0, 0.0),
                                                   child: Row(
@@ -1502,7 +1500,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                       Flexible(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1619,7 +1617,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Container(
+                                                      SizedBox(
                                                         width: 100.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -1738,7 +1736,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                             ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1746,7 +1744,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: TextFormField(
@@ -1863,7 +1861,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: TextFormField(
@@ -1982,7 +1980,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2090,7 +2088,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2198,7 +2196,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2309,12 +2307,12 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Divider(
+                                              const Divider(
                                                 thickness: 1.0,
                                                 color: Color(0x83DA2E1A),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 0.0, 0.0),
                                                 child: Row(
@@ -2329,7 +2327,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Readex Pro',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFFA70000),
                                                             fontWeight:
                                                                 FontWeight.w600,
@@ -2339,7 +2337,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.all(15.0),
+                                                padding: const EdgeInsets.all(15.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
@@ -2357,7 +2355,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                             (newValue) async {
                                                           setState(() => _model
                                                                   .switchListTileValue1 =
-                                                              newValue!);
+                                                              newValue);
                                                         },
                                                         title: Text(
                                                           'Taxa de embalagem',
@@ -2393,7 +2391,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                     if (_model
                                                             .switchListTileValue1 ??
                                                         true)
-                                                      Container(
+                                                      SizedBox(
                                                         width: 150.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -2504,7 +2502,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.all(15.0),
+                                                padding: const EdgeInsets.all(15.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
@@ -2522,7 +2520,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                             (newValue) async {
                                                           setState(() => _model
                                                                   .switchListTileValue2 =
-                                                              newValue!);
+                                                              newValue);
                                                         },
                                                         title: Text(
                                                           'Taxa de garçom',
@@ -2558,7 +2556,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                     if (_model
                                                             .switchListTileValue2 ??
                                                         true)
-                                                      Container(
+                                                      SizedBox(
                                                         width: 150.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -2669,7 +2667,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 15.0, 15.0),
                                                 child: Row(
@@ -2697,7 +2695,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 15.0, 15.0),
                                                 child: Row(
@@ -2735,7 +2733,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                       direction:
                                                           Axis.horizontal,
                                                       radioButtonColor:
-                                                          Color(0xFFA70000),
+                                                          const Color(0xFFA70000),
                                                       inactiveRadioButtonColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2751,7 +2749,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 15.0, 15.0),
                                                 child: Row(
@@ -2779,7 +2777,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 15.0, 15.0),
                                                 child: Row(
@@ -2817,7 +2815,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                       direction:
                                                           Axis.horizontal,
                                                       radioButtonColor:
-                                                          Color(0xFFA70000),
+                                                          const Color(0xFFA70000),
                                                       inactiveRadioButtonColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2836,25 +2834,19 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 30.0, 0.0, 30.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 currentUserLocationValue =
                                                     await getCurrentUserLocation(
                                                         defaultLocation:
-                                                            LatLng(0.0, 0.0));
-                                                var _shouldSetState = false;
+                                                            const LatLng(0.0, 0.0));
+                                                var shouldSetState = false;
                                                 if (_model.textController4
-                                                            .text !=
-                                                        null &&
-                                                    _model.textController4
                                                             .text !=
                                                         '') {
                                                   if (_model.textController6
-                                                              .text !=
-                                                          null &&
-                                                      _model.textController6
                                                               .text !=
                                                           '') {
                                                     await EstabelecimentoTable()
@@ -2975,7 +2967,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                             ?.id,
                                                       ),
                                                     );
-                                                    _shouldSetState = true;
+                                                    shouldSetState = true;
                                                     _model.mesa =
                                                         await MesasTable()
                                                             .insert({
@@ -2988,7 +2980,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         0,
                                                       ),
                                                     });
-                                                    _shouldSetState = true;
+                                                    shouldSetState = true;
                                                     if (!isWeb) {
                                                       _model.apiResultcliente =
                                                           await AsaasCesarGroup
@@ -3014,7 +3006,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           '0',
                                                         ),
                                                       );
-                                                      _shouldSetState = true;
+                                                      shouldSetState = true;
                                                       if (!(_model
                                                               .apiResultcliente
                                                               ?.succeeded ??
@@ -3032,22 +3024,23 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                                         ?.jsonBody ??
                                                                     ''),
                                                               )!),
-                                                              content: Text(
+                                                              content: const Text(
                                                                   'api ok'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Ok'),
                                                                 ),
                                                               ],
                                                             );
                                                           },
                                                         );
-                                                        if (_shouldSetState)
+                                                        if (shouldSetState) {
                                                           setState(() {});
+                                                        }
                                                         return;
                                                       }
                                                       await AssinaturasTable()
@@ -3082,22 +3075,23 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           (alertDialogContext) {
                                                         return AlertDialog(
                                                           title:
-                                                              Text('Atenção'),
-                                                          content: Text(
-                                                              'O campo \"Número\" é obrigatório.'),
+                                                              const Text('Atenção'),
+                                                          content: const Text(
+                                                              'O campo "Número" é obrigatório.'),
                                                           actions: [
                                                             TextButton(
                                                               onPressed: () =>
                                                                   Navigator.pop(
                                                                       alertDialogContext),
-                                                              child: Text('Ok'),
+                                                              child: const Text('Ok'),
                                                             ),
                                                           ],
                                                         );
                                                       },
                                                     );
-                                                    if (_shouldSetState)
+                                                    if (shouldSetState) {
                                                       setState(() {});
+                                                    }
                                                     return;
                                                   }
                                                 } else {
@@ -3106,38 +3100,40 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                     builder:
                                                         (alertDialogContext) {
                                                       return AlertDialog(
-                                                        title: Text('Atenção'),
-                                                        content: Text(
-                                                            'O campo \"CEP\" é obrigatório.'),
+                                                        title: const Text('Atenção'),
+                                                        content: const Text(
+                                                            'O campo "CEP" é obrigatório.'),
                                                         actions: [
                                                           TextButton(
                                                             onPressed: () =>
                                                                 Navigator.pop(
                                                                     alertDialogContext),
-                                                            child: Text('Ok'),
+                                                            child: const Text('Ok'),
                                                           ),
                                                         ],
                                                       );
                                                     },
                                                   );
-                                                  if (_shouldSetState)
+                                                  if (shouldSetState) {
                                                     setState(() {});
+                                                  }
                                                   return;
                                                 }
 
-                                                if (_shouldSetState)
+                                                if (shouldSetState) {
                                                   setState(() {});
+                                                }
                                               },
                                               text: 'Salvar',
                                               options: FFButtonOptions(
                                                 width: 160.0,
                                                 height: 40.0,
-                                                padding: EdgeInsets.all(0.0),
+                                                padding: const EdgeInsets.all(0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color: Color(0xFFA70000),
+                                                color: const Color(0xFFA70000),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall
@@ -3148,7 +3144,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                           fontSize: 19.0,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: BorderSide(
+                                                borderSide: const BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
@@ -3171,7 +3167,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 20.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -3182,19 +3178,19 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFFA70000),
+                                                  color: const Color(0xFFA70000),
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       thickness: 1.0,
                                       color: Color(0x83DA2E1A),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.all(10.0),
+                                      padding: const EdgeInsets.all(10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -3204,7 +3200,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                             child: Container(
                                               width: 280.0,
                                               height: 80.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -3231,7 +3227,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 15.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -3340,7 +3336,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         .primaryText,
                                                   ),
                                                 ),
-                                                duration: Duration(
+                                                duration: const Duration(
                                                     milliseconds: 4000),
                                                 backgroundColor:
                                                     FlutterFlowTheme.of(context)
@@ -3371,7 +3367,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   size: 24.0,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -3395,7 +3391,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.all(10.0),
+                                      padding: const EdgeInsets.all(10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -3405,7 +3401,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                             child: Container(
                                               width: 280.0,
                                               height: 80.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -3432,7 +3428,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 15.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -3541,7 +3537,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         .primaryText,
                                                   ),
                                                 ),
-                                                duration: Duration(
+                                                duration: const Duration(
                                                     milliseconds: 4000),
                                                 backgroundColor:
                                                     FlutterFlowTheme.of(context)
@@ -3572,7 +3568,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   size: 24.0,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -3596,7 +3592,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.all(10.0),
+                                      padding: const EdgeInsets.all(10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -3606,7 +3602,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                             child: Container(
                                               width: 280.0,
                                               height: 80.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -3633,7 +3629,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 15.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -3742,7 +3738,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         .primaryText,
                                                   ),
                                                 ),
-                                                duration: Duration(
+                                                duration: const Duration(
                                                     milliseconds: 4000),
                                                 backgroundColor:
                                                     FlutterFlowTheme.of(context)
@@ -3773,7 +3769,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                   size: 24.0,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -3797,7 +3793,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 25.0, 0.0, 60.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -3818,7 +3814,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         backgroundColor:
                                                             Colors.transparent,
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -3836,7 +3832,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                                       context)
                                                                   .unfocus(),
                                                           child:
-                                                              PopupSucessoEstabWidget(),
+                                                              const PopupSucessoEstabWidget(),
                                                         ),
                                                       );
                                                     },
@@ -3870,12 +3866,12 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 options: FFButtonOptions(
                                                   width: 160.0,
                                                   height: 40.0,
-                                                  padding: EdgeInsets.all(0.0),
+                                                  padding: const EdgeInsets.all(0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
-                                                  color: Color(0xFFA70000),
+                                                  color: const Color(0xFFA70000),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -3887,7 +3883,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                             fontSize: 19.0,
                                                           ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -3910,7 +3906,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 20.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -3921,19 +3917,19 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFFA70000),
+                                                  color: const Color(0xFFA70000),
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       thickness: 1.0,
                                       color: Color(0x83DA2E1A),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 25.0, 0.0, 10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -3942,9 +3938,9 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 360.0,
                                               child: TextFormField(
                                                 controller:
@@ -4049,7 +4045,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -4058,9 +4054,9 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 360.0,
                                               child: TextFormField(
                                                 controller:
@@ -4169,7 +4165,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 60.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -4178,9 +4174,9 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 100.0,
                                               child: TextFormField(
                                                 controller:
@@ -4286,9 +4282,9 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 100.0,
                                               child: TextFormField(
                                                 controller:
@@ -4394,9 +4390,9 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     35.0, 0.0, 8.0, 0.0),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 100.0,
                                               child: TextFormField(
                                                 controller:
@@ -4505,7 +4501,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 25.0, 0.0, 60.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -4761,7 +4757,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                               (alertDialogContext) {
                                                             return AlertDialog(
                                                               title:
-                                                                  Text('Erro'),
+                                                                  const Text('Erro'),
                                                               content: Text(
                                                                   AsaasCesarGroup
                                                                       .criarAssinaturaCall
@@ -4775,7 +4771,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Ok'),
                                                                 ),
                                                               ],
@@ -4789,7 +4785,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                         builder:
                                                             (alertDialogContext) {
                                                           return AlertDialog(
-                                                            title: Text(
+                                                            title: const Text(
                                                                 'Erro ao criar conta Asaas!'),
                                                             content: Text(
                                                                 AsaasCesarGroup
@@ -4805,7 +4801,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                                     Navigator.pop(
                                                                         alertDialogContext),
                                                                 child:
-                                                                    Text('Ok'),
+                                                                    const Text('Ok'),
                                                               ),
                                                             ],
                                                           );
@@ -4832,12 +4828,12 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                 options: FFButtonOptions(
                                                   width: 160.0,
                                                   height: 40.0,
-                                                  padding: EdgeInsets.all(0.0),
+                                                  padding: const EdgeInsets.all(0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
-                                                  color: Color(0xFFA70000),
+                                                  color: const Color(0xFFA70000),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -4849,7 +4845,7 @@ class _E02EstabelecimentoWidgetState extends State<E02EstabelecimentoWidget> {
                                                             fontSize: 19.0,
                                                           ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),

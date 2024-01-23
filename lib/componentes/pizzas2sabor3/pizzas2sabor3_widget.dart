@@ -4,15 +4,13 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pizzas2sabor3_model.dart';
 export 'pizzas2sabor3_model.dart';
 
 class Pizzas2sabor3Widget extends StatefulWidget {
   const Pizzas2sabor3Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.prato,
     required this.restaurante,
@@ -20,7 +18,7 @@ class Pizzas2sabor3Widget extends StatefulWidget {
     required this.categoria,
     required this.itemPedido,
     required this.sabores,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final PratosRow? prato;
@@ -70,12 +68,12 @@ class _Pizzas2sabor3WidgetState extends State<Pizzas2sabor3Widget> {
           context: context,
           builder: (alertDialogContext) {
             return AlertDialog(
-              title: Text('Sabor adicionado!'),
-              content: Text('Por favor, selecione mais 1 sabor.'),
+              title: const Text('Sabor adicionado!'),
+              content: const Text('Por favor, selecione mais 1 sabor.'),
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(alertDialogContext),
-                  child: Text('Ok'),
+                  child: const Text('Ok'),
                 ),
               ],
             );

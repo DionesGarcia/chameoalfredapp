@@ -9,22 +9,20 @@ import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/random_data_util.dart' as random_data;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente1_model.dart';
 export 'cliente1_model.dart';
 
 class Cliente1Widget extends StatefulWidget {
   const Cliente1Widget({
-    Key? key,
+    super.key,
     required this.restauranteID,
     this.mesa,
     required this.user,
-  }) : super(key: key);
+  });
 
   final int? restauranteID;
   final String? mesa;
@@ -53,7 +51,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
       GoRouter.of(context).prepareAuthEvent();
       if ('111111' != '111111') {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             content: Text(
               'Passwords don\'t match!',
             ),
@@ -124,15 +122,15 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
               child: wrapWithModel(
                 model: _model.drawerUserModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerUserWidget(),
+                child: const DrawerUserWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -143,7 +141,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -155,7 +153,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 600.0,
                   height: double.infinity,
@@ -204,7 +202,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                 borderRadius: BorderRadius.circular(0.0),
                               ),
                               child: Stack(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 children: [
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
@@ -219,7 +217,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 5.0, 0.0, 0.0),
                               child: Wrap(
                                 spacing: 10.0,
@@ -253,7 +251,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 5.0, 0.0),
                                                 child: Icon(
@@ -266,7 +264,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                               ),
                                               Flexible(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 3.0, 0.0),
                                                   child: Text(
@@ -309,7 +307,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                         Flexible(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     3.0, 0.0, 3.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -317,7 +315,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 5.0, 0.0),
                                                   child: Icon(
@@ -331,7 +329,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                 Text(
                                                   valueOrDefault<String>(
                                                     columnEstabelecimentoRow
-                                                        ?.cel,
+                                                        .cel,
                                                     '0',
                                                   ),
                                                   style: FlutterFlowTheme.of(
@@ -372,7 +370,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                         Flexible(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     3.0, 0.0, 3.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -380,7 +378,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 5.0, 0.0),
                                                   child: Icon(
@@ -420,7 +418,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                               color: FlutterFlowTheme.of(context).terceira,
                             ),
                             Padding(
-                              padding: EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(16.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -428,7 +426,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 24.0, 0.0, 0.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
@@ -439,8 +437,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                             'mesa': widget.mesa,
                                             'status': 'PEDINDO',
                                             'pedido': valueOrDefault<int>(
-                                              (columnEstabelecimentoRow!
-                                                      .numeroPedidoatual!) +
+                                              (columnEstabelecimentoRow.numeroPedidoatual!) +
                                                   1,
                                               0,
                                             ),
@@ -452,7 +449,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                             data: {
                                               'numeroPedidoatual':
                                                   columnEstabelecimentoRow
-                                                      ?.numeroPedidoatual,
+                                                      .numeroPedidoatual,
                                             },
                                             matchingRows: (rows) => rows.eq(
                                               'id',
@@ -481,17 +478,17 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                           setState(() {});
                                         },
                                         text: '       Cardápio',
-                                        icon: Icon(
+                                        icon: const Icon(
                                           Icons.menu_book_outlined,
                                           size: 40.0,
                                         ),
                                         options: FFButtonOptions(
                                           height: 100.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .primaria,
@@ -504,7 +501,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                     fontSize: 26.0,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -518,13 +515,13 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -533,8 +530,8 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         await actions.criarQRcode(
-                                          columnEstabelecimentoRow!.banner2!,
-                                          columnEstabelecimentoRow!.banner1!,
+                                          columnEstabelecimentoRow.banner2!,
+                                          columnEstabelecimentoRow.banner1!,
                                           'restaurante://restaurante.com${GoRouter.of(context).location}',
                                         );
                                       },
@@ -549,12 +546,12 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 4.0),
                               child: Container(
                                 width: double.infinity,
                                 height: 270.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: FutureBuilder<List<CategoriaRow>>(
                                   future: CategoriaTable().queryRows(
                                     queryFn: (q) => q.eq(
@@ -583,20 +580,20 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                         listViewCategoriaRowList =
                                         snapshot.data!;
                                     return ListView.separated(
-                                      padding: EdgeInsets.symmetric(
+                                      padding: const EdgeInsets.symmetric(
                                           horizontal: 16.0),
                                       scrollDirection: Axis.horizontal,
                                       itemCount:
                                           listViewCategoriaRowList.length,
                                       separatorBuilder: (_, __) =>
-                                          SizedBox(width: 16.0),
+                                          const SizedBox(width: 16.0),
                                       itemBuilder: (context, listViewIndex) {
                                         final listViewCategoriaRow =
                                             listViewCategoriaRowList[
                                                 listViewIndex];
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 12.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -611,8 +608,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                 'mesa': widget.mesa,
                                                 'status': 'PEDINDO',
                                                 'pedido': valueOrDefault<int>(
-                                                  (columnEstabelecimentoRow!
-                                                          .numeroPedidoatual!) +
+                                                  (columnEstabelecimentoRow.numeroPedidoatual!) +
                                                       1,
                                                   0,
                                                 ),
@@ -689,7 +685,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(8.0),
+                                                padding: const EdgeInsets.all(8.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -717,11 +713,11 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.0, -1.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
@@ -746,7 +742,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                                             .min,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             0.0,
                                                                             0.0,
@@ -769,13 +765,13 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                                               width: 2.0,
                                                                             ),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(2.0),
+                                                                                const EdgeInsets.all(2.0),
                                                                             child:
                                                                                 Icon(
                                                                               Icons.favorite_border,
@@ -796,7 +792,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -816,7 +812,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,

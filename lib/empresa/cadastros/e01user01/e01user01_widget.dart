@@ -11,13 +11,12 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'e01user01_model.dart';
 export 'e01user01_model.dart';
 
 class E01user01Widget extends StatefulWidget {
-  const E01user01Widget({Key? key}) : super(key: key);
+  const E01user01Widget({super.key});
 
   @override
   _E01user01WidgetState createState() => _E01user01WidgetState();
@@ -89,15 +88,15 @@ class _E01user01WidgetState extends State<E01user01Widget>
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -108,7 +107,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -120,7 +119,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: 600.0,
                   decoration: BoxDecoration(
@@ -130,7 +129,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -142,7 +141,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                               onTap: () async {
                                 context.safePop();
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 color: Color(0xFFDA2E1A),
                                 size: 25.0,
@@ -150,7 +149,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 20.0, 0.0),
                                 child: Text(
                                   'Usuários',
@@ -167,7 +166,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0x83DA2E1A),
                       ),
@@ -175,7 +174,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                         child: Column(
                           children: [
                             Align(
-                              alignment: Alignment(0.0, 0),
+                              alignment: const Alignment(0.0, 0),
                               child: TabBar(
                                 labelColor:
                                     FlutterFlowTheme.of(context).primaria,
@@ -187,11 +186,11 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                       fontFamily: 'Readex Pro',
                                       fontSize: 14.0,
                                     ),
-                                unselectedLabelStyle: TextStyle(),
+                                unselectedLabelStyle: const TextStyle(),
                                 indicatorColor:
                                     FlutterFlowTheme.of(context).primaria,
-                                padding: EdgeInsets.all(4.0),
-                                tabs: [
+                                padding: const EdgeInsets.all(4.0),
+                                tabs: const [
                                   Tab(
                                     text: 'CADASTRAR',
                                   ),
@@ -213,7 +212,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -329,7 +328,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -446,7 +445,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -579,7 +578,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -714,7 +713,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                       Flexible(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 15.0, 15.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -726,7 +725,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                           .dropDownValueController ??=
                                                       FormFieldController<
                                                           String>(null),
-                                                  options: [
+                                                  options: const [
                                                     'Administrador',
                                                     'Garçom',
                                                     'Cozinha',
@@ -767,7 +766,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                           .terceira,
                                                   borderWidth: 1.0,
                                                   borderRadius: 8.0,
-                                                  margin: EdgeInsetsDirectional
+                                                  margin: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -780,7 +779,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                           ),
                                         ),
                                       ),
-                                      Flexible(
+                                      const Flexible(
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -792,7 +791,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 25.0, 0.0, 0.0),
                                         child: FutureBuilder<
                                             List<EstabelecimentoRow>>(
@@ -844,7 +843,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                         .text) {
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
-                                                    SnackBar(
+                                                    const SnackBar(
                                                       content: Text(
                                                         'Passwords don\'t match!',
                                                       ),
@@ -905,7 +904,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                                 .primaryText,
                                                       ),
                                                     ),
-                                                    duration: Duration(
+                                                    duration: const Duration(
                                                         milliseconds: 4000),
                                                     backgroundColor:
                                                         FlutterFlowTheme.of(
@@ -929,7 +928,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                   context.mounted,
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        TransitionInfo(
+                                                        const TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -958,11 +957,11 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                               options: FFButtonOptions(
                                                 width: 200.0,
                                                 height: 40.0,
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:
@@ -977,7 +976,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                           color: Colors.white,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: BorderSide(
+                                                borderSide: const BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
@@ -995,7 +994,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                     children: [
                                       Flexible(
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child:
                                               FutureBuilder<List<UsuariosRow>>(
                                             future: UsuariosTable().queryRows(
@@ -1037,7 +1036,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                           listViewIndex];
                                                   return Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 8.0),
                                                     child: Row(
@@ -1046,7 +1045,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1059,7 +1058,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                             children: [
                                                               Container(
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Stack(
                                                                   children: [
                                                                     if (listViewUsuariosRow.imagem ==
@@ -1086,7 +1085,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                                         clipBehavior:
                                                                             Clip.antiAlias,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           shape:
                                                                               BoxShape.circle,
                                                                         ),
@@ -1141,7 +1140,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1171,12 +1170,12 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
-                                                                                color: Color(0xFF15981B),
+                                                                                color: const Color(0xFF15981B),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w300,
                                                                               ),
                                                                         ),
-                                                                        SizedBox(
+                                                                        const SizedBox(
                                                                           height:
                                                                               10.0,
                                                                           child:
@@ -1188,7 +1187,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               25.0,
@@ -1201,7 +1200,7 @@ class _E01user01WidgetState extends State<E01user01Widget>
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Readex Pro',
-                                                                                  color: Color(0xFF15981B),
+                                                                                  color: const Color(0xFF15981B),
                                                                                   fontSize: 12.0,
                                                                                   fontWeight: FontWeight.w300,
                                                                                 ),

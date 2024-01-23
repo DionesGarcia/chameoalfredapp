@@ -9,7 +9,7 @@ class HistricoTable extends SupabaseTable<HistricoRow> {
 }
 
 class HistricoRow extends SupabaseDataRow {
-  HistricoRow(Map<String, dynamic> data) : super(data);
+  HistricoRow(super.data);
 
   @override
   SupabaseTable get table => HistricoTable();

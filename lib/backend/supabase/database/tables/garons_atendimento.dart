@@ -10,7 +10,7 @@ class GaronsAtendimentoTable extends SupabaseTable<GaronsAtendimentoRow> {
 }
 
 class GaronsAtendimentoRow extends SupabaseDataRow {
-  GaronsAtendimentoRow(Map<String, dynamic> data) : super(data);
+  GaronsAtendimentoRow(super.data);
 
   @override
   SupabaseTable get table => GaronsAtendimentoTable();

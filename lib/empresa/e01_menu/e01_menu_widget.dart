@@ -6,17 +6,15 @@ import '/componentes/header_empresa/header_empresa_widget.dart';
 import '/componentes/popup_menu_cadastro/popup_menu_cadastro_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'e01_menu_model.dart';
 export 'e01_menu_model.dart';
 
 class E01MenuWidget extends StatefulWidget {
-  const E01MenuWidget({Key? key}) : super(key: key);
+  const E01MenuWidget({super.key});
 
   @override
   _E01MenuWidgetState createState() => _E01MenuWidgetState();
@@ -113,23 +111,23 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -143,7 +141,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: FutureBuilder<List<EstabelecimentoRow>>(
                       future: EstabelecimentoTable().querySingleRow(
                         queryFn: (q) => q.eq(
@@ -180,14 +178,14 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                 .secondaryBackground,
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -217,7 +215,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 10.0, 20.0, 0.0),
                                               child: Row(
@@ -228,7 +226,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                   Text(
                                                     valueOrDefault<String>(
                                                       containerEstabelecimentoRow
-                                                          ?.nome,
+                                                          .nome,
                                                       'Cadastre o estabelecimento!',
                                                     ),
                                                     style: FlutterFlowTheme.of(
@@ -246,7 +244,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 20.0, 0.0),
                                               child: Row(
@@ -263,7 +261,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                           fontFamily:
                                                               'Readex Pro',
                                                           color:
-                                                              Color(0xFF15981B),
+                                                              const Color(0xFF15981B),
                                                         ),
                                                   ),
                                                   Text(
@@ -275,7 +273,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                           fontFamily:
                                                               'Readex Pro',
                                                           color:
-                                                              Color(0xFF15981B),
+                                                              const Color(0xFF15981B),
                                                         ),
                                                   ),
                                                 ],
@@ -287,7 +285,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 30.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -301,8 +299,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed(
                                                   'pedidos',
                                                   queryParameters: {
@@ -323,7 +320,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -340,7 +337,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -353,7 +350,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -427,8 +424,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed(
                                                   'Cozinha',
                                                   queryParameters: {
@@ -449,7 +445,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -466,7 +462,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -479,7 +475,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -490,7 +486,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             },
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -547,7 +543,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 30.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -561,8 +557,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed(
                                                   'gacom',
                                                   queryParameters: {
@@ -583,7 +578,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -600,7 +595,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -613,7 +608,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -624,7 +619,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             },
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -681,8 +676,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed(
                                                   'E01Opcoe',
                                                   queryParameters: {
@@ -703,7 +697,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -720,7 +714,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -733,7 +727,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -744,7 +738,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             },
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -798,7 +792,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 30.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -811,15 +805,14 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            if (!containerEstabelecimentoRow!
-                                                .cadCompleto!) {
+                                            if (!containerEstabelecimentoRow.cadCompleto!) {
                                               context.pushNamed(
                                                 'E02Estabelecimento',
                                                 queryParameters: {
                                                   'estabelecimentoID':
                                                       serializeParam(
                                                     containerEstabelecimentoRow
-                                                        ?.id,
+                                                        .id,
                                                     ParamType.int,
                                                   ),
                                                 }.withoutNulls,
@@ -831,7 +824,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                   'estabelecimentoID':
                                                       serializeParam(
                                                     containerEstabelecimentoRow
-                                                        ?.id,
+                                                        .id,
                                                     ParamType.int,
                                                   ),
                                                 }.withoutNulls,
@@ -845,7 +838,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                   BorderRadius.circular(16.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(10.0),
+                                              padding: const EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -897,8 +890,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed(
                                                   'relatorio01',
                                                   queryParameters: {
@@ -919,7 +911,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -936,7 +928,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -949,7 +941,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -960,7 +952,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             },
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -1009,7 +1001,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 30.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1023,8 +1015,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (containerEstabelecimentoRow!
-                                                  .cadCompleto!) {
+                                              if (containerEstabelecimentoRow.cadCompleto!) {
                                                 context.pushNamed('E01user01');
                                               } else {
                                                 await showDialog(
@@ -1036,7 +1027,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -1053,7 +1044,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                     context)
                                                                 .unfocus(),
                                                         child:
-                                                            PopupMenuCadastroWidget(),
+                                                            const PopupMenuCadastroWidget(),
                                                       ),
                                                     );
                                                   },
@@ -1066,7 +1057,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                     'estabelecimentoID':
                                                         serializeParam(
                                                       containerEstabelecimentoRow
-                                                          ?.id,
+                                                          .id,
                                                       ParamType.int,
                                                     ),
                                                   }.withoutNulls,
@@ -1077,7 +1068,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             },
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -1128,7 +1119,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                             future: MesasTable().querySingleRow(
                                               queryFn: (q) => q.eq(
                                                 'restaurante_id',
-                                                containerEstabelecimentoRow?.id,
+                                                containerEstabelecimentoRow.id,
                                               ),
                                             ),
                                             builder: (context, snapshot) {
@@ -1167,8 +1158,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                 highlightColor:
                                                     Colors.transparent,
                                                 onTap: () async {
-                                                  if (containerEstabelecimentoRow!
-                                                      .cadCompleto!) {
+                                                  if (containerEstabelecimentoRow.cadCompleto!) {
                                                     context.pushNamed(
                                                       'E01Mesas',
                                                       queryParameters: {
@@ -1193,7 +1183,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
-                                                          alignment: AlignmentDirectional(
+                                                          alignment: const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -1212,7 +1202,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                                         context)
                                                                     .unfocus(),
                                                             child:
-                                                                PopupMenuCadastroWidget(),
+                                                                const PopupMenuCadastroWidget(),
                                                           ),
                                                         );
                                                       },
@@ -1225,7 +1215,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                         'estabelecimentoID':
                                                             serializeParam(
                                                           containerEstabelecimentoRow
-                                                              ?.id,
+                                                              .id,
                                                           ParamType.int,
                                                         ),
                                                       }.withoutNulls,
@@ -1236,7 +1226,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                 },
                                                 child: Container(
                                                   width: 150.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,

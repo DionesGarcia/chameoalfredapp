@@ -1,22 +1,15 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-import '/backend/schema/structs/index.dart';
 
 import '/backend/supabase/supabase.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -81,7 +74,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => RootPageContext.wrap(
-        appStateNotifier.loggedIn ? E01MenuWidget() : AuthloginWidget(),
+        appStateNotifier.loggedIn ? const E01MenuWidget() : const AuthloginWidget(),
         errorRoute: state.location,
       ),
       routes: [
@@ -89,7 +82,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: '_initialize',
           path: '/',
           builder: (context, _) => RootPageContext.wrap(
-            appStateNotifier.loggedIn ? E01MenuWidget() : AuthloginWidget(),
+            appStateNotifier.loggedIn ? const E01MenuWidget() : const AuthloginWidget(),
           ),
           routes: [
             FFRoute(
@@ -130,7 +123,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Authlogin',
               path: 'auth',
-              builder: (context, params) => AuthloginWidget(),
+              builder: (context, params) => const AuthloginWidget(),
             ),
             FFRoute(
               name: 'E02Estabelecimento',
@@ -143,12 +136,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'E01Menu',
               path: 'menu',
-              builder: (context, params) => E01MenuWidget(),
+              builder: (context, params) => const E01MenuWidget(),
             ),
             FFRoute(
               name: 'sisfinanceiro',
               path: 'financeiro',
-              builder: (context, params) => SisfinanceiroWidget(),
+              builder: (context, params) => const SisfinanceiroWidget(),
             ),
             FFRoute(
               name: 'SISinanceiroedisedit',
@@ -163,7 +156,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Financeiro03',
               path: 'financeiro03',
-              builder: (context, params) => Financeiro03Widget(),
+              builder: (context, params) => const Financeiro03Widget(),
             ),
             FFRoute(
               name: 'Cozinha',
@@ -176,12 +169,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Clienteob3',
               path: 'clienteob3',
-              builder: (context, params) => Clienteob3Widget(),
+              builder: (context, params) => const Clienteob3Widget(),
             ),
             FFRoute(
               name: 'entregador1',
               path: 'entregador1',
-              builder: (context, params) => Entregador1Widget(),
+              builder: (context, params) => const Entregador1Widget(),
             ),
             FFRoute(
               name: 'gacom',
@@ -194,7 +187,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'garcom2',
               path: 'garcom2',
-              builder: (context, params) => Garcom2Widget(),
+              builder: (context, params) => const Garcom2Widget(),
             ),
             FFRoute(
               name: 'E01Opcoes-edit',
@@ -234,12 +227,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'E01user01',
               path: 'e01user01',
-              builder: (context, params) => E01user01Widget(),
+              builder: (context, params) => const E01user01Widget(),
             ),
             FFRoute(
               name: 'mensagem01',
               path: 'mensagem01',
-              builder: (context, params) => Mensagem01Widget(),
+              builder: (context, params) => const Mensagem01Widget(),
             ),
             FFRoute(
               name: 'E01Mesas',
@@ -285,7 +278,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'AuthCreat',
               path: 'authCreat',
-              builder: (context, params) => AuthCreatWidget(),
+              builder: (context, params) => const AuthCreatWidget(),
             ),
             FFRoute(
               name: 'E02Estabelecimentotrue',
@@ -354,7 +347,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'SisMenu',
               path: 'menusis',
-              builder: (context, params) => SisMenuWidget(),
+              builder: (context, params) => const SisMenuWidget(),
             ),
             FFRoute(
               name: 'sisestabelecimento',
@@ -375,7 +368,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'sislista',
               path: 'sislista',
-              builder: (context, params) => SislistaWidget(),
+              builder: (context, params) => const SislistaWidget(),
             ),
             FFRoute(
               name: 'sisuser',
@@ -620,7 +613,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

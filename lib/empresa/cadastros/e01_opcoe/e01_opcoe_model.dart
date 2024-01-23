@@ -1,21 +1,11 @@
 import '/backend/supabase/supabase.dart';
 import '/componentes/drawer_a_d_m/drawer_a_d_m_widget.dart';
-import '/componentes/e01_pedido_cat/e01_pedido_cat_widget.dart';
-import '/componentes/edit_pedido/edit_pedido_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
 import 'e01_opcoe_widget.dart' show E01OpcoeWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class E01OpcoeModel extends FlutterFlowModel<E01OpcoeWidget> {
   ///  Local state fields for this page.
@@ -162,11 +152,13 @@ class E01OpcoeModel extends FlutterFlowModel<E01OpcoeWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     drawerADMModel = createModel(context, () => DrawerADMModel());
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     drawerADMModel.dispose();
@@ -219,7 +211,7 @@ class E01OpcoeModel extends FlutterFlowModel<E01OpcoeWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(Duration(milliseconds: 50));
+      await Future.delayed(const Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter2?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
@@ -234,7 +226,7 @@ class E01OpcoeModel extends FlutterFlowModel<E01OpcoeWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(Duration(milliseconds: 50));
+      await Future.delayed(const Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter1?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

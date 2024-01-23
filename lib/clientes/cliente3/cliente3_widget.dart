@@ -9,22 +9,20 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente3_model.dart';
 export 'cliente3_model.dart';
 
 class Cliente3Widget extends StatefulWidget {
   const Cliente3Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.categoria,
     required this.restaurante,
     required this.pedido,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final CategoriaRow? categoria;
@@ -83,15 +81,15 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
               child: wrapWithModel(
                 model: _model.drawerUserModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerUserWidget(),
+                child: const DrawerUserWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -102,7 +100,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -113,7 +111,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
             ),
             body: SafeArea(
               top: true,
-              child: Container(
+              child: SizedBox(
                 height: double.infinity,
                 child: Stack(
                   children: [
@@ -133,7 +131,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 5.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -152,10 +150,10 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                           ),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 3.0, 5.0, 3.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
@@ -163,7 +161,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: Text(
@@ -214,10 +212,10 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                           ),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 3.0, 5.0, 3.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
@@ -225,7 +223,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: Text(
@@ -271,7 +269,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                     ],
                                   ),
                                 ),
-                                Divider(
+                                const Divider(
                                   thickness: 1.0,
                                   color: Color(0xA3DA2E1A),
                                 ),
@@ -296,14 +294,14 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsets.all(16.0),
+                                                        const EdgeInsets.all(16.0),
                                                     child: Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -360,7 +358,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -384,7 +382,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                         Flexible(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         0.0,
@@ -421,7 +419,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -480,7 +478,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                     listViewPratosRowList[
                                                                         listViewIndex];
                                                                 return Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -514,7 +512,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                             width:
                                                                                 70.0,
                                                                             decoration:
-                                                                                BoxDecoration(
+                                                                                const BoxDecoration(
                                                                               borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(16.0),
                                                                                 bottomRight: Radius.circular(0.0),
@@ -618,24 +616,24 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                               CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsets.all(8.0),
+                                                                              padding: const EdgeInsets.all(8.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Container(
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                         ),
                                                                                       ],
                                                                                     ),
                                                                                   ),
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.min,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -654,7 +652,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                               ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                                                                                           child: Text(
                                                                                             valueOrDefault<String>(
                                                                                               listViewPratosRow.descricao,
@@ -693,7 +691,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                         ),
                                                                                                         '0',
                                                                                                       ),
-                                                                                                      style: TextStyle(),
+                                                                                                      style: const TextStyle(),
                                                                                                     )
                                                                                                   ],
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -728,7 +726,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                           format: '##0.00',
                                                                                                           locale: 'pt_BR',
                                                                                                         ),
-                                                                                                        style: TextStyle(),
+                                                                                                        style: const TextStyle(),
                                                                                                       )
                                                                                                     ],
                                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -764,14 +762,14 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                   '1',
                                                                                                 ) ==
                                                                                                 '1'
-                                                                                            ? Color(0xFFDAD6FF)
+                                                                                            ? const Color(0xFFDAD6FF)
                                                                                             : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                         elevation: 4.0,
                                                                                         shape: RoundedRectangleBorder(
                                                                                           borderRadius: BorderRadius.circular(8.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(3.0),
+                                                                                          padding: const EdgeInsets.all(3.0),
                                                                                           child: RichText(
                                                                                             textScaleFactor: MediaQuery.of(context).textScaleFactor,
                                                                                             text: TextSpan(
@@ -792,7 +790,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                     format: '##0.00',
                                                                                                     locale: 'pt_BR',
                                                                                                   ),
-                                                                                                  style: TextStyle(),
+                                                                                                  style: const TextStyle(),
                                                                                                 )
                                                                                               ],
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -826,14 +824,14 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                   '1',
                                                                                                 ) ==
                                                                                                 '1/2'
-                                                                                            ? Color(0xFFDAD6FF)
+                                                                                            ? const Color(0xFFDAD6FF)
                                                                                             : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                         elevation: 4.0,
                                                                                         shape: RoundedRectangleBorder(
                                                                                           borderRadius: BorderRadius.circular(8.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(3.0),
+                                                                                          padding: const EdgeInsets.all(3.0),
                                                                                           child: RichText(
                                                                                             textScaleFactor: MediaQuery.of(context).textScaleFactor,
                                                                                             text: TextSpan(
@@ -854,7 +852,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                     format: '##0.00',
                                                                                                     locale: 'pt_BR',
                                                                                                   ),
-                                                                                                  style: TextStyle(),
+                                                                                                  style: const TextStyle(),
                                                                                                 )
                                                                                               ],
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -887,14 +885,14 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                   '1',
                                                                                                 ) ==
                                                                                                 '1/3'
-                                                                                            ? Color(0xFFDAD6FF)
+                                                                                            ? const Color(0xFFDAD6FF)
                                                                                             : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                         elevation: 4.0,
                                                                                         shape: RoundedRectangleBorder(
                                                                                           borderRadius: BorderRadius.circular(8.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(3.0),
+                                                                                          padding: const EdgeInsets.all(3.0),
                                                                                           child: RichText(
                                                                                             textScaleFactor: MediaQuery.of(context).textScaleFactor,
                                                                                             text: TextSpan(
@@ -915,7 +913,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                                                     format: '##0.00',
                                                                                                     locale: 'pt_BR',
                                                                                                   ),
-                                                                                                  style: TextStyle(),
+                                                                                                  style: const TextStyle(),
                                                                                                 )
                                                                                               ],
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1002,7 +1000,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                           snapshot.data!;
                                       return Container(
                                         width: double.infinity,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color: Color(0xFFD9D9D9),
                                           borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(0.0),
@@ -1013,7 +1011,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 15.0, 0.0),
                                           child: FutureBuilder<
                                               List<SomaPedidoRow>>(
@@ -1070,7 +1068,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   5.0,
                                                                   3.0,
@@ -1088,7 +1086,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFFDA2E1A),
                                                                   fontSize:
                                                                       22.0,
@@ -1120,7 +1118,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFFDA2E1A),
                                                                   fontSize:
                                                                       22.0,
@@ -1196,12 +1194,10 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                             MainAxisAlignment
                                                                 .end,
                                                         children: [
-                                                          if (containerItensDoPedidoRowList
-                                                                  .length >=
-                                                              1)
+                                                          if (containerItensDoPedidoRowList.isNotEmpty)
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1228,11 +1224,11 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                 shape: badges
                                                                     .BadgeShape
                                                                     .circle,
-                                                                badgeColor: Color(
+                                                                badgeColor: const Color(
                                                                     0xFF15981B),
                                                                 elevation: 4.0,
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             8.0,
@@ -1246,7 +1242,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                         .BadgeAnimationType
                                                                         .scale,
                                                                 toAnimate: true,
-                                                                child: Icon(
+                                                                child: const Icon(
                                                                   Icons
                                                                       .shopping_cart_outlined,
                                                                   color: Color(
@@ -1302,16 +1298,16 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                               width: 100.0,
                                                               height: 46.0,
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(0.0),
                                                               iconPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFFA70000),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
@@ -1329,7 +1325,7 @@ class _Cliente3WidgetState extends State<Cliente3Widget> {
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  BorderSide(
+                                                                  const BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,

@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import '../schema/structs/index.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -58,7 +56,7 @@ class BuscarUsuarioPorIDCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'Buscar Usuario por ID',
-      apiUrl: '${SupabaseGroup.baseUrl}usuarios?uid=eq.${uid}&select=*',
+      apiUrl: '${SupabaseGroup.baseUrl}usuarios?uid=eq.$uid&select=*',
       callType: ApiCallType.GET,
       headers: {
         'Authorization':
@@ -115,7 +113,7 @@ class BuscarUsuarioPorEmailCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'Buscar Usuario por email',
-      apiUrl: '${SupabaseGroup.baseUrl}usuarios?email=eq.${email}&select=*',
+      apiUrl: '${SupabaseGroup.baseUrl}usuarios?email=eq.$email&select=*',
       callType: ApiCallType.GET,
       headers: {
         'Authorization':
@@ -169,7 +167,7 @@ class BuscarPedidoPorRestauranteCall {
     return ApiManager.instance.makeApiCall(
       callName: 'Buscar Pedido por restaurante',
       apiUrl:
-          '${SupabaseGroup.baseUrl}Pedidos?restaurante_id=eq.${restauranteId}&select=*',
+          '${SupabaseGroup.baseUrl}Pedidos?restaurante_id=eq.$restauranteId&select=*',
       callType: ApiCallType.GET,
       headers: {
         'Authorization':
@@ -216,7 +214,7 @@ class BuscarRestaurantePorUserIDCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'Buscar Restaurante por userID',
-      apiUrl: '${SupabaseGroup.baseUrl}Estabelecimento?id=eq.${id}&select=*',
+      apiUrl: '${SupabaseGroup.baseUrl}Estabelecimento?id=eq.$id&select=*',
       callType: ApiCallType.GET,
       headers: {
         'Authorization':
@@ -280,11 +278,11 @@ class CriarPagamentoCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "customer": "${customer}",
-  "value": ${value},
-  "dueDate": "${dueDate}",
+  "customer": "$customer",
+  "value": $value,
+  "dueDate": "$dueDate",
   "billingType": "UNDEFINED",
-  "description": "${description}"
+  "description": "$description"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Criar pagamento',
@@ -355,9 +353,9 @@ class CriarClienteCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "name": "${nome}",
-  "email": "${mail}",
-  "cpfCnpj": "${cpf}"
+  "name": "$nome",
+  "email": "$mail",
+  "cpfCnpj": "$cpf"
   }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Criar Cliente',
@@ -396,7 +394,7 @@ class VerificarPagamentoCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'Verificar pagamento',
-      apiUrl: '${AsaasCesarGroup.baseUrl}payments/${id}',
+      apiUrl: '${AsaasCesarGroup.baseUrl}payments/$id',
       callType: ApiCallType.GET,
       headers: {
         'access_token':
@@ -431,15 +429,15 @@ class CriarSubcontaCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "email": "${email}",
-  "loginEmail": "${loginEmail}",
-  "cpfCnpj": "${cpfCnpj}",
-  "mobilePhone": "${mobilePhone}",
-  "province": "${province}",
-  "addressNumber": "${addressNumber}",
-  "postalCode": "${postalCode}",
-  "address": "${address}",
-  "name": "${name}",
+  "email": "$email",
+  "loginEmail": "$loginEmail",
+  "cpfCnpj": "$cpfCnpj",
+  "mobilePhone": "$mobilePhone",
+  "province": "$province",
+  "addressNumber": "$addressNumber",
+  "postalCode": "$postalCode",
+  "address": "$address",
+  "name": "$name",
   "companyType": "LIMITED",
   "birthDate": "10-10-2000"
 }''';
@@ -496,25 +494,25 @@ class CriarAssinaturaCall {
     final ffApiRequestBody = '''
 {
   "billingType": "CREDIT_CARD",
-  "cycle": "${cycle}",
+  "cycle": "$cycle",
   "creditCard": {
-    "holderName": "${holderName}",
-    "number": "${number}",
-    "expiryMonth": "${expiryMonth}",
-    "expiryYear": "${expiryYear}",
-    "ccv": "${ccv}"
+    "holderName": "$holderName",
+    "number": "$number",
+    "expiryMonth": "$expiryMonth",
+    "expiryYear": "$expiryYear",
+    "ccv": "$ccv"
   },
   "creditCardHolderInfo": {
-    "name": "${name}",
-    "email": "${email}",
-    "cpfCnpj": "${cpfCnpj}",
-    "postalCode": "${postalCode}",
-    "addressNumber": "${addressNumber}",
-    "phone": "${phone}"
+    "name": "$name",
+    "email": "$email",
+    "cpfCnpj": "$cpfCnpj",
+    "postalCode": "$postalCode",
+    "addressNumber": "$addressNumber",
+    "phone": "$phone"
   },
-  "customer": "${customer}",
-  "value": ${value},
-  "nextDueDate": "${nextDueDate}"
+  "customer": "$customer",
+  "value": $value,
+  "nextDueDate": "$nextDueDate"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Criar assinatura',
@@ -603,10 +601,10 @@ class CriarClientePROFISSIONALCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "name": "${name}",
-  "email": "${email}",
-  "cpfCnpj": "${cpfCnpj}",
-  "token": "${token}",
+  "name": "$name",
+  "email": "$email",
+  "cpfCnpj": "$cpfCnpj",
+  "token": "$token",
   "company": "company"
 }''';
     return ApiManager.instance.makeApiCall(
@@ -616,7 +614,7 @@ class CriarClientePROFISSIONALCall {
       headers: {
         'accept': 'application/json',
         'content-type': 'application/json',
-        'access_token': '${token}',
+        'access_token': '$token',
       },
       params: {},
       body: ffApiRequestBody,
@@ -647,11 +645,11 @@ class CriarPagamentoPROFISSIONALCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "customer": "${customer}",
-  "value": ${value},
-  "dueDate": "${dueDate}",
+  "customer": "$customer",
+  "value": $value,
+  "dueDate": "$dueDate",
   "billingType": "UNDEFINED",
-  "description": "${description}",
+  "description": "$description",
   "split": [
     {
       "walletId": "655642d5-1eb2-4b6b-a4e4-bbd4391087ba",
@@ -666,7 +664,7 @@ class CriarPagamentoPROFISSIONALCall {
       headers: {
         'accept': 'application/json',
         'content-type': 'application/json',
-        'access_token': '${token}',
+        'access_token': '$token',
       },
       params: {},
       body: ffApiRequestBody,
@@ -700,12 +698,12 @@ class ConfirmarPagamentoPROFISSIONALCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'Confirmar pagamento PROFISSIONAL',
-      apiUrl: '${AsaasCesarProfissionalGroup.baseUrl}/payments/${id}',
+      apiUrl: '${AsaasCesarProfissionalGroup.baseUrl}/payments/$id',
       callType: ApiCallType.GET,
       headers: {
         'accept': 'application/json',
         'content-type': 'application/json',
-        'access_token': '${token}',
+        'access_token': '$token',
       },
       params: {
         'id': id,
@@ -736,7 +734,7 @@ class CepCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'cep',
-      apiUrl: 'viacep.com.br/ws/${varcep}/json/',
+      apiUrl: 'viacep.com.br/ws/$varcep/json/',
       callType: ApiCallType.GET,
       headers: {},
       params: {},

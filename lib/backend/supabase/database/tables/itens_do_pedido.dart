@@ -10,7 +10,7 @@ class ItensDoPedidoTable extends SupabaseTable<ItensDoPedidoRow> {
 }
 
 class ItensDoPedidoRow extends SupabaseDataRow {
-  ItensDoPedidoRow(Map<String, dynamic> data) : super(data);
+  ItensDoPedidoRow(super.data);
 
   @override
   SupabaseTable get table => ItensDoPedidoTable();

@@ -9,7 +9,7 @@ class GuarnicaoTable extends SupabaseTable<GuarnicaoRow> {
 }
 
 class GuarnicaoRow extends SupabaseDataRow {
-  GuarnicaoRow(Map<String, dynamic> data) : super(data);
+  GuarnicaoRow(super.data);
 
   @override
   SupabaseTable get table => GuarnicaoTable();

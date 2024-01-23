@@ -1,14 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'vazio_carrinho_model.dart';
 export 'vazio_carrinho_model.dart';
 
 class VazioCarrinhoWidget extends StatefulWidget {
-  const VazioCarrinhoWidget({Key? key}) : super(key: key);
+  const VazioCarrinhoWidget({super.key});
 
   @override
   _VazioCarrinhoWidgetState createState() => _VazioCarrinhoWidgetState();
@@ -51,14 +49,14 @@ class _VazioCarrinhoWidgetState extends State<VazioCarrinhoWidget> {
           size: 72.0,
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
           child: Text(
             'o carinho está vazia',
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 34.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 34.0, 0.0, 0.0),
           child: Text(
             'Faça seu pedido!',
             style: FlutterFlowTheme.of(context).labelMedium,

@@ -1,19 +1,10 @@
-import '/auth/supabase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
-import '/backend/supabase/supabase.dart';
 import '/componentes/drawer_a_d_m/drawer_a_d_m_widget.dart';
-import '/componentes/edit_user/edit_user_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'e01user01_widget.dart' show E01user01Widget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class E01user01Model extends FlutterFlowModel<E01user01Widget> {
   ///  State fields for stateful widgets in this page.
@@ -54,6 +45,7 @@ class E01user01Model extends FlutterFlowModel<E01user01Widget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     drawerADMModel = createModel(context, () => DrawerADMModel());
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
@@ -61,6 +53,7 @@ class E01user01Model extends FlutterFlowModel<E01user01Widget> {
     textFieldSENVisibility2 = false;
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     drawerADMModel.dispose();

@@ -1,18 +1,16 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'clienteob3_model.dart';
 export 'clienteob3_model.dart';
 
 class Clienteob3Widget extends StatefulWidget {
-  const Clienteob3Widget({Key? key}) : super(key: key);
+  const Clienteob3Widget({super.key});
 
   @override
   _Clienteob3WidgetState createState() => _Clienteob3WidgetState();
@@ -81,9 +79,9 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                       FlutterFlowTheme.of(context).accent3,
                       FlutterFlowTheme.of(context).primaryBackground
                     ],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
@@ -101,7 +99,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -120,7 +118,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 250.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.home,
@@ -130,7 +128,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 240.0, 0.0, 0.0),
                               child: Text(
                                 'Inicio',
@@ -147,14 +145,14 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 15.0, 0.0, 0.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.clock,
@@ -164,7 +162,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 10.0, 0.0, 0.0),
                                 child: Text(
                                   'Pedidos',
@@ -182,14 +180,14 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 7.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.attach_money,
@@ -199,7 +197,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     19.0, 0.0, 0.0, 5.0),
                                 child: Text(
                                   'Pagamentos',
@@ -221,7 +219,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 15.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.settings,
@@ -231,7 +229,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 5.0, 0.0, 0.0),
                               child: Text(
                                 'Configurações',
@@ -272,7 +270,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 30.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -288,11 +286,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                         child: Column(
                                           children: [
                                             Align(
-                                              alignment: Alignment(0.0, 0),
+                                              alignment: const Alignment(0.0, 0),
                                               child: TabBar(
-                                                labelColor: Color(0xFFA70000),
+                                                labelColor: const Color(0xFFA70000),
                                                 unselectedLabelColor:
-                                                    Color(0x83DA2E1A),
+                                                    const Color(0x83DA2E1A),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleMedium
@@ -304,11 +302,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                               FontWeight.w500,
                                                         ),
                                                 unselectedLabelStyle:
-                                                    TextStyle(),
+                                                    const TextStyle(),
                                                 indicatorColor:
-                                                    Color(0xFFA70000),
-                                                padding: EdgeInsets.all(4.0),
-                                                tabs: [
+                                                    const Color(0xFFA70000),
+                                                padding: const EdgeInsets.all(4.0),
+                                                tabs: const [
                                                   Tab(
                                                     text: 'VISITADOS',
                                                   ),
@@ -342,7 +340,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                           children: [
                                                             Expanded(
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         0.0,
@@ -384,7 +382,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                     focusedBorder:
                                                                         OutlineInputBorder(
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Color(
                                                                             0x83DA2E1A),
                                                                         width:
@@ -421,13 +419,13 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                               12.0),
                                                                     ),
                                                                     contentPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             15.0,
                                                                             0.0,
                                                                             15.0),
                                                                     prefixIcon:
-                                                                        Icon(
+                                                                        const Icon(
                                                                       Icons
                                                                           .search,
                                                                       color: Color(
@@ -450,7 +448,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   5.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -468,7 +466,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFDA2E1A),
                                                                       fontSize:
                                                                           14.0,
@@ -479,7 +477,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -497,7 +495,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                             ],
                                                           ),
                                                         ),
-                                                        Divider(
+                                                        const Divider(
                                                           thickness: 1.0,
                                                           color:
                                                               Color(0xA3DA2E1A),
@@ -508,7 +506,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -564,7 +562,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                         fit: BoxFit.cover,
                                                                                       ),
                                                                                     ),
-                                                                                    Stack(
+                                                                                    const Stack(
                                                                                       children: [],
                                                                                     ),
                                                                                     Row(
@@ -582,7 +580,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -597,7 +595,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -613,7 +611,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -647,7 +645,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -689,7 +687,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                         fit: BoxFit.cover,
                                                                                       ),
                                                                                     ),
-                                                                                    Stack(
+                                                                                    const Stack(
                                                                                       children: [],
                                                                                     ),
                                                                                     Row(
@@ -707,7 +705,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -722,7 +720,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -738,7 +736,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -772,7 +770,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                 ],
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -801,7 +799,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   5.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -819,7 +817,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFDA2E1A),
                                                                       fontSize:
                                                                           14.0,
@@ -830,7 +828,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -848,14 +846,14 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                             ],
                                                           ),
                                                         ),
-                                                        Divider(
+                                                        const Divider(
                                                           thickness: 1.0,
                                                           color:
                                                               Color(0xA3DA2E1A),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       15.0,
                                                                       0.0,
@@ -916,7 +914,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
-                                                                                Stack(
+                                                                                const Stack(
                                                                                   children: [],
                                                                                 ),
                                                                                 Row(
@@ -934,7 +932,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -954,7 +952,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -975,7 +973,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1015,7 +1013,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ],
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1066,7 +1064,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
-                                                                                Stack(
+                                                                                const Stack(
                                                                                   children: [],
                                                                                 ),
                                                                                 Row(
@@ -1084,7 +1082,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1104,7 +1102,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1125,7 +1123,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1165,7 +1163,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ],
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1197,7 +1195,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   5.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -1215,7 +1213,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFDA2E1A),
                                                                       fontSize:
                                                                           14.0,
@@ -1226,7 +1224,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1244,14 +1242,14 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                             ],
                                                           ),
                                                         ),
-                                                        Divider(
+                                                        const Divider(
                                                           thickness: 1.0,
                                                           color:
                                                               Color(0xA3DA2E1A),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       15.0,
                                                                       0.0,
@@ -1312,7 +1310,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
-                                                                                Stack(
+                                                                                const Stack(
                                                                                   children: [],
                                                                                 ),
                                                                                 Row(
@@ -1330,7 +1328,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1350,7 +1348,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1371,7 +1369,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1411,7 +1409,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ],
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1462,7 +1460,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
-                                                                                Stack(
+                                                                                const Stack(
                                                                                   children: [],
                                                                                 ),
                                                                                 Row(
@@ -1480,7 +1478,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1500,7 +1498,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1521,7 +1519,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1561,7 +1559,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                                                             ],
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.0,
                                                                                 0.0,
@@ -1624,16 +1622,16 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                   Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.93, -0.95),
+                        alignment: const AlignmentDirectional(0.93, -0.95),
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Stack(
                                 children: [
                                   Align(
                                     alignment:
-                                        AlignmentDirectional(1.04, -0.94),
+                                        const AlignmentDirectional(1.04, -0.94),
                                     child: FlutterFlowIconButton(
                                       borderColor: Colors.transparent,
                                       borderRadius: 30.0,
@@ -1659,7 +1657,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -1680,11 +1678,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                               children: [
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1703,7 +1701,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Início',
@@ -1725,11 +1723,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1748,7 +1746,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Favorito',
@@ -1770,11 +1768,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1813,11 +1811,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1836,7 +1834,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 2.0, 0.0, 0.0),
                                               child: Text(
                                                 'Conta',
@@ -1862,11 +1860,11 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                 ),
                                 Container(
                                   width: 70.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
+                                      const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -1885,7 +1883,7 @@ class _Clienteob3WidgetState extends State<Clienteob3Widget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               'Pedidos',

@@ -7,20 +7,18 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 's_i_sinanceiroedisedit_model.dart';
 export 's_i_sinanceiroedisedit_model.dart';
 
 class SISinanceiroediseditWidget extends StatefulWidget {
   const SISinanceiroediseditWidget({
-    Key? key,
+    super.key,
     required this.restauranteID,
     required this.financeiro,
-  }) : super(key: key);
+  });
 
   final String? restauranteID;
   final AssinaturasRow? financeiro;
@@ -105,15 +103,15 @@ class _SISinanceiroediseditWidgetState
               child: wrapWithModel(
                 model: _model.drawerADMsisModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMsisWidget(),
+                child: const DrawerADMsisWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
@@ -124,7 +122,7 @@ class _SISinanceiroediseditWidgetState
                     child: wrapWithModel(
                       model: _model.headeradmsisModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderadmsisWidget(),
+                      child: const HeaderadmsisWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -138,7 +136,7 @@ class _SISinanceiroediseditWidgetState
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Container(
                       width: 500.0,
                       height: double.infinity,
@@ -150,18 +148,18 @@ class _SISinanceiroediseditWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(15.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.arrow_back,
                                     color: Color(0xFFDA2E1A),
                                     size: 25.0,
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: Text(
                                         'Financeiro',
@@ -179,7 +177,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 15.0, 20.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -190,19 +188,19 @@ class _SISinanceiroediseditWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFFA70000),
+                                          color: const Color(0xFFA70000),
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               thickness: 1.0,
                               color: Color(0x83DA2E1A),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(15.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -224,7 +222,7 @@ class _SISinanceiroediseditWidgetState
                                           'ANUAL',
                                         ),
                                       ),
-                                      options: ['Mensal', 'Anual'],
+                                      options: const ['Mensal', 'Anual'],
                                       onChanged: (val) => setState(
                                           () => _model.dropDownValue = val),
                                       width: 300.0,
@@ -250,7 +248,7 @@ class _SISinanceiroediseditWidgetState
                                           FlutterFlowTheme.of(context).terceira,
                                       borderWidth: 1.0,
                                       borderRadius: 8.0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,
@@ -262,7 +260,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 0.0, 15.0, 15.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -343,7 +341,7 @@ class _SISinanceiroediseditWidgetState
                             if (_model.dropDownValue != null &&
                                 _model.dropDownValue != '')
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -353,7 +351,7 @@ class _SISinanceiroediseditWidgetState
                                         controller: _model.textController2,
                                         focusNode: _model.textFieldFocusNode2,
                                         onFieldSubmitted: (_) async {
-                                          final _datePickedDate =
+                                          final datePickedDate =
                                               await showDatePicker(
                                             context: context,
                                             initialDate: getCurrentTimestamp,
@@ -398,12 +396,12 @@ class _SISinanceiroediseditWidgetState
                                             },
                                           );
 
-                                          if (_datePickedDate != null) {
+                                          if (datePickedDate != null) {
                                             safeSetState(() {
                                               _model.datePicked = DateTime(
-                                                _datePickedDate.year,
-                                                _datePickedDate.month,
-                                                _datePickedDate.day,
+                                                datePickedDate.year,
+                                                datePickedDate.month,
+                                                datePickedDate.day,
                                               );
                                             });
                                           }
@@ -474,7 +472,7 @@ class _SISinanceiroediseditWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                           ),
-                                          prefixIcon: Icon(
+                                          prefixIcon: const Icon(
                                             Icons.calendar_month,
                                           ),
                                         ),
@@ -496,7 +494,7 @@ class _SISinanceiroediseditWidgetState
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 0.0, 15.0, 15.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -577,12 +575,12 @@ class _SISinanceiroediseditWidgetState
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               thickness: 1.0,
                               color: Color(0x83DA2E1A),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 15.0, 20.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -602,7 +600,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 15.0, 20.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -625,7 +623,7 @@ class _SISinanceiroediseditWidgetState
                                             ),
                                     buttonPosition: RadioButtonPosition.left,
                                     direction: Axis.horizontal,
-                                    radioButtonColor: Color(0xFFA70000),
+                                    radioButtonColor: const Color(0xFFA70000),
                                     inactiveRadioButtonColor:
                                         FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -637,7 +635,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 15.0, 20.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -657,7 +655,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 15.0, 20.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -685,7 +683,7 @@ class _SISinanceiroediseditWidgetState
                                             ),
                                     buttonPosition: RadioButtonPosition.left,
                                     direction: Axis.horizontal,
-                                    radioButtonColor: Color(0xFFA70000),
+                                    radioButtonColor: const Color(0xFFA70000),
                                     inactiveRadioButtonColor:
                                         FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -697,7 +695,7 @@ class _SISinanceiroediseditWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 30.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -725,10 +723,10 @@ class _SISinanceiroediseditWidgetState
                                 options: FFButtonOptions(
                                   width: 160.0,
                                   height: 40.0,
-                                  padding: EdgeInsets.all(0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsets.all(0.0),
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFFA70000),
+                                  color: const Color(0xFFA70000),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -737,7 +735,7 @@ class _SISinanceiroediseditWidgetState
                                         fontSize: 19.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

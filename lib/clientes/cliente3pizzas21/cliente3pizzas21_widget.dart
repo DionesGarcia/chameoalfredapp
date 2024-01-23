@@ -4,24 +4,22 @@ import '/componentes/header_empresa/header_empresa_widget.dart';
 import '/componentes/pizzas2sabor31/pizzas2sabor31_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente3pizzas21_model.dart';
 export 'cliente3pizzas21_model.dart';
 
 class Cliente3pizzas21Widget extends StatefulWidget {
   const Cliente3pizzas21Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.categoria,
     required this.restaurante,
     required this.pedido,
     required this.itempedido,
     required this.sabores,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final CategoriaRow? categoria;
@@ -82,15 +80,15 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
               child: wrapWithModel(
                 model: _model.drawerUserModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerUserWidget(),
+                child: const DrawerUserWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -101,7 +99,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -115,7 +113,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Container(
                       width: 600.0,
                       height: double.infinity,
@@ -134,7 +132,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                 children: [
                                   Flexible(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -155,9 +153,9 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                               ),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 3.0, 5.0, 3.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
@@ -166,7 +164,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: Text(
@@ -220,9 +218,9 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                               ),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 3.0, 5.0, 3.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
@@ -231,7 +229,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: Text(
@@ -279,7 +277,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                       ),
                                     ),
                                   ),
-                                  Divider(
+                                  const Divider(
                                     thickness: 1.0,
                                     color: Color(0xA3DA2E1A),
                                   ),
@@ -301,14 +299,14 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsets.all(16.0),
+                                                  padding: const EdgeInsets.all(16.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -338,7 +336,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -361,7 +359,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                       Flexible(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       15.0,
                                                                       0.0,
@@ -398,7 +396,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -456,7 +454,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                       listViewIndex];
                                                               return Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -494,7 +492,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                         height:
                                                                             140.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           borderRadius:
                                                                               BorderRadius.only(
                                                                             bottomLeft:
@@ -507,7 +505,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                                 Radius.circular(0.0),
                                                                           ),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -554,25 +552,25 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                               CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsets.all(8.0),
+                                                                              padding: const EdgeInsets.all(8.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.min,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Container(
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                         ),
                                                                                       ],
                                                                                     ),
                                                                                   ),
                                                                                   Container(
                                                                                     width: 250.0,
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.min,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -591,7 +589,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                                               ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                                                                                           child: Text(
                                                                                             valueOrDefault<String>(
                                                                                               listViewPratosRow.descricao,
@@ -604,7 +602,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                                           ),
                                                                                         ),
                                                                                         if (widget.categoria?.pizza == false)
-                                                                                          Row(
+                                                                                          const Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [],
                                                                                           ),
@@ -627,7 +625,7 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                           color:
                                                                               FlutterFlowTheme.of(context).secundria,
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(0.0),
                                                                             bottomRight:

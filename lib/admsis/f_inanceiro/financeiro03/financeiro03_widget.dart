@@ -3,17 +3,14 @@ import '/componentes/drawer_a_d_msis/drawer_a_d_msis_widget.dart';
 import '/componentes/headeradmsis/headeradmsis_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'financeiro03_model.dart';
 export 'financeiro03_model.dart';
 
 class Financeiro03Widget extends StatefulWidget {
-  const Financeiro03Widget({Key? key}) : super(key: key);
+  const Financeiro03Widget({super.key});
 
   @override
   _Financeiro03WidgetState createState() => _Financeiro03WidgetState();
@@ -76,15 +73,15 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
               child: wrapWithModel(
                 model: _model.drawerADMsisModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMsisWidget(),
+                child: const DrawerADMsisWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 500.0,
@@ -95,7 +92,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                     child: wrapWithModel(
                       model: _model.headeradmsisModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderadmsisWidget(),
+                      child: const HeaderadmsisWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -107,7 +104,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 500.0,
                   height: double.infinity,
@@ -118,7 +115,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -130,7 +127,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                               onTap: () async {
                                 context.safePop();
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 color: Color(0xFFDA2E1A),
                                 size: 25.0,
@@ -138,9 +135,9 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                             ),
                             Flexible(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
                                   child: Text(
                                     'Dashbord',
@@ -158,22 +155,22 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0x83DA2E1A),
                       ),
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 15.0, 15.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Flexible(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 30.0, 0.0),
-                                  child: Container(
+                                  child: SizedBox(
                                     width: 100.0,
                                     child: TextFormField(
                                       controller: _model.textController1,
@@ -324,7 +321,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 15.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -368,7 +365,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 0.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -412,7 +409,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 0.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -492,12 +489,12 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                         child: Container(
                           height: 50.0,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: TextFormField(
                               controller: _model.textController3,
@@ -546,9 +543,9 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 15.0, 8.0, 0.0),
-                                prefixIcon: Icon(
+                                prefixIcon: const Icon(
                                   Icons.search,
                                   size: 15.0,
                                 ),
@@ -567,7 +564,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                           children: [
                             Flexible(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 25.0, 15.0, 0.0),
                                 child: FutureBuilder<List<AssinaturasRow>>(
                                   future: AssinaturasTable().queryRows(
@@ -764,7 +761,7 @@ class _Financeiro03WidgetState extends State<Financeiro03Widget> {
                                                 ),
                                               ],
                                             ),
-                                            Divider(
+                                            const Divider(
                                               thickness: 1.0,
                                               color: Color(0x83DA2E1A),
                                             ),

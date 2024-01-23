@@ -1,20 +1,11 @@
-import '/backend/supabase/supabase.dart';
-import '/componentes/cliente_boton_vercarrinho/cliente_boton_vercarrinho_widget.dart';
 import '/componentes/drawer_user/drawer_user_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
 import '/componentes/lanches_com12/lanches_com12_widget.dart';
 import '/componentes/lanches_sem12/lanches_sem12_widget.dart';
 import '/componentes/pizzas/pizzas_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'cliente3_widget.dart' show Cliente3Widget;
-import 'package:badges/badges.dart' as badges;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class Cliente3Model extends FlutterFlowModel<Cliente3Widget> {
   ///  Local state fields for this page.
@@ -54,6 +45,7 @@ class Cliente3Model extends FlutterFlowModel<Cliente3Widget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
     drawerUserModel = createModel(context, () => DrawerUserModel());
@@ -62,6 +54,7 @@ class Cliente3Model extends FlutterFlowModel<Cliente3Widget> {
     lanchesSem12Models = FlutterFlowDynamicModels(() => LanchesSem12Model());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     headerEmpresaModel.dispose();

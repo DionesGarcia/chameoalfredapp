@@ -8,13 +8,12 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'auth_creat_model.dart';
 export 'auth_creat_model.dart';
 
 class AuthCreatWidget extends StatefulWidget {
-  const AuthCreatWidget({Key? key}) : super(key: key);
+  const AuthCreatWidget({super.key});
 
   @override
   _AuthCreatWidgetState createState() => _AuthCreatWidgetState();
@@ -77,7 +76,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
@@ -85,7 +84,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     image: DecorationImage(
                       fit: BoxFit.contain,
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       image: Image.asset(
                         'assets/images/001.png',
                       ).image,
@@ -96,9 +95,9 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                       Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 200.0, 0.0, 0.0),
                               child: Container(
                                 width: 600.0,
@@ -106,7 +105,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(0.0),
                                     bottomRight: Radius.circular(0.0),
                                     topLeft: Radius.circular(40.0),
@@ -121,7 +120,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 60.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -129,7 +128,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 8.0, 0.0),
                                                     child: TextFormField(
@@ -164,7 +163,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x8357636C),
                                                                   fontStyle:
                                                                       FontStyle
@@ -173,7 +172,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0x83DA2E1A),
                                                             width: 1.0,
@@ -186,7 +185,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFFA70000),
                                                             width: 1.0,
@@ -224,7 +223,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
-                                                        suffixIcon: FaIcon(
+                                                        suffixIcon: const FaIcon(
                                                           FontAwesomeIcons
                                                               .userCircle,
                                                           color:
@@ -249,7 +248,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 60.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -257,7 +256,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 8.0, 0.0),
                                                     child: TextFormField(
@@ -292,7 +291,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x8357636C),
                                                                   fontStyle:
                                                                       FontStyle
@@ -301,7 +300,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0x83DA2E1A),
                                                             width: 1.0,
@@ -314,7 +313,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFFA70000),
                                                             width: 1.0,
@@ -352,7 +351,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
-                                                        suffixIcon: Icon(
+                                                        suffixIcon: const Icon(
                                                           Icons.email,
                                                           color:
                                                               Color(0x81A70000),
@@ -376,7 +375,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 5.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -384,7 +383,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 30.0,
                                                                 8.0, 0.0),
                                                     child: TextFormField(
@@ -420,7 +419,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x8357636C),
                                                                   fontStyle:
                                                                       FontStyle
@@ -429,7 +428,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0x83DA2E1A),
                                                             width: 1.0,
@@ -442,7 +441,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFFA70000),
                                                             width: 1.0,
@@ -496,7 +495,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                     .visibility_outlined
                                                                 : Icons
                                                                     .visibility_off_outlined,
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x7EA70000),
                                                             size: 22.0,
                                                           ),
@@ -520,7 +519,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 5.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -528,7 +527,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 30.0,
                                                                 8.0, 0.0),
                                                     child: TextFormField(
@@ -565,7 +564,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x8357636C),
                                                                   fontStyle:
                                                                       FontStyle
@@ -574,7 +573,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0x83DA2E1A),
                                                             width: 1.0,
@@ -587,7 +586,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFFA70000),
                                                             width: 1.0,
@@ -641,7 +640,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                     .visibility_outlined
                                                                 : Icons
                                                                     .visibility_off_outlined,
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x7EA70000),
                                                             size: 22.0,
                                                           ),
@@ -665,7 +664,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 50.0, 15.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -717,7 +716,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                 : null;
                                                         return FFButtonWidget(
                                                           onPressed: () async {
-                                                            var _shouldSetState =
+                                                            var shouldSetState =
                                                                 false;
                                                             if (buttonUsuariosRow
                                                                         ?.email !=
@@ -737,7 +736,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                     backgroundColor:
                                                                         Colors
                                                                             .transparent,
-                                                                    alignment: AlignmentDirectional(
+                                                                    alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -752,7 +751,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                           : FocusScope.of(context)
                                                                               .unfocus(),
                                                                       child:
-                                                                          PopupLogErroemailWidget(),
+                                                                          const PopupLogErroemailWidget(),
                                                                     ),
                                                                   );
                                                                 },
@@ -760,8 +759,9 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                   setState(
                                                                       () {}));
 
-                                                              if (_shouldSetState)
+                                                              if (shouldSetState) {
                                                                 setState(() {});
+                                                              }
                                                               return;
                                                             } else {
                                                               if (_model
@@ -782,7 +782,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                   ScaffoldMessenger.of(
                                                                           context)
                                                                       .showSnackBar(
-                                                                    SnackBar(
+                                                                    const SnackBar(
                                                                       content:
                                                                           Text(
                                                                         'Passwords don\'t match!',
@@ -840,7 +840,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                   'locationEst':
                                                                       '',
                                                                 });
-                                                                _shouldSetState =
+                                                                shouldSetState =
                                                                     true;
                                                                 _model.user1 =
                                                                     await UsuariosTable()
@@ -859,7 +859,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                           ?.id,
                                                                   'tipo': 'adm',
                                                                 });
-                                                                _shouldSetState =
+                                                                shouldSetState =
                                                                     true;
                                                                 setState(() {
                                                                   FFAppState()
@@ -899,7 +899,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: AlignmentDirectional(
+                                                                      alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -910,7 +910,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                             ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                                                                             : FocusScope.of(context).unfocus(),
                                                                         child:
-                                                                            PopupLogSenhanaoconfereWidget(),
+                                                                            const PopupLogSenhanaoconfereWidget(),
                                                                       ),
                                                                     );
                                                                   },
@@ -918,15 +918,17 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                     setState(
                                                                         () {}));
 
-                                                                if (_shouldSetState)
+                                                                if (shouldSetState) {
                                                                   setState(
                                                                       () {});
+                                                                }
                                                                 return;
                                                               }
                                                             }
 
-                                                            if (_shouldSetState)
+                                                            if (shouldSetState) {
                                                               setState(() {});
+                                                            }
                                                           },
                                                           text:
                                                               'Fazer meu cadastro',
@@ -935,16 +937,16 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                             width: 300.0,
                                                             height: 50.0,
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFFDA2E1A),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -961,7 +963,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,

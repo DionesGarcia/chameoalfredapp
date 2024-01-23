@@ -10,16 +10,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cozinha_model.dart';
 export 'cozinha_model.dart';
 
 class CozinhaWidget extends StatefulWidget {
   const CozinhaWidget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -81,16 +80,16 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
               child: wrapWithModel(
                 model: _model.drawerADMModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerADMWidget(),
+                child: const DrawerADMWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor:
                     FlutterFlowTheme.of(context).secondaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: double.infinity,
@@ -101,7 +100,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -126,7 +125,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(15.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -139,7 +138,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                   onTap: () async {
                                     context.safePop();
                                   },
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_back,
                                     color: Color(0xFFDA2E1A),
                                     size: 25.0,
@@ -147,7 +146,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 20.0, 0.0),
                                     child: Text(
                                       'Cozinha',
@@ -156,7 +155,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFFA70000),
+                                            color: const Color(0xFFA70000),
                                             fontSize: 24.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -167,7 +166,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -201,7 +200,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -213,14 +212,14 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text('Atenção!'),
-                                            content: Text(
+                                            title: const Text('Atenção!'),
+                                            content: const Text(
                                                 'A impressora não foi configurada corretamente.'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('Ok'),
+                                                child: const Text('Ok'),
                                               ),
                                             ],
                                           );
@@ -236,7 +235,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Imprimir automático',
@@ -252,7 +251,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -268,7 +267,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(0.0, 0),
+                                          alignment: const Alignment(0.0, 0),
                                           child: FlutterFlowButtonTabBar(
                                             useToggleButtonStyle: false,
                                             labelStyle:
@@ -280,12 +279,12 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             labelColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primaria,
                                             unselectedLabelColor:
-                                                Color(0x8057636C),
+                                                const Color(0x8057636C),
                                             backgroundColor:
                                                 FlutterFlowTheme.of(context)
                                                     .accent1,
@@ -302,9 +301,9 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                             borderRadius: 8.0,
                                             elevation: 0.0,
                                             buttonMargin:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
-                                            padding: EdgeInsets.all(4.0),
+                                            padding: const EdgeInsets.all(4.0),
                                             tabs: [
                                               FutureBuilder<List<PedidosRow>>(
                                                 future:
@@ -393,7 +392,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                   );
                                                 },
                                               ),
-                                              Tab(
+                                              const Tab(
                                                 text: 'FINALIZADO',
                                               ),
                                             ],
@@ -477,7 +476,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                       snapshot.data!;
                                                   if (listViewFila01PedidosRowList
                                                       .isEmpty) {
-                                                    return VazioFilaWidget();
+                                                    return const VazioFilaWidget();
                                                   }
                                                   return ListView.builder(
                                                     padding: EdgeInsets.zero,
@@ -497,7 +496,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         15.0,
@@ -536,16 +535,16 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               MainAxisAlignment.spaceBetween,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
                                                                               child: Container(
                                                                                 width: 40.0,
                                                                                 height: 40.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFF058812),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Text(
                                                                                     valueOrDefault<String>(
                                                                                       listViewFila01PedidosRow.mesa,
@@ -562,7 +561,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                             ),
                                                                             Flexible(
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(3.0),
+                                                                                padding: const EdgeInsets.all(3.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.min,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -595,7 +594,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -616,7 +615,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -638,7 +637,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -674,7 +673,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               10.0,
@@ -704,15 +703,15 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                 options: FFButtonOptions(
                                                                                   width: 120.0,
                                                                                   height: 45.0,
-                                                                                  padding: EdgeInsets.all(0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsets.all(0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: FlutterFlowTheme.of(context).secundria,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Readex Pro',
                                                                                         color: Colors.white,
                                                                                       ),
                                                                                   elevation: 3.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 1.0,
                                                                                   ),
@@ -723,7 +722,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       dateTimeFormat(
                                                                                         'm',
@@ -804,7 +803,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                       listViewFIlaItensDoPedidoRowList[
                                                                           listViewFIlaIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             20.0,
@@ -845,7 +844,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -863,7 +862,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         valueOrDefault<String>(
                                                                                           listViewFIlaItensDoPedidoRow.desc,
@@ -878,7 +877,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     ),
                                                                                     if (listViewFIlaItensDoPedidoRow.obs != '0')
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewFIlaItensDoPedidoRow.obs!,
                                                                                           maxLines: 2,
@@ -898,7 +897,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -994,7 +993,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                             snapshot.data!;
                                                         if (listViewEMPRODPedidosRowList
                                                             .isEmpty) {
-                                                          return VazioFilaWidget();
+                                                          return const VazioFilaWidget();
                                                         }
                                                         return ListView.builder(
                                                           padding:
@@ -1011,7 +1010,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                     listViewEMPRODIndex];
                                                             return Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -1054,11 +1053,11 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                content: Text('Pedido finalizado.'),
+                                                                                content: const Text('Pedido finalizado.'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -1082,7 +1081,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                                                                               child: Container(
                                                                                 width: 69.0,
                                                                                 height: 73.0,
@@ -1098,7 +1097,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                   children: [
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         'Mesa:',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1116,7 +1115,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     ),
                                                                                     Flexible(
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 3.0, 3.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 3.0, 3.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.min,
                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1148,7 +1147,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1169,7 +1168,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsets.all(10.0),
+                                                                                        padding: const EdgeInsets.all(10.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1191,7 +1190,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.start,
@@ -1232,7 +1231,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1265,15 +1264,15 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     options: FFButtonOptions(
                                                                                       width: 120.0,
                                                                                       height: 45.0,
-                                                                                      padding: EdgeInsets.all(0.0),
-                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsets.all(0.0),
+                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                             fontFamily: 'Readex Pro',
                                                                                             color: Colors.white,
                                                                                           ),
                                                                                       elevation: 3.0,
-                                                                                      borderSide: BorderSide(
+                                                                                      borderSide: const BorderSide(
                                                                                         color: Colors.transparent,
                                                                                         width: 1.0,
                                                                                       ),
@@ -1284,7 +1283,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           dateTimeFormat(
                                                                                             'm',
@@ -1295,7 +1294,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           'min.',
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1375,7 +1374,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                             snapshot.data!;
                                                         if (listViewFINPedidosRowList
                                                             .isEmpty) {
-                                                          return VazioFilaWidget();
+                                                          return const VazioFilaWidget();
                                                         }
                                                         return ListView.builder(
                                                           padding:
@@ -1411,7 +1410,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                         .spaceBetween,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
@@ -1441,7 +1440,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 10.0,
                                                                                 0.0,
@@ -1478,7 +1477,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1490,7 +1489,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                       children: [
                                                                                         Expanded(
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                                             child: Text(
                                                                                               'Hora do pedido: ',
                                                                                               textAlign: TextAlign.start,
@@ -1500,7 +1499,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                         ),
                                                                                         Expanded(
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                                             child: Text(
                                                                                               dateTimeFormat(
                                                                                                 'jm',
@@ -1519,7 +1518,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -1535,7 +1534,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                                                                                           child: Text(
                                                                                             dateTimeFormat(
                                                                                               'm',
@@ -1558,7 +1557,7 @@ class _CozinhaWidgetState extends State<CozinhaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,

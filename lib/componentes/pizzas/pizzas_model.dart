@@ -1,14 +1,8 @@
 import '/backend/supabase/supabase.dart';
-import '/componentes/cliente_botonadd_carrinho/cliente_botonadd_carrinho_widget.dart';
-import '/flutter_flow/flutter_flow_radio_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'pizzas_widget.dart' show PizzasWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PizzasModel extends FlutterFlowModel<PizzasWidget> {
   ///  Local state fields for this component.
@@ -30,8 +24,10 @@ class PizzasModel extends FlutterFlowModel<PizzasWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {}
 
   /// Action blocks are added here.

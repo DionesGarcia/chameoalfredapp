@@ -5,22 +5,20 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'checkout_model.dart';
 export 'checkout_model.dart';
 
 class CheckoutWidget extends StatefulWidget {
   const CheckoutWidget({
-    Key? key,
+    super.key,
     required this.valor,
     required this.cover,
     required this.txEmb,
     required this.mesa,
     required this.restaurante,
     required this.pedido,
-  }) : super(key: key);
+  });
 
   final double? valor;
   final double? cover;
@@ -68,19 +66,19 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4.0,
               color: Color(0x25090F13),
               offset: Offset(0.0, 2.0),
             )
           ],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
@@ -88,7 +86,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 16.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,7 +96,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                     child: Container(
                       width: 60.0,
                       height: 4.0,
@@ -111,13 +109,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                       child: FlutterFlowIconButton(
                         borderColor: Colors.transparent,
                         borderRadius: 30.0,
@@ -143,7 +141,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                             style: FlutterFlowTheme.of(context).headlineSmall,
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
                               'Preencha os dados abaixo para fazer seu pedido.',
@@ -166,7 +164,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -240,7 +238,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -315,13 +313,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 32.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 32.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 40.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 40.0, 12.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -353,7 +351,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                     ),
                     if (widget.cover! >= 1.0)
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 4.0, 12.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -386,7 +384,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                       ),
                     if (widget.txEmb! >= 1.0)
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 4.0, 12.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -419,7 +417,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                       ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 16.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 16.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -482,11 +480,11 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                   ))
                 FFButtonWidget(
                   onPressed: () async {
-                    var _shouldSetState = false;
+                    var shouldSetState = false;
                     _model.apiResultcliente = await AsaasCesarProfissionalGroup
                         .criarClientePROFISSIONALCall
                         .call();
-                    _shouldSetState = true;
+                    shouldSetState = true;
                     if ((_model.apiResultcliente?.succeeded ?? true)) {
                       setState(() {
                         _model.hide = true;
@@ -505,7 +503,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                         token: widget.restaurante?.apiKey,
                         value: widget.valor,
                       );
-                      _shouldSetState = true;
+                      shouldSetState = true;
                       if ((_model.apiResultsn0?.succeeded ?? true)) {
                         await launchURL(AsaasCesarProfissionalGroup
                             .criarPagamentoPROFISSIONALCall
@@ -516,12 +514,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
-                              title: Text('Verificar Pagamento!'),
+                              title: const Text('Verificar Pagamento!'),
                               actions: [
                                 TextButton(
                                   onPressed: () =>
                                       Navigator.pop(alertDialogContext),
-                                  child: Text('Ok'),
+                                  child: const Text('Ok'),
                                 ),
                               ],
                             );
@@ -537,7 +535,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                           ),
                           token: widget.restaurante?.apiKey,
                         );
-                        _shouldSetState = true;
+                        shouldSetState = true;
                         if ((_model.apiResultdtm?.succeeded ?? true)) {
                           if (AsaasCesarProfissionalGroup
                                   .confirmarPagamentoPROFISSIONALCall
@@ -549,18 +547,18 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                               context: context,
                               builder: (alertDialogContext) {
                                 return AlertDialog(
-                                  content: Text('Pagamento pendente.'),
+                                  content: const Text('Pagamento pendente.'),
                                   actions: [
                                     TextButton(
                                       onPressed: () =>
                                           Navigator.pop(alertDialogContext),
-                                      child: Text('Ok'),
+                                      child: const Text('Ok'),
                                     ),
                                   ],
                                 );
                               },
                             );
-                            if (_shouldSetState) setState(() {});
+                            if (shouldSetState) setState(() {});
                             return;
                           } else {
                             await PedidosTable().update(
@@ -579,7 +577,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: Text('Erro o criar cliente!'),
+                                title: const Text('Erro o criar cliente!'),
                                 content: Text(getJsonField(
                                   (_model.apiResultdtm?.jsonBody ?? ''),
                                   r'''$.error''',
@@ -588,13 +586,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext),
-                                    child: Text('Ok'),
+                                    child: const Text('Ok'),
                                   ),
                                 ],
                               );
                             },
                           );
-                          if (_shouldSetState) setState(() {});
+                          if (shouldSetState) setState(() {});
                           return;
                         }
                       } else {
@@ -602,7 +600,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
-                              title: Text('Erro o criar cliente!'),
+                              title: const Text('Erro o criar cliente!'),
                               content: Text(getJsonField(
                                 (_model.apiResultsn0?.jsonBody ?? ''),
                                 r'''$.error''',
@@ -611,13 +609,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                 TextButton(
                                   onPressed: () =>
                                       Navigator.pop(alertDialogContext),
-                                  child: Text('Ok'),
+                                  child: const Text('Ok'),
                                 ),
                               ],
                             );
                           },
                         );
-                        if (_shouldSetState) setState(() {});
+                        if (shouldSetState) setState(() {});
                         return;
                       }
                     } else {
@@ -625,7 +623,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                         context: context,
                         builder: (alertDialogContext) {
                           return AlertDialog(
-                            title: Text('Erro o criar cliente!'),
+                            title: const Text('Erro o criar cliente!'),
                             content: Text(getJsonField(
                               (_model.apiResultcliente?.jsonBody ?? ''),
                               r'''$.error''',
@@ -634,25 +632,25 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                               TextButton(
                                 onPressed: () =>
                                     Navigator.pop(alertDialogContext),
-                                child: Text('Ok'),
+                                child: const Text('Ok'),
                               ),
                             ],
                           );
                         },
                       );
-                      if (_shouldSetState) setState(() {});
+                      if (shouldSetState) setState(() {});
                       return;
                     }
 
-                    if (_shouldSetState) setState(() {});
+                    if (shouldSetState) setState(() {});
                   },
                   text: 'Enviar',
                   options: FFButtonOptions(
                     width: 270.0,
                     height: 50.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaria,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Outfit',
@@ -662,7 +660,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                           fontWeight: FontWeight.normal,
                         ),
                     elevation: 2.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),
@@ -683,11 +681,11 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                     context: context,
                     builder: (alertDialogContext) {
                       return AlertDialog(
-                        title: Text('Verificar Pagamento!'),
+                        title: const Text('Verificar Pagamento!'),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.pop(alertDialogContext),
-                            child: Text('Ok'),
+                            child: const Text('Ok'),
                           ),
                         ],
                       );
@@ -702,9 +700,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 options: FFButtonOptions(
                   width: 270.0,
                   height: 50.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primaria,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Outfit',
@@ -713,7 +711,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                         fontWeight: FontWeight.normal,
                       ),
                   elevation: 2.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),

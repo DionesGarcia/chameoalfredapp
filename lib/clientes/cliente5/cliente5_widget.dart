@@ -13,19 +13,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cliente5_model.dart';
 export 'cliente5_model.dart';
 
 class Cliente5Widget extends StatefulWidget {
   const Cliente5Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.valorCarrinho,
     required this.restaurante,
     required this.pedidoID,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final double? valorCarrinho;
@@ -93,15 +92,15 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
               child: wrapWithModel(
                 model: _model.drawerUserModel,
                 updateCallback: () => setState(() {}),
-                child: DrawerUserWidget(),
+                child: const DrawerUserWidget(),
               ),
             ),
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                 automaticallyImplyLeading: false,
-                actions: [],
+                actions: const [],
                 flexibleSpace: FlexibleSpaceBar(
                   title: Container(
                     width: 600.0,
@@ -112,7 +111,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                     child: wrapWithModel(
                       model: _model.headerEmpresaModel,
                       updateCallback: () => setState(() {}),
-                      child: HeaderEmpresaWidget(),
+                      child: const HeaderEmpresaWidget(),
                     ),
                   ),
                   centerTitle: true,
@@ -124,7 +123,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
             body: SafeArea(
               top: true,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 600.0,
                   decoration: BoxDecoration(
@@ -136,7 +135,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -150,16 +149,16 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                   color: FlutterFlowTheme.of(context).secundria,
                                 ),
                               ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     5.0, 3.0, 5.0, 3.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         'Mesa',
@@ -198,16 +197,16 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                   color: FlutterFlowTheme.of(context).secundria,
                                 ),
                               ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     5.0, 3.0, 5.0, 3.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         'Pedido# ',
@@ -243,19 +242,19 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0xA3DA2E1A),
                       ),
                       Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 30.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -272,7 +271,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                 await HistricoTable().insert({
                                   'restaurante_id': widget.restaurante?.id,
                                   'mesa': widget.mesa,
-                                  'pedido': widget.pedidoID?.id?.toString(),
+                                  'pedido': widget.pedidoID?.id.toString(),
                                   'ação':
                                       'Mesa ${widget.mesa} chamou o garçom.',
                                   'data': supaSerialize<DateTime>(
@@ -284,14 +283,14 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: Text('Chamar o Garçom!'),
-                                      content: Text(
+                                      title: const Text('Chamar o Garçom!'),
+                                      content: const Text(
                                           'Aguarde, em breve o garçom vem a sua mesa.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: Text('Ok'),
+                                          child: const Text('Ok'),
                                         ),
                                       ],
                                     );
@@ -305,8 +304,8 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                               options: FFButtonOptions(
                                 width: 170.0,
                                 height: 40.0,
-                                padding: EdgeInsets.all(0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: _model.hide
                                     ? FlutterFlowTheme.of(context).lineColor
@@ -319,7 +318,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                       fontSize: 19.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -328,7 +327,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 30.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -368,8 +367,8 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                               options: FFButtonOptions(
                                 width: 170.0,
                                 height: 40.0,
-                                padding: EdgeInsets.all(0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: widget.pedidoID?.pago == false
                                     ? FlutterFlowTheme.of(context).secundria
@@ -382,7 +381,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                       fontSize: 19.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -396,7 +395,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: double.infinity,
                               height: 170.0,
                               child: PageView(
@@ -453,7 +452,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 30.0, 15.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -464,7 +463,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                 width: 100.0,
                                 height: 71.0,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFD9D9D9),
+                                  color: const Color(0xFFD9D9D9),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Row(
@@ -473,7 +472,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -493,7 +492,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(8.0, 4.0, 8.0, 4.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -563,7 +562,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
                                                 'Pago',
@@ -580,7 +579,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child: Icon(
@@ -596,7 +595,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                       ),
                                     Flexible(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 15.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
@@ -619,7 +618,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                 width: 150.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xFFFFC0BB),
+                                                  color: const Color(0xFFFFC0BB),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
@@ -683,7 +682,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
                                                             'acompanhe seu pedido',
@@ -706,7 +705,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
                                                             valueOrDefault<
@@ -753,7 +752,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                           children: [
                             Flexible(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 28.0, 0.0, 0.0),
                                 child: FutureBuilder<List<ItensDoPedidoRow>>(
                                   future: ItensDoPedidoTable().queryRows(
@@ -783,7 +782,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                         listViewItensDoPedidoRowList =
                                         snapshot.data!;
                                     if (listViewItensDoPedidoRowList.isEmpty) {
-                                      return VazioCarrinhoWidget();
+                                      return const VazioCarrinhoWidget();
                                     }
                                     return ListView.builder(
                                       padding: EdgeInsets.zero,
@@ -796,14 +795,14 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                 listViewIndex];
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 5.0, 15.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           3.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -827,7 +826,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -907,7 +906,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                                       .field12 ??
                                                                   true)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -916,7 +915,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                                   child: Card(
                                                                     clipBehavior:
                                                                         Clip.antiAliasWithSaveLayer,
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFE8FFEA),
                                                                     elevation:
                                                                         4.0,
@@ -928,7 +927,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           5.0,
                                                                           0.0,
                                                                           5.0,
@@ -1026,7 +1025,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 25.0, 0.0, 30.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -1036,7 +1035,7 @@ class _Cliente5WidgetState extends State<Cliente5Widget> {
                               color: FlutterFlowTheme.of(context).alternate,
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 5.0, 15.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,

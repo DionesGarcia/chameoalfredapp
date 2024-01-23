@@ -14,16 +14,15 @@ import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pedidos_model.dart';
 export 'pedidos_model.dart';
 
 class PedidosWidget extends StatefulWidget {
   const PedidosWidget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -147,16 +146,16 @@ class _PedidosWidgetState extends State<PedidosWidget>
                   child: wrapWithModel(
                     model: _model.drawerADMModel,
                     updateCallback: () => setState(() {}),
-                    child: DrawerADMWidget(),
+                    child: const DrawerADMWidget(),
                   ),
                 ),
                 appBar: PreferredSize(
-                  preferredSize: Size.fromHeight(100.0),
+                  preferredSize: const Size.fromHeight(100.0),
                   child: AppBar(
                     backgroundColor:
                         FlutterFlowTheme.of(context).secondaryBackground,
                     automaticallyImplyLeading: false,
-                    actions: [],
+                    actions: const [],
                     flexibleSpace: FlexibleSpaceBar(
                       title: Container(
                         width: double.infinity,
@@ -167,7 +166,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                         child: wrapWithModel(
                           model: _model.headerEmpresaModel,
                           updateCallback: () => setState(() {}),
-                          child: HeaderEmpresaWidget(),
+                          child: const HeaderEmpresaWidget(),
                         ),
                       ),
                       centerTitle: true,
@@ -192,7 +191,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -204,7 +203,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                       onTap: () async {
                                         context.safePop();
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.arrow_back,
                                         color: Color(0xFFDA2E1A),
                                         size: 25.0,
@@ -212,7 +211,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           'Pedidos',
@@ -229,12 +228,12 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                   ],
                                 ),
                               ),
-                              Divider(
+                              const Divider(
                                 thickness: 1.0,
                                 color: Color(0x83DA2E1A),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -252,7 +251,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                             Column(
                                               children: [
                                                 Align(
-                                                  alignment: Alignment(0.0, 0),
+                                                  alignment: const Alignment(0.0, 0),
                                                   child:
                                                       FlutterFlowButtonTabBar(
                                                     useToggleButtonStyle: false,
@@ -266,7 +265,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                               fontSize: 14.0,
                                                             ),
                                                     unselectedLabelStyle:
-                                                        TextStyle(),
+                                                        const TextStyle(),
                                                     labelColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -295,12 +294,12 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                     borderRadius: 8.0,
                                                     elevation: 0.0,
                                                     buttonMargin:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 8.0, 0.0),
                                                     padding:
-                                                        EdgeInsets.all(4.0),
-                                                    tabs: [
+                                                        const EdgeInsets.all(4.0),
+                                                    tabs: const [
                                                       Tab(
                                                         text: 'VER',
                                                       ),
@@ -379,7 +378,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         15.0,
                                                                         10.0,
@@ -406,10 +405,10 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                           height:
                                                                               48.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 10.0,
                                                                                 0.0,
@@ -424,13 +423,13 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                     children: [
                                                                                       Flexible(
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController1,
                                                                                             focusNode: _model.textFieldFocusNode1,
                                                                                             onChanged: (_) => EasyDebounce.debounce(
                                                                                               '_model.textController1',
-                                                                                              Duration(milliseconds: 2000),
+                                                                                              const Duration(milliseconds: 2000),
                                                                                               () async {
                                                                                                 await EstabelecimentoTable().update(
                                                                                                   data: {
@@ -503,13 +502,13 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                     children: [
                                                                                       Flexible(
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController2,
                                                                                             focusNode: _model.textFieldFocusNode2,
                                                                                             onChanged: (_) => EasyDebounce.debounce(
                                                                                               '_model.textController2',
-                                                                                              Duration(milliseconds: 2000),
+                                                                                              const Duration(milliseconds: 2000),
                                                                                               () async {
                                                                                                 await EstabelecimentoTable().update(
                                                                                                   data: {
@@ -582,13 +581,13 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                     children: [
                                                                                       Flexible(
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController3,
                                                                                             focusNode: _model.textFieldFocusNode3,
                                                                                             onChanged: (_) => EasyDebounce.debounce(
                                                                                               '_model.textController3',
-                                                                                              Duration(milliseconds: 2000),
+                                                                                              const Duration(milliseconds: 2000),
                                                                                               () async {
                                                                                                 await EstabelecimentoTable().update(
                                                                                                   data: {
@@ -660,7 +659,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                           ),
                                                                         ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -675,7 +674,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Text(
                                                                                       'Pedido #',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium,
@@ -683,10 +682,10 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                   ),
                                                                                   Container(
                                                                                     height: 30.0,
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 8.0, 0.0),
-                                                                                      child: Container(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 8.0, 0.0),
+                                                                                      child: SizedBox(
                                                                                         width: 60.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController4,
@@ -788,7 +787,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                 ))
                                                                                   Flexible(
                                                                                     child: FlutterFlowChoiceChips(
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         ChipData('Lista', Icons.list_alt),
                                                                                         ChipData('Grid', Icons.grid_view)
                                                                                       ],
@@ -851,7 +850,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                       MainAxisSize
                                                                           .max,
                                                                   children: [
-                                                                    Padding(
+                                                                    const Padding(
                                                                       padding: EdgeInsetsDirectional.fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -878,7 +877,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           10.0,
@@ -901,7 +900,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                 FormFieldController<String>(
                                                                               _model.dropDownValue ??= 'Todos',
                                                                             ),
-                                                                            options: [
+                                                                            options: const [
                                                                               'Pagos',
                                                                               'Não pagos',
                                                                               'Todos'
@@ -932,7 +931,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                 2.0,
                                                                             borderRadius:
                                                                                 8.0,
-                                                                            margin: EdgeInsetsDirectional.fromSTEB(
+                                                                            margin: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 4.0,
                                                                                 16.0,
@@ -999,7 +998,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                           .data!;
                                                                   if (listViewFila01PedidosRowList
                                                                       .isEmpty) {
-                                                                    return VazioFilaWidget();
+                                                                    return const VazioFilaWidget();
                                                                   }
                                                                   return ListView
                                                                       .builder(
@@ -1022,7 +1021,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                             MainAxisSize.min,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 15.0,
                                                                                 0.0,
@@ -1046,18 +1045,18 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                           children: [
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
                                                                                               child: Container(
                                                                                                 width: 40.0,
                                                                                                 height: 40.0,
-                                                                                                decoration: BoxDecoration(
+                                                                                                decoration: const BoxDecoration(
                                                                                                   color: Color(0xFF058812),
                                                                                                   shape: BoxShape.circle,
                                                                                                 ),
                                                                                                 child: Visibility(
                                                                                                   visible: !widget.restaurante!.shopping!,
                                                                                                   child: Align(
-                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                     child: Text(
                                                                                                       valueOrDefault<String>(
                                                                                                         listViewFila01PedidosRow.mesa,
@@ -1075,7 +1074,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                             ),
                                                                                             Flexible(
                                                                                               child: Padding(
-                                                                                                padding: EdgeInsets.all(3.0),
+                                                                                                padding: const EdgeInsets.all(3.0),
                                                                                                 child: Row(
                                                                                                   mainAxisSize: MainAxisSize.min,
                                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1114,7 +1113,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1136,7 +1135,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1158,7 +1157,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -1194,7 +1193,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.min,
                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -1205,16 +1204,16 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     print('Button pressed ...');
                                                                                                   },
                                                                                                   text: 'Pago ',
-                                                                                                  icon: Icon(
+                                                                                                  icon: const Icon(
                                                                                                     Icons.check_circle,
                                                                                                     size: 15.0,
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     width: 120.0,
                                                                                                     height: 45.0,
-                                                                                                    padding: EdgeInsets.all(0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                    color: Color(0xFFBCE9CF),
+                                                                                                    padding: const EdgeInsets.all(0.0),
+                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    color: const Color(0xFFBCE9CF),
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
                                                                                                           color: FlutterFlowTheme.of(context).success,
@@ -1268,15 +1267,15 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                   options: FFButtonOptions(
                                                                                                     width: 120.0,
                                                                                                     height: 45.0,
-                                                                                                    padding: EdgeInsets.all(0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsets.all(0.0),
+                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secundria,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
                                                                                                           color: Colors.white,
                                                                                                         ),
                                                                                                     elevation: 3.0,
-                                                                                                    borderSide: BorderSide(
+                                                                                                    borderSide: const BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -1287,7 +1286,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                                     child: InkWell(
                                                                                                       splashColor: Colors.transparent,
                                                                                                       focusColor: Colors.transparent,
@@ -1298,12 +1297,12 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                           context: context,
                                                                                                           builder: (alertDialogContext) {
                                                                                                             return AlertDialog(
-                                                                                                              title: Text('Atenção!'),
-                                                                                                              content: Text('A impressora não foi configurada corretamente.'),
+                                                                                                              title: const Text('Atenção!'),
+                                                                                                              content: const Text('A impressora não foi configurada corretamente.'),
                                                                                                               actions: [
                                                                                                                 TextButton(
                                                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                                  child: Text('Ok'),
+                                                                                                                  child: const Text('Ok'),
                                                                                                                 ),
                                                                                                               ],
                                                                                                             );
@@ -1387,7 +1386,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                           .data!;
                                                                   if (listViewFila01PedidosRowList
                                                                       .isEmpty) {
-                                                                    return VazioFilaWidget();
+                                                                    return const VazioFilaWidget();
                                                                   }
                                                                   return ListView
                                                                       .builder(
@@ -1410,7 +1409,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 15.0,
                                                                                 0.0,
@@ -1434,18 +1433,18 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                           children: [
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
                                                                                               child: Container(
                                                                                                 width: 40.0,
                                                                                                 height: 40.0,
-                                                                                                decoration: BoxDecoration(
+                                                                                                decoration: const BoxDecoration(
                                                                                                   color: Color(0xFF058812),
                                                                                                   shape: BoxShape.circle,
                                                                                                 ),
                                                                                                 child: Visibility(
                                                                                                   visible: !widget.restaurante!.shopping!,
                                                                                                   child: Align(
-                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                     child: Text(
                                                                                                       valueOrDefault<String>(
                                                                                                         listViewFila01PedidosRow.mesa,
@@ -1463,7 +1462,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                             ),
                                                                                             Flexible(
                                                                                               child: Padding(
-                                                                                                padding: EdgeInsets.all(3.0),
+                                                                                                padding: const EdgeInsets.all(3.0),
                                                                                                 child: Row(
                                                                                                   mainAxisSize: MainAxisSize.min,
                                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1502,7 +1501,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1523,7 +1522,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1545,7 +1544,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -1581,7 +1580,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.min,
                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -1627,15 +1626,15 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                   options: FFButtonOptions(
                                                                                                     width: 120.0,
                                                                                                     height: 45.0,
-                                                                                                    padding: EdgeInsets.all(0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsets.all(0.0),
+                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secundria,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
                                                                                                           color: Colors.white,
                                                                                                         ),
                                                                                                     elevation: 3.0,
-                                                                                                    borderSide: BorderSide(
+                                                                                                    borderSide: const BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -1646,7 +1645,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                                     child: InkWell(
                                                                                                       splashColor: Colors.transparent,
                                                                                                       focusColor: Colors.transparent,
@@ -1657,12 +1656,12 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                           context: context,
                                                                                                           builder: (alertDialogContext) {
                                                                                                             return AlertDialog(
-                                                                                                              title: Text('Atenção!'),
-                                                                                                              content: Text('A impressora não foi configurada corretamente.'),
+                                                                                                              title: const Text('Atenção!'),
+                                                                                                              content: const Text('A impressora não foi configurada corretamente.'),
                                                                                                               actions: [
                                                                                                                 TextButton(
                                                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                                  child: Text('Ok'),
+                                                                                                                  child: const Text('Ok'),
                                                                                                                 ),
                                                                                                               ],
                                                                                                             );
@@ -1748,7 +1747,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                           .data!;
                                                                   if (listViewFila01PedidosRowList
                                                                       .isEmpty) {
-                                                                    return VazioFilaWidget();
+                                                                    return const VazioFilaWidget();
                                                                   }
                                                                   return ListView
                                                                       .builder(
@@ -1771,7 +1770,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 15.0,
                                                                                 0.0,
@@ -1795,18 +1794,18 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                           children: [
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
                                                                                               child: Container(
                                                                                                 width: 40.0,
                                                                                                 height: 40.0,
-                                                                                                decoration: BoxDecoration(
+                                                                                                decoration: const BoxDecoration(
                                                                                                   color: Color(0xFF058812),
                                                                                                   shape: BoxShape.circle,
                                                                                                 ),
                                                                                                 child: Visibility(
                                                                                                   visible: !widget.restaurante!.shopping!,
                                                                                                   child: Align(
-                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                     child: Text(
                                                                                                       valueOrDefault<String>(
                                                                                                         listViewFila01PedidosRow.mesa,
@@ -1824,7 +1823,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                             ),
                                                                                             Flexible(
                                                                                               child: Padding(
-                                                                                                padding: EdgeInsets.all(3.0),
+                                                                                                padding: const EdgeInsets.all(3.0),
                                                                                                 child: Row(
                                                                                                   mainAxisSize: MainAxisSize.min,
                                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1863,7 +1862,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1884,7 +1883,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1906,7 +1905,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 10.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -1942,7 +1941,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                           ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.min,
                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -1963,16 +1962,16 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                     await _model.waitForRequestCompleted();
                                                                                                   },
                                                                                                   text: 'Pago ',
-                                                                                                  icon: Icon(
+                                                                                                  icon: const Icon(
                                                                                                     Icons.check_circle,
                                                                                                     size: 15.0,
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     width: 120.0,
                                                                                                     height: 45.0,
-                                                                                                    padding: EdgeInsets.all(0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                    color: Color(0xFFBCE9CF),
+                                                                                                    padding: const EdgeInsets.all(0.0),
+                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    color: const Color(0xFFBCE9CF),
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
                                                                                                           color: FlutterFlowTheme.of(context).success,
@@ -1989,7 +1988,7 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                                     child: InkWell(
                                                                                                       splashColor: Colors.transparent,
                                                                                                       focusColor: Colors.transparent,
@@ -2000,12 +1999,12 @@ class _PedidosWidgetState extends State<PedidosWidget>
                                                                                                           context: context,
                                                                                                           builder: (alertDialogContext) {
                                                                                                             return AlertDialog(
-                                                                                                              title: Text('Atenção!'),
-                                                                                                              content: Text('A impressora não foi configurada corretamente.'),
+                                                                                                              title: const Text('Atenção!'),
+                                                                                                              content: const Text('A impressora não foi configurada corretamente.'),
                                                                                                               actions: [
                                                                                                                 TextButton(
                                                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                                  child: Text('Ok'),
+                                                                                                                  child: const Text('Ok'),
                                                                                                                 ),
                                                                                                               ],
                                                                                                             );

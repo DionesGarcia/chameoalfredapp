@@ -10,7 +10,7 @@ class EstabelecimentoTable extends SupabaseTable<EstabelecimentoRow> {
 }
 
 class EstabelecimentoRow extends SupabaseDataRow {
-  EstabelecimentoRow(Map<String, dynamic> data) : super(data);
+  EstabelecimentoRow(super.data);
 
   @override
   SupabaseTable get table => EstabelecimentoTable();

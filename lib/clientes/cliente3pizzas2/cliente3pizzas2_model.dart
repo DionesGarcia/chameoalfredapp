@@ -1,15 +1,9 @@
-import '/backend/supabase/supabase.dart';
 import '/componentes/drawer_user/drawer_user_widget.dart';
 import '/componentes/header_empresa/header_empresa_widget.dart';
 import '/componentes/pizzas2sabor/pizzas2sabor_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'cliente3pizzas2_widget.dart' show Cliente3pizzas2Widget;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class Cliente3pizzas2Model extends FlutterFlowModel<Cliente3pizzas2Widget> {
   ///  Local state fields for this page.
@@ -41,12 +35,14 @@ class Cliente3pizzas2Model extends FlutterFlowModel<Cliente3pizzas2Widget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     headerEmpresaModel = createModel(context, () => HeaderEmpresaModel());
     drawerUserModel = createModel(context, () => DrawerUserModel());
     pizzas2saborModels = FlutterFlowDynamicModels(() => Pizzas2saborModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     headerEmpresaModel.dispose();

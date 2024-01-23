@@ -5,21 +5,19 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'lanches_com12_model.dart';
 export 'lanches_com12_model.dart';
 
 class LanchesCom12Widget extends StatefulWidget {
   const LanchesCom12Widget({
-    Key? key,
+    super.key,
     required this.mesa,
     required this.prato,
     required this.restaurante,
     required this.pedido,
     required this.categoria,
-  }) : super(key: key);
+  });
 
   final String? mesa;
   final PratosRow? prato;
@@ -63,7 +61,7 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
       options: ['1', '1/2'].toList(),
       onChanged: (val) async {
         setState(() {});
-        var _shouldSetState = false;
+        var shouldSetState = false;
         _model.updatePage(() {
           _model.pizzaretorno = _model.radioButtonValue!;
         });
@@ -77,12 +75,12 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, false),
-                        child: Text('Opções'),
+                        child: const Text('Opções'),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, true),
-                        child: Text('Adicionar ao carrinho'),
+                        child: const Text('Adicionar ao carrinho'),
                       ),
                     ],
                   );
@@ -105,7 +103,7 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
               'qtd': '1',
               '1/2': false,
             });
-            _shouldSetState = true;
+            shouldSetState = true;
           } else {
             await showModalBottomSheet(
               isScrollControlled: true,
@@ -139,12 +137,12 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, false),
-                        child: Text('Opções'),
+                        child: const Text('Opções'),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(alertDialogContext, true),
-                        child: Text('Adicionar ao carrinho'),
+                        child: const Text('Adicionar ao carrinho'),
                       ),
                     ],
                   );
@@ -167,7 +165,7 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
               '1/2': true,
               'qtd': '1',
             });
-            _shouldSetState = true;
+            shouldSetState = true;
           } else {
             await showModalBottomSheet(
               isScrollControlled: true,
@@ -192,7 +190,7 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
             Navigator.pop(context);
           }
         } else {
-          if (_shouldSetState) setState(() {});
+          if (shouldSetState) setState(() {});
           return;
         }
 
@@ -218,7 +216,7 @@ class _LanchesCom12WidgetState extends State<LanchesCom12Widget> {
           }.withoutNulls,
         );
 
-        if (_shouldSetState) setState(() {});
+        if (shouldSetState) setState(() {});
       },
       controller: _model.radioButtonValueController ??=
           FormFieldController<String>(null),

@@ -4,14 +4,12 @@ import '/componentes/popup_menu_cadastro/popup_menu_cadastro_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'drawer_a_d_m_model.dart';
 export 'drawer_a_d_m_model.dart';
 
 class DrawerADMWidget extends StatefulWidget {
-  const DrawerADMWidget({Key? key}) : super(key: key);
+  const DrawerADMWidget({super.key});
 
   @override
   _DrawerADMWidgetState createState() => _DrawerADMWidgetState();
@@ -88,7 +86,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -113,7 +111,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 150.0, 15.0, 15.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 150.0, 15.0, 15.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -132,20 +130,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
                                 bottomRight: Radius.circular(0.0),
                                 topLeft: Radius.circular(10.0),
                                 topRight: Radius.circular(10.0),
                               ),
                               border: Border.all(
-                                color: Color(0xFFDA2E1A),
+                                color: const Color(0xFFDA2E1A),
                               ),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 0.0, 0.0),
                                   child: Icon(
@@ -156,7 +154,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Home',
@@ -181,7 +179,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 Builder(
                   builder: (context) => Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -205,9 +203,9 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               return Dialog(
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
-                                alignment: AlignmentDirectional(0.0, 0.0)
+                                alignment: const AlignmentDirectional(0.0, 0.0)
                                     .resolve(Directionality.of(context)),
-                                child: PopupMenuCadastroWidget(),
+                                child: const PopupMenuCadastroWidget(),
                               );
                             },
                           ).then((value) => setState(() {}));
@@ -235,20 +233,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(10.0),
                                   topRight: Radius.circular(10.0),
                                 ),
                                 border: Border.all(
-                                  color: Color(0xFFDA2E1A),
+                                  color: const Color(0xFFDA2E1A),
                                 ),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Icon(
@@ -259,7 +257,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Pedidos',
@@ -285,7 +283,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 Builder(
                   builder: (context) => Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                     child: FutureBuilder<List<MesasRow>>(
                       future: MesasTable().querySingleRow(
                         queryFn: (q) => q.eq(
@@ -339,9 +337,9 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   return Dialog(
                                     insetPadding: EdgeInsets.zero,
                                     backgroundColor: Colors.transparent,
-                                    alignment: AlignmentDirectional(0.0, 0.0)
+                                    alignment: const AlignmentDirectional(0.0, 0.0)
                                         .resolve(Directionality.of(context)),
-                                    child: PopupMenuCadastroWidget(),
+                                    child: const PopupMenuCadastroWidget(),
                                   );
                                 },
                               ).then((value) => setState(() {}));
@@ -369,20 +367,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(10.0),
                                       topRight: Radius.circular(10.0),
                                     ),
                                     border: Border.all(
-                                      color: Color(0xFFDA2E1A),
+                                      color: const Color(0xFFDA2E1A),
                                     ),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Padding(
+                                      const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 0.0, 0.0),
                                         child: Icon(
@@ -394,7 +392,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Mesas',
@@ -422,7 +420,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 Builder(
                   builder: (context) => Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -434,7 +432,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                             'E02Estabelecimentotrue',
                             queryParameters: {
                               'estabelecimentoID': serializeParam(
-                                columnEstabelecimentoRow?.id,
+                                columnEstabelecimentoRow.id,
                                 ParamType.int,
                               ),
                             }.withoutNulls,
@@ -446,9 +444,9 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               return Dialog(
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
-                                alignment: AlignmentDirectional(0.0, 0.0)
+                                alignment: const AlignmentDirectional(0.0, 0.0)
                                     .resolve(Directionality.of(context)),
-                                child: PopupMenuCadastroWidget(),
+                                child: const PopupMenuCadastroWidget(),
                               );
                             },
                           ).then((value) => setState(() {}));
@@ -476,20 +474,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(10.0),
                                   topRight: Radius.circular(10.0),
                                 ),
                                 border: Border.all(
-                                  color: Color(0xFFDA2E1A),
+                                  color: const Color(0xFFDA2E1A),
                                 ),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Icon(
@@ -500,7 +498,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Estabelecimento',
@@ -526,7 +524,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 Builder(
                   builder: (context) => Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -550,9 +548,9 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               return Dialog(
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
-                                alignment: AlignmentDirectional(0.0, 0.0)
+                                alignment: const AlignmentDirectional(0.0, 0.0)
                                     .resolve(Directionality.of(context)),
-                                child: PopupMenuCadastroWidget(),
+                                child: const PopupMenuCadastroWidget(),
                               );
                             },
                           ).then((value) => setState(() {}));
@@ -580,20 +578,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(10.0),
                                   topRight: Radius.circular(10.0),
                                 ),
                                 border: Border.all(
-                                  color: Color(0xFFDA2E1A),
+                                  color: const Color(0xFFDA2E1A),
                                 ),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Icon(
@@ -604,7 +602,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Cozinha',
@@ -629,7 +627,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -640,14 +638,14 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(0.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(10.0),
                               topRight: Radius.circular(10.0),
                             ),
                             border: Border.all(
-                              color: Color(0xFFDA2E1A),
+                              color: const Color(0xFFDA2E1A),
                             ),
                           ),
                           child: Builder(
@@ -675,10 +673,10 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0)
+                                            const AlignmentDirectional(0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
-                                        child: PopupMenuCadastroWidget(),
+                                        child: const PopupMenuCadastroWidget(),
                                       );
                                     },
                                   ).then((value) => setState(() {}));
@@ -699,7 +697,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Icon(
@@ -710,7 +708,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Garçons',
@@ -735,7 +733,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -746,20 +744,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(0.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(10.0),
                               topRight: Radius.circular(10.0),
                             ),
                             border: Border.all(
-                              color: Color(0xFFDA2E1A),
+                              color: const Color(0xFFDA2E1A),
                             ),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 0.0, 0.0),
                                 child: Icon(
@@ -770,7 +768,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Gateway de Pagamento',
@@ -793,7 +791,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 15.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -804,20 +802,20 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(0.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(10.0),
                               topRight: Radius.circular(10.0),
                             ),
                             border: Border.all(
-                              color: Color(0xFFDA2E1A),
+                              color: const Color(0xFFDA2E1A),
                             ),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 0.0, 0.0),
                                 child: Icon(
@@ -828,7 +826,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Push',
@@ -851,7 +849,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -873,7 +871,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                               'Authlogin',
                               context.mounted,
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),

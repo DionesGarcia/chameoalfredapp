@@ -3,19 +3,18 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'navbar_model.dart';
 export 'navbar_model.dart';
 
 class NavbarWidget extends StatefulWidget {
   const NavbarWidget({
-    Key? key,
+    super.key,
     required this.nomepagina,
     required this.restID,
     required this.pedido,
     required this.mesa,
-  }) : super(key: key);
+  });
 
   final String? nomepagina;
   final int? restID;
@@ -94,7 +93,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
             },
             child: Container(
               width: 100.0,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -117,7 +116,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                     children: [
                       if (widget.nomepagina != 'inicio')
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 2.0, 0.0, 0.0),
                           child: Text(
                             'Início',
@@ -137,7 +136,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -161,7 +160,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                     if (widget.nomepagina != 'pedidos')
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                         child: Text(
                           'Pedidos',
                           style: FlutterFlowTheme.of(context)
@@ -179,7 +178,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -215,7 +214,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -248,7 +247,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                     children: [
                       if (widget.nomepagina != 'conf')
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 2.0, 0.0, 0.0),
                           child: Text(
                             'Conf.',

@@ -2,14 +2,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'header_empresa_model.dart';
 export 'header_empresa_model.dart';
 
 class HeaderEmpresaWidget extends StatefulWidget {
-  const HeaderEmpresaWidget({Key? key}) : super(key: key);
+  const HeaderEmpresaWidget({super.key});
 
   @override
   _HeaderEmpresaWidgetState createState() => _HeaderEmpresaWidgetState();
@@ -61,7 +59,7 @@ class _HeaderEmpresaWidgetState extends State<HeaderEmpresaWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Stack(
               children: [
                 Stack(
@@ -83,18 +81,18 @@ class _HeaderEmpresaWidgetState extends State<HeaderEmpresaWidget> {
                   ],
                 ),
                 Align(
-                  alignment: AlignmentDirectional(1.0, 0.0),
+                  alignment: const AlignmentDirectional(1.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Container(
                       width: 80.0,
                       height: 30.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(1.0, 0.0),
+                            alignment: const AlignmentDirectional(1.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 20.0,
@@ -116,14 +114,14 @@ class _HeaderEmpresaWidgetState extends State<HeaderEmpresaWidget> {
                     ),
                   ),
                 ),
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [],
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.92, 0.87),
+                  alignment: const AlignmentDirectional(0.92, 0.87),
                   child: Text(
                     FFAppState().nomeRstaurante,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

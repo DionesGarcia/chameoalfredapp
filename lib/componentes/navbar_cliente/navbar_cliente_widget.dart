@@ -1,14 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'navbar_cliente_model.dart';
 export 'navbar_cliente_model.dart';
 
 class NavbarClienteWidget extends StatefulWidget {
-  const NavbarClienteWidget({Key? key}) : super(key: key);
+  const NavbarClienteWidget({super.key});
 
   @override
   _NavbarClienteWidgetState createState() => _NavbarClienteWidgetState();
@@ -58,11 +56,11 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
         children: [
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -79,7 +77,7 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Text(
                         'Início',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -95,11 +93,11 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -116,7 +114,7 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Text(
                         'Pedidos',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -132,11 +130,11 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -165,11 +163,11 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
           ),
           Container(
             width: 100.0,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -186,7 +184,7 @@ class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Text(
                         'Conf.',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(

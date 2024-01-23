@@ -5,16 +5,15 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'e01_pedido_cat_model.dart';
 export 'e01_pedido_cat_model.dart';
 
 class E01PedidoCatWidget extends StatefulWidget {
   const E01PedidoCatWidget({
-    Key? key,
+    super.key,
     required this.restaurante,
-  }) : super(key: key);
+  });
 
   final EstabelecimentoRow? restaurante;
 
@@ -63,13 +62,13 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 500.0,
         height: 650.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
@@ -94,7 +93,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,7 +107,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -131,7 +130,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Container(
                     width: 100.0,
                     height: 100.0,
@@ -140,8 +139,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                     ),
                     child: Stack(
                       children: [
-                        if (_model.uploadedLocalFile1 != null &&
-                            (_model.uploadedLocalFile1.bytes?.isNotEmpty ??
+                        if ((_model.uploadedLocalFile1.bytes?.isNotEmpty ??
                                 false))
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -153,8 +151,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                               fit: BoxFit.cover,
                             ),
                           ),
-                        if (_model.uploadedLocalFile1 == null ||
-                            (_model.uploadedLocalFile1.bytes?.isEmpty ?? true))
+                        if ((_model.uploadedLocalFile1.bytes?.isEmpty ?? true))
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
@@ -170,7 +167,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -231,7 +228,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -268,7 +265,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -303,9 +300,9 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                       ),
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
-                          child: Container(
+                          child: SizedBox(
                             width: 100.0,
                             child: TextFormField(
                               controller: _model.textController1,
@@ -373,9 +370,9 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                       ),
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
-                          child: Container(
+                          child: SizedBox(
                             width: 100.0,
                             child: TextFormField(
                               controller: _model.textController2,
@@ -447,13 +444,13 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Flexible(
-                    child: Container(
+                    child: SizedBox(
                       width: 250.0,
                       child: TextFormField(
                         controller: _model.textController3,
@@ -477,7 +474,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                               color: FlutterFlowTheme.of(context).secundria,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(8.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(8.0),
@@ -489,7 +486,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                               color: FlutterFlowTheme.of(context).primaria,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(8.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(8.0),
@@ -501,7 +498,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(8.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(8.0),
@@ -513,7 +510,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(8.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(8.0),
@@ -536,7 +533,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                       height: 50.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secundria,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(0.0),
                           bottomRight: Radius.circular(8.0),
                           topLeft: Radius.circular(0.0),
@@ -550,12 +547,10 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            var _shouldSetState = false;
-                            if (_model.uploadedLocalFile1 != null &&
-                                (_model.uploadedLocalFile1.bytes?.isNotEmpty ??
+                            var shouldSetState = false;
+                            if ((_model.uploadedLocalFile1.bytes?.isNotEmpty ??
                                     false)) {
-                              if (_model.textController3.text != null &&
-                                  _model.textController3.text != '') {
+                              if (_model.textController3.text != '') {
                                 {
                                   setState(
                                       () => _model.isDataUploading2 = true);
@@ -618,14 +613,14 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                     0.0,
                                   ),
                                 });
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 await showDialog(
                                   context: context,
                                   builder: (dialogContext) {
                                     return Dialog(
                                       insetPadding: EdgeInsets.zero,
                                       backgroundColor: Colors.transparent,
-                                      alignment: AlignmentDirectional(0.0, 0.0)
+                                      alignment: const AlignmentDirectional(0.0, 0.0)
                                           .resolve(Directionality.of(context)),
                                       child: PopupSucessoCategoriaWidget(
                                         categoria: _model.textController3.text,
@@ -640,19 +635,19 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      content: Text(
+                                      content: const Text(
                                           'Por favor, digite uma categoria!'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: Text('Ok'),
+                                          child: const Text('Ok'),
                                         ),
                                       ],
                                     );
                                   },
                                 );
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               }
                             } else {
@@ -661,22 +656,22 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
                                     content:
-                                        Text('Por favor, carregue uma imagem!'),
+                                        const Text('Por favor, carregue uma imagem!'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: Text('Ok'),
+                                        child: const Text('Ok'),
                                       ),
                                     ],
                                   );
                                 },
                               );
-                              if (_shouldSetState) setState(() {});
+                              if (shouldSetState) setState(() {});
                               return;
                             }
 
-                            if (_shouldSetState) setState(() {});
+                            if (shouldSetState) setState(() {});
                           },
                           child: Icon(
                             Icons.add_circle,
@@ -692,7 +687,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -707,7 +702,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -743,7 +738,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                             final columnCategoriaRow =
                                 columnCategoriaRowList[columnIndex];
                             return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 15.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -758,9 +753,9 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                   ),
                                   Expanded(
                                     child: Align(
-                                      alignment: AlignmentDirectional(1.0, 0.0),
+                                      alignment: const AlignmentDirectional(1.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 30.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -775,8 +770,8 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                                           (alertDialogContext) {
                                                         return AlertDialog(
                                                           title:
-                                                              Text('Atenção!'),
-                                                          content: Text(
+                                                              const Text('Atenção!'),
+                                                          content: const Text(
                                                               'Deseja excluir a categoria?'),
                                                           actions: [
                                                             TextButton(
@@ -784,7 +779,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                                                   Navigator.pop(
                                                                       alertDialogContext,
                                                                       false),
-                                                              child: Text(
+                                                              child: const Text(
                                                                   'Cancela'),
                                                             ),
                                                             TextButton(
@@ -792,7 +787,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                                                   Navigator.pop(
                                                                       alertDialogContext,
                                                                       true),
-                                                              child: Text(
+                                                              child: const Text(
                                                                   'Confirma'),
                                                             ),
                                                           ],
