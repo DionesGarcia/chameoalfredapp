@@ -135,12 +135,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'E01Menu',
-              path: 'menu',
+              path: '/menu',
               builder: (context, params) => const E01MenuWidget(),
             ),
             FFRoute(
               name: 'sisfinanceiro',
-              path: 'financeiro',
+              path: '/financeiro',
               builder: (context, params) => const SisfinanceiroWidget(),
             ),
             FFRoute(
@@ -346,7 +346,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'SisMenu',
-              path: 'menusis',
+              path: '/menusis',
               builder: (context, params) => const SisMenuWidget(),
             ),
             FFRoute(
@@ -372,7 +372,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'sisuser',
-              path: 'usersis',
+              path: '/usersis',
               builder: (context, params) => SisuserWidget(
                 resraurante: params.getParam<EstabelecimentoRow>(
                     'resraurante', ParamType.SupabaseRow),

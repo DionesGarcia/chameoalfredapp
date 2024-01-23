@@ -109,12 +109,6 @@ class FFAppState extends ChangeNotifier {
     _locationUser = value;
   }
 
-  LatLng? _locationEst;
-  LatLng? get locationEst => _locationEst;
-  set locationEst(LatLng? value) {
-    _locationEst = value;
-  }
-
   String _pagina = '';
   String get pagina => _pagina;
   set pagina(String value) {
