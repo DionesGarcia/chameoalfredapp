@@ -302,17 +302,42 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Expanded(
-                                    child: Text(
-                                      'Esqueci a senha',
-                                      textAlign: TextAlign.end,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: const Color(0xFF6A051D),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w600,
-                                          ),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                          'Cliente1',
+                                          queryParameters: {
+                                            'restauranteID': serializeParam(
+                                              88,
+                                              ParamType.int,
+                                            ),
+                                            'mesa': serializeParam(
+                                              '01',
+                                              ParamType.String,
+                                            ),
+                                            'user': serializeParam(
+                                              55,
+                                              ParamType.int,
+                                            ),
+                                          }.withoutNulls,
+                                        );
+                                      },
+                                      child: Text(
+                                        'Esqueci a senha',
+                                        textAlign: TextAlign.end,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: const Color(0xFF6A051D),
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
                                     ),
                                   ),
                                 ],

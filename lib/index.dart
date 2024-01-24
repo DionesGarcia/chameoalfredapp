@@ -12,7 +12,6 @@ export '/pages/s_i_sinanceiroedisedit/s_i_sinanceiroedisedit_widget.dart'
     show SISinanceiroediseditWidget;
 export '/pages/financeiro03/financeiro03_widget.dart' show Financeiro03Widget;
 export '/pages/cozinha/cozinha_widget.dart' show CozinhaWidget;
-export '/pages/clienteob3/clienteob3_widget.dart' show Clienteob3Widget;
 export '/pages/entregador1/entregador1_widget.dart' show Entregador1Widget;
 export '/pages/gacom/gacom_widget.dart' show GacomWidget;
 export '/pages/garcom2/garcom2_widget.dart' show Garcom2Widget;
