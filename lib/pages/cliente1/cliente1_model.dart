@@ -9,8 +9,6 @@ class Cliente1Model extends FlutterFlowModel<Cliente1Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Stores action output result for [Backend Call - Insert Row] action in Cliente1 widget.
-  UsuariosRow? user11;
   // Model for DrawerUser component.
   late DrawerUserModel drawerUserModel;
   // Model for HeaderEmpresa component.

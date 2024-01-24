@@ -100,129 +100,117 @@ class _Cliente2WidgetState extends State<Cliente2Widget> {
             cliente2EstabelecimentoRowList.isNotEmpty
                 ? cliente2EstabelecimentoRowList.first
                 : null;
-        return Title(
-            title: 'Cliente2',
-            color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
-            child: GestureDetector(
-              onTap: () => _model.unfocusNode.canRequestFocus
-                  ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-                  : FocusScope.of(context).unfocus(),
-              child: Scaffold(
-                key: scaffoldKey,
+        return GestureDetector(
+          onTap: () => _model.unfocusNode.canRequestFocus
+              ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+              : FocusScope.of(context).unfocus(),
+          child: Scaffold(
+            key: scaffoldKey,
+            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+            drawer: Drawer(
+              elevation: 16.0,
+              child: wrapWithModel(
+                model: _model.drawerUserModel,
+                updateCallback: () => setState(() {}),
+                child: const DrawerUserWidget(),
+              ),
+            ),
+            appBar: PreferredSize(
+              preferredSize: const Size.fromHeight(100.0),
+              child: AppBar(
                 backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-                drawer: Drawer(
-                  elevation: 16.0,
-                  child: wrapWithModel(
-                    model: _model.drawerUserModel,
-                    updateCallback: () => setState(() {}),
-                    child: const DrawerUserWidget(),
-                  ),
-                ),
-                appBar: PreferredSize(
-                  preferredSize: const Size.fromHeight(100.0),
-                  child: AppBar(
-                    backgroundColor:
-                        FlutterFlowTheme.of(context).primaryBackground,
-                    automaticallyImplyLeading: false,
-                    actions: const [],
-                    flexibleSpace: FlexibleSpaceBar(
-                      title: Container(
-                        width: 600.0,
-                        height: double.infinity,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                        ),
-                        child: wrapWithModel(
-                          model: _model.headerEmpresaModel,
-                          updateCallback: () => setState(() {}),
-                          child: const HeaderEmpresaWidget(),
-                        ),
-                      ),
-                      centerTitle: true,
-                      expandedTitleScale: 1.0,
+                automaticallyImplyLeading: false,
+                actions: const [],
+                flexibleSpace: FlexibleSpaceBar(
+                  title: Container(
+                    width: 600.0,
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
-                    elevation: 0.0,
+                    child: wrapWithModel(
+                      model: _model.headerEmpresaModel,
+                      updateCallback: () => setState(() {}),
+                      child: const HeaderEmpresaWidget(),
+                    ),
                   ),
+                  centerTitle: true,
+                  expandedTitleScale: 1.0,
                 ),
-                body: SafeArea(
-                  top: true,
-                  child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: 600.0,
-                          height: double.infinity,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                          child: SizedBox(
-                            height: double.infinity,
-                            child: Stack(
-                              children: [
-                                SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      if (!cliente2EstabelecimentoRow!
-                                          .shopping!)
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 5.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.83, 0.79),
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
+                elevation: 0.0,
+              ),
+            ),
+            body: SafeArea(
+              top: true,
+              child: Align(
+                alignment: const AlignmentDirectional(0.0, 0.0),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 600.0,
+                      height: double.infinity,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: SizedBox(
+                        height: double.infinity,
+                        child: Stack(
+                          children: [
+                            SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  if (!cliente2EstabelecimentoRow!.shopping!)
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 5.0, 0.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Align(
+                                            alignment: const AlignmentDirectional(
+                                                0.83, 0.79),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8.0),
-                                                    border: Border.all(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secundria,
-                                                    ),
-                                                  ),
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(5.0, 3.0,
-                                                                5.0, 3.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Mesa',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secundria,
+                                                ),
+                                              ),
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        5.0, 3.0, 5.0, 3.0),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  5.0,
+                                                                  0.0),
+                                                      child: Text(
+                                                        'Mesa',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
@@ -234,12 +222,13 @@ class _Cliente2WidgetState extends State<Cliente2Widget> {
                                                                       FontWeight
                                                                           .w500,
                                                                 ),
-                                                          ),
-                                                        ),
-                                                        Text(
-                                                          widget.mesa!,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      widget.mesa!,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
@@ -251,258 +240,252 @@ class _Cliente2WidgetState extends State<Cliente2Widget> {
                                                                     FontWeight
                                                                         .normal,
                                                               ),
-                                                        ),
-                                                      ],
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ),
-                                            ],
-                                          ),
-                                        ),
-                                      const Divider(
-                                        thickness: 1.0,
-                                        color: Color(0xA3DA2E1A),
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          FutureBuilder<List<CategoriaRow>>(
-                                            future: CategoriaTable().queryRows(
-                                              queryFn: (q) => q.eq(
-                                                'restaurante_id',
-                                                widget.restaurante,
-                                              ),
                                             ),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 50.0,
-                                                    height: 50.0,
-                                                    child:
-                                                        CircularProgressIndicator(
-                                                      valueColor:
-                                                          AlwaysStoppedAnimation<
-                                                              Color>(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primary,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              List<CategoriaRow>
-                                                  listViewCategoriaRowList =
-                                                  snapshot.data!;
-                                              return ListView.builder(
-                                                padding: EdgeInsets.zero,
-                                                shrinkWrap: true,
-                                                scrollDirection: Axis.vertical,
-                                                itemCount:
-                                                    listViewCategoriaRowList
-                                                        .length,
-                                                itemBuilder:
-                                                    (context, listViewIndex) {
-                                                  final listViewCategoriaRow =
-                                                      listViewCategoriaRowList[
-                                                          listViewIndex];
-                                                  return InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      await HistricoTable()
-                                                          .insert({
-                                                        'restaurante_id':
-                                                            widget.restaurante,
-                                                        'mesa': widget.mesa,
-                                                        'pedido': widget
-                                                            .pedido?.id
-                                                            .toString(),
-                                                        'ação':
-                                                            'Pedido # ${widget.pedido?.pedido?.toString()} iniciado.',
-                                                        'data': supaSerialize<
-                                                                DateTime>(
-                                                            getCurrentTimestamp),
-                                                        'filtro': 'pedidos',
-                                                        'Usuario': FFAppState()
-                                                            .userID
-                                                            .toString(),
-                                                      });
-
-                                                      context.pushNamed(
-                                                        'Cliente3',
-                                                        queryParameters: {
-                                                          'mesa':
-                                                              serializeParam(
-                                                            widget.mesa,
-                                                            ParamType.String,
-                                                          ),
-                                                          'categoria':
-                                                              serializeParam(
-                                                            listViewCategoriaRow,
-                                                            ParamType
-                                                                .SupabaseRow,
-                                                          ),
-                                                          'restaurante':
-                                                              serializeParam(
-                                                            cliente2EstabelecimentoRow,
-                                                            ParamType
-                                                                .SupabaseRow,
-                                                          ),
-                                                          'pedido':
-                                                              serializeParam(
-                                                            widget.pedido,
-                                                            ParamType
-                                                                .SupabaseRow,
-                                                          ),
-                                                        }.withoutNulls,
-                                                      );
-                                                    },
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        border: Border.all(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .accent2,
-                                                        ),
-                                                      ),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets.all(
-                                                                    16.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              children: [
-                                                                Flexible(
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Container(
-                                                                        width:
-                                                                            70.0,
-                                                                        height:
-                                                                            70.0,
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          image:
-                                                                              DecorationImage(
-                                                                            fit:
-                                                                                BoxFit.cover,
-                                                                            image:
-                                                                                Image.network(
-                                                                              listViewCategoriaRow.imagem!,
-                                                                            ).image,
-                                                                          ),
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
-                                                                          border:
-                                                                              Border.all(
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).alternate,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                      Flexible(
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            valueOrDefault<String>(
-                                                                              listViewCategoriaRow.nome,
-                                                                              '00',
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Readex Pro',
-                                                                                  fontSize: 22.0,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                                Icon(
-                                                                  Icons
-                                                                      .arrow_forward_ios,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaria,
-                                                                  size: 24.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  );
-                                                },
-                                              );
-                                            },
                                           ),
                                         ],
                                       ),
-                                    ],
+                                    ),
+                                  const Divider(
+                                    thickness: 1.0,
+                                    color: Color(0xA3DA2E1A),
                                   ),
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(0.0, 1.0),
-                                  child: Row(
+                                  Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      Expanded(
-                                        child: wrapWithModel(
-                                          model: _model.navbarModel,
-                                          updateCallback: () => setState(() {}),
-                                          child: NavbarWidget(
-                                            nomepagina: FFAppState().pagina,
-                                            restID: widget.restaurante!,
-                                            mesa: widget.mesa!,
-                                            pedido: widget.pedido!,
+                                      FutureBuilder<List<CategoriaRow>>(
+                                        future: CategoriaTable().queryRows(
+                                          queryFn: (q) => q.eq(
+                                            'restaurante_id',
+                                            widget.restaurante,
                                           ),
                                         ),
+                                        builder: (context, snapshot) {
+                                          // Customize what your widget looks like when it's loading.
+                                          if (!snapshot.hasData) {
+                                            return Center(
+                                              child: SizedBox(
+                                                width: 50.0,
+                                                height: 50.0,
+                                                child:
+                                                    CircularProgressIndicator(
+                                                  valueColor:
+                                                      AlwaysStoppedAnimation<
+                                                          Color>(
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          List<CategoriaRow>
+                                              listViewCategoriaRowList =
+                                              snapshot.data!;
+                                          return ListView.builder(
+                                            padding: EdgeInsets.zero,
+                                            shrinkWrap: true,
+                                            scrollDirection: Axis.vertical,
+                                            itemCount:
+                                                listViewCategoriaRowList.length,
+                                            itemBuilder:
+                                                (context, listViewIndex) {
+                                              final listViewCategoriaRow =
+                                                  listViewCategoriaRowList[
+                                                      listViewIndex];
+                                              return InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await HistricoTable().insert({
+                                                    'restaurante_id':
+                                                        widget.restaurante,
+                                                    'mesa': widget.mesa,
+                                                    'pedido': widget.pedido?.id
+                                                        .toString(),
+                                                    'ação':
+                                                        'Pedido # ${widget.pedido?.pedido?.toString()} iniciado.',
+                                                    'data': supaSerialize<
+                                                            DateTime>(
+                                                        getCurrentTimestamp),
+                                                    'filtro': 'pedidos',
+                                                    'Usuario': FFAppState()
+                                                        .userID
+                                                        .toString(),
+                                                  });
+
+                                                  context.pushNamed(
+                                                    'Cliente3',
+                                                    queryParameters: {
+                                                      'mesa': serializeParam(
+                                                        widget.mesa,
+                                                        ParamType.String,
+                                                      ),
+                                                      'categoria':
+                                                          serializeParam(
+                                                        listViewCategoriaRow,
+                                                        ParamType.SupabaseRow,
+                                                      ),
+                                                      'restaurante':
+                                                          serializeParam(
+                                                        cliente2EstabelecimentoRow,
+                                                        ParamType.SupabaseRow,
+                                                      ),
+                                                      'pedido': serializeParam(
+                                                        widget.pedido,
+                                                        ParamType.SupabaseRow,
+                                                      ),
+                                                    }.withoutNulls,
+                                                  );
+                                                },
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .accent2,
+                                                    ),
+                                                  ),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                        padding: const EdgeInsets.all(
+                                                            16.0),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Flexible(
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Container(
+                                                                    width: 70.0,
+                                                                    height:
+                                                                        70.0,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryBackground,
+                                                                      image:
+                                                                          DecorationImage(
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                        image: Image
+                                                                            .network(
+                                                                          listViewCategoriaRow
+                                                                              .imagem!,
+                                                                        ).image,
+                                                                      ),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              8.0),
+                                                                      border:
+                                                                          Border
+                                                                              .all(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .alternate,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child:
+                                                                        Padding(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          16.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Text(
+                                                                        valueOrDefault<
+                                                                            String>(
+                                                                          listViewCategoriaRow
+                                                                              .nome,
+                                                                          '00',
+                                                                        ),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              fontSize: 22.0,
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Icon(
+                                                              Icons
+                                                                  .arrow_forward_ios,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaria,
+                                                              size: 24.0,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          );
+                                        },
                                       ),
                                     ],
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 1.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Expanded(
+                                    child: wrapWithModel(
+                                      model: _model.navbarModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: NavbarWidget(
+                                        nomepagina: FFAppState().pagina,
+                                        restID: widget.restaurante!,
+                                        mesa: widget.mesa!,
+                                        pedido: widget.pedido!,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-            ));
+            ),
+          ),
+        );
       },
     );
   }
