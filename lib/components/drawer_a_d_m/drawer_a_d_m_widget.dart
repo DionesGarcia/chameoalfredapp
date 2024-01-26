@@ -12,7 +12,7 @@ class DrawerADMWidget extends StatefulWidget {
   const DrawerADMWidget({super.key});
 
   @override
-  _DrawerADMWidgetState createState() => _DrawerADMWidgetState();
+  State<DrawerADMWidget> createState() => _DrawerADMWidgetState();
 }
 
 class _DrawerADMWidgetState extends State<DrawerADMWidget> {
@@ -201,6 +201,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                             context: context,
                             builder: (dialogContext) {
                               return Dialog(
+                                elevation: 0,
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
                                 alignment: const AlignmentDirectional(0.0, 0.0)
@@ -335,6 +336,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                 context: context,
                                 builder: (dialogContext) {
                                   return Dialog(
+                                    elevation: 0,
                                     insetPadding: EdgeInsets.zero,
                                     backgroundColor: Colors.transparent,
                                     alignment: const AlignmentDirectional(0.0, 0.0)
@@ -442,6 +444,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                             context: context,
                             builder: (dialogContext) {
                               return Dialog(
+                                elevation: 0,
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
                                 alignment: const AlignmentDirectional(0.0, 0.0)
@@ -546,6 +549,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                             context: context,
                             builder: (dialogContext) {
                               return Dialog(
+                                elevation: 0,
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
                                 alignment: const AlignmentDirectional(0.0, 0.0)
@@ -670,6 +674,7 @@ class _DrawerADMWidgetState extends State<DrawerADMWidget> {
                                     context: context,
                                     builder: (dialogContext) {
                                       return Dialog(
+                                        elevation: 0,
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:

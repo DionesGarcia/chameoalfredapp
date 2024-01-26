@@ -16,7 +16,7 @@ class EditestsisWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _EditestsisWidgetState createState() => _EditestsisWidgetState();
+  State<EditestsisWidget> createState() => _EditestsisWidgetState();
 }
 
 class _EditestsisWidgetState extends State<EditestsisWidget> {

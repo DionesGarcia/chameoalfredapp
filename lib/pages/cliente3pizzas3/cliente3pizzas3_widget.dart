@@ -19,7 +19,7 @@ class Cliente3pizzas3Widget extends StatefulWidget {
     required this.pedido,
     required this.itempedido,
     int? sabores,
-  })  : sabores = sabores ?? 2;
+  }) : sabores = sabores ?? 2;
 
   final String? mesa;
   final CategoriaRow? categoria;
@@ -29,7 +29,7 @@ class Cliente3pizzas3Widget extends StatefulWidget {
   final int sabores;
 
   @override
-  _Cliente3pizzas3WidgetState createState() => _Cliente3pizzas3WidgetState();
+  State<Cliente3pizzas3Widget> createState() => _Cliente3pizzas3WidgetState();
 }
 
 class _Cliente3pizzas3WidgetState extends State<Cliente3pizzas3Widget> {
@@ -485,6 +485,11 @@ class _Cliente3pizzas3WidgetState extends State<Cliente3pizzas3Widget> {
                                                                           60.0,
                                                                       height:
                                                                           140.0,
+                                                                      constraints:
+                                                                          const BoxConstraints(
+                                                                        minHeight:
+                                                                            140.0,
+                                                                      ),
                                                                       decoration:
                                                                           BoxDecoration(
                                                                         color: FlutterFlowTheme.of(context)
@@ -620,6 +625,11 @@ class _Cliente3pizzas3WidgetState extends State<Cliente3pizzas3Widget> {
                                                                           20.0,
                                                                       height:
                                                                           140.0,
+                                                                      constraints:
+                                                                          const BoxConstraints(
+                                                                        minHeight:
+                                                                            140.0,
+                                                                      ),
                                                                       decoration:
                                                                           BoxDecoration(
                                                                         color: FlutterFlowTheme.of(context)

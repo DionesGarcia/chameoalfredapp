@@ -28,7 +28,7 @@ class CheckoutWidget extends StatefulWidget {
   final PedidosRow? pedido;
 
   @override
-  _CheckoutWidgetState createState() => _CheckoutWidgetState();
+  State<CheckoutWidget> createState() => _CheckoutWidgetState();
 }
 
 class _CheckoutWidgetState extends State<CheckoutWidget> {

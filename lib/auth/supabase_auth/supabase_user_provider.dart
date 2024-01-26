@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class RestauranteSupabaseUser extends BaseAuthUser {
-  RestauranteSupabaseUser(this.user);
+class ChameOAlfredSupabaseUser extends BaseAuthUser {
+  ChameOAlfredSupabaseUser(this.user);
   User? user;
   @override
   bool get loggedIn => user != null;
@@ -57,7 +57,7 @@ class RestauranteSupabaseUser extends BaseAuthUser {
 /// [SupaFlow.client.auth.onAuthStateChange] does not yield any values until the
 /// user is already authenticated. So we add a default null user to the stream,
 /// if we need to interact with the [currentUser] before logging in.
-Stream<BaseAuthUser> restauranteSupabaseUserStream() {
+Stream<BaseAuthUser> chameOAlfredSupabaseUserStream() {
   final supabaseAuthStream = SupaFlow.client.auth.onAuthStateChange.debounce(
       (authState) => authState.event == AuthChangeEvent.tokenRefreshed
           ? TimerStream(authState, const Duration(seconds: 1))
@@ -67,7 +67,7 @@ Stream<BaseAuthUser> restauranteSupabaseUserStream() {
           : supabaseAuthStream)
       .map<BaseAuthUser>(
     (authState) {
-      currentUser = RestauranteSupabaseUser(authState?.session?.user);
+      currentUser = ChameOAlfredSupabaseUser(authState?.session?.user);
       return currentUser!;
     },
   );

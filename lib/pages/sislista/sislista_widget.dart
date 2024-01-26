@@ -17,7 +17,7 @@ class SislistaWidget extends StatefulWidget {
   const SislistaWidget({super.key});
 
   @override
-  _SislistaWidgetState createState() => _SislistaWidgetState();
+  State<SislistaWidget> createState() => _SislistaWidgetState();
 }
 
 class _SislistaWidgetState extends State<SislistaWidget> {

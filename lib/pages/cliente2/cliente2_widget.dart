@@ -25,7 +25,7 @@ class Cliente2Widget extends StatefulWidget {
   final PedidosRow? pedido;
 
   @override
-  _Cliente2WidgetState createState() => _Cliente2WidgetState();
+  State<Cliente2Widget> createState() => _Cliente2WidgetState();
 }
 
 class _Cliente2WidgetState extends State<Cliente2Widget> {

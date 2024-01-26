@@ -25,7 +25,7 @@ class GacomWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _GacomWidgetState createState() => _GacomWidgetState();
+  State<GacomWidget> createState() => _GacomWidgetState();
 }
 
 class _GacomWidgetState extends State<GacomWidget>

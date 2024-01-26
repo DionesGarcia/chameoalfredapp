@@ -15,7 +15,7 @@ class PopupSucessoCategoriaWidget extends StatefulWidget {
   final String? categoria;
 
   @override
-  _PopupSucessoCategoriaWidgetState createState() =>
+  State<PopupSucessoCategoriaWidget> createState() =>
       _PopupSucessoCategoriaWidgetState();
 }
 

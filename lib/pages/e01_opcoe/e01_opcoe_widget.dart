@@ -26,7 +26,7 @@ class E01OpcoeWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _E01OpcoeWidgetState createState() => _E01OpcoeWidgetState();
+  State<E01OpcoeWidget> createState() => _E01OpcoeWidgetState();
 }
 
 class _E01OpcoeWidgetState extends State<E01OpcoeWidget>

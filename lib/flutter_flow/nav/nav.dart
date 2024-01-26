@@ -83,299 +83,295 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, _) => RootPageContext.wrap(
             appStateNotifier.loggedIn ? const E01MenuWidget() : const AuthloginWidget(),
           ),
-          routes: [
-            FFRoute(
-              name: 'Cliente1',
-              path: 'cliente1',
-              builder: (context, params) => Cliente1Widget(
-                restauranteID: params.getParam('restauranteID', ParamType.int),
-                mesa: params.getParam('mesa', ParamType.String),
-                user: params.getParam('user', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente4',
-              path: 'cliente4',
-              builder: (context, params) => Cliente4Widget(
-                valorCarrinho:
-                    params.getParam('valorCarrinho', ParamType.double),
-                mesa: params.getParam('mesa', ParamType.String),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente5',
-              path: 'cliente5',
-              builder: (context, params) => Cliente5Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                valorCarrinho:
-                    params.getParam('valorCarrinho', ParamType.double),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedidoID: params.getParam<PedidosRow>(
-                    'pedidoID', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'Authlogin',
-              path: 'auth',
-              builder: (context, params) => AuthloginWidget(
-                user: params.getParam('user', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'E02Estabelecimento',
-              path: 'e02Estabelecimento',
-              builder: (context, params) => E02EstabelecimentoWidget(
-                estabelecimentoID:
-                    params.getParam('estabelecimentoID', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'E01Menu',
-              path: 'menu',
-              builder: (context, params) => const E01MenuWidget(),
-            ),
-            FFRoute(
-              name: 'sisfinanceiro',
-              path: 'financeiro',
-              builder: (context, params) => const SisfinanceiroWidget(),
-            ),
-            FFRoute(
-              name: 'SISinanceiroedisedit',
-              path: 'sISinanceiroedisedit',
-              builder: (context, params) => SISinanceiroediseditWidget(
-                restauranteID:
-                    params.getParam('restauranteID', ParamType.String),
-                financeiro: params.getParam<AssinaturasRow>(
-                    'financeiro', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'Financeiro03',
-              path: 'financeiro03',
-              builder: (context, params) => const Financeiro03Widget(),
-            ),
-            FFRoute(
-              name: 'Cozinha',
-              path: 'cozinha',
-              builder: (context, params) => CozinhaWidget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'entregador1',
-              path: 'entregador1',
-              builder: (context, params) => const Entregador1Widget(),
-            ),
-            FFRoute(
-              name: 'gacom',
-              path: 'gacom',
-              builder: (context, params) => GacomWidget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'garcom2',
-              path: 'garcom2',
-              builder: (context, params) => const Garcom2Widget(),
-            ),
-            FFRoute(
-              name: 'E01Opcoes-edit',
-              path: 'options',
-              builder: (context, params) => E01OpcoesEditWidget(
-                refprato: params.getParam<PratosRow>(
-                    'refprato', ParamType.SupabaseRow),
-                restaurate: params.getParam<EstabelecimentoRow>(
-                    'restaurate', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'pedidos',
-              path: 'pedidos',
-              builder: (context, params) => PedidosWidget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'pedido03',
-              path: 'pedido03',
-              builder: (context, params) => Pedido03Widget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'relatorio01',
-              path: 'relatorio01',
-              requireAuth: true,
-              builder: (context, params) => Relatorio01Widget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'E01user01',
-              path: 'e01user01',
-              builder: (context, params) => const E01user01Widget(),
-            ),
-            FFRoute(
-              name: 'mensagem01',
-              path: 'mensagem01',
-              builder: (context, params) => const Mensagem01Widget(),
-            ),
-            FFRoute(
-              name: 'E01Mesas',
-              path: 'e01Mesas',
-              builder: (context, params) => E01MesasWidget(
-                mesas:
-                    params.getParam<MesasRow>('mesas', ParamType.SupabaseRow),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'useroEdit',
-              path: 'pedEdit2',
-              builder: (context, params) => UseroEditWidget(
-                userID: params.getParam<UsuariosRow>(
-                    'userID', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente2',
-              path: 'cliente2',
-              builder: (context, params) => Cliente2Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                restaurante: params.getParam('restaurante', ParamType.int),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente3',
-              path: 'cliente3',
-              builder: (context, params) => Cliente3Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                categoria: params.getParam<CategoriaRow>(
-                    'categoria', ParamType.SupabaseRow),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'AuthCreat',
-              path: 'authCreat',
-              builder: (context, params) => const AuthCreatWidget(),
-            ),
-            FFRoute(
-              name: 'E02Estabelecimentotrue',
-              path: 'e02Estabelecimentotrue',
-              builder: (context, params) => E02EstabelecimentotrueWidget(
-                estabelecimentoID:
-                    params.getParam('estabelecimentoID', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente3pizzas2',
-              path: 'cliente3pizzas2',
-              builder: (context, params) => Cliente3pizzas2Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                categoria: params.getParam<CategoriaRow>(
-                    'categoria', ParamType.SupabaseRow),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-                itempedido: params.getParam<ItensDoPedidoRow>(
-                    'itempedido', ParamType.SupabaseRow),
-                sabores: params.getParam('sabores', ParamType.String),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente3pizzas3',
-              path: 'cliente3pizzas3',
-              builder: (context, params) => Cliente3pizzas3Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                categoria: params.getParam<CategoriaRow>(
-                    'categoria', ParamType.SupabaseRow),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-                itempedido: params.getParam<ItensDoPedidoRow>(
-                    'itempedido', ParamType.SupabaseRow),
-                sabores: params.getParam('sabores', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'Cliente3pizzas21',
-              path: 'cliente3pizzas21',
-              builder: (context, params) => Cliente3pizzas21Widget(
-                mesa: params.getParam('mesa', ParamType.String),
-                categoria: params.getParam<CategoriaRow>(
-                    'categoria', ParamType.SupabaseRow),
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-                pedido: params.getParam<PedidosRow>(
-                    'pedido', ParamType.SupabaseRow),
-                itempedido: params.getParam<ItensDoPedidoRow>(
-                    'itempedido', ParamType.SupabaseRow),
-                sabores: params.getParam('sabores', ParamType.String),
-              ),
-            ),
-            FFRoute(
-              name: 'E01Opcoe',
-              path: 'options-edit',
-              builder: (context, params) => E01OpcoeWidget(
-                restaurante: params.getParam<EstabelecimentoRow>(
-                    'restaurante', ParamType.SupabaseRow),
-              ),
-            ),
-            FFRoute(
-              name: 'SisMenu',
-              path: 'menusis',
-              builder: (context, params) => const SisMenuWidget(),
-            ),
-            FFRoute(
-              name: 'sisestabelecimento',
-              path: 'sisestabelecimento',
-              builder: (context, params) => SisestabelecimentoWidget(
-                estabelecimentoID:
-                    params.getParam('estabelecimentoID', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'sisestabelecimentotrue',
-              path: 'sisestabelecimentotrue',
-              builder: (context, params) => SisestabelecimentotrueWidget(
-                estabelecimentoID:
-                    params.getParam('estabelecimentoID', ParamType.int),
-              ),
-            ),
-            FFRoute(
-              name: 'sislista',
-              path: 'sislista',
-              builder: (context, params) => const SislistaWidget(),
-            ),
-            FFRoute(
-              name: 'sisuser',
-              path: 'usersis',
-              builder: (context, params) => SisuserWidget(
-                resraurante: params.getParam<EstabelecimentoRow>(
-                    'resraurante', ParamType.SupabaseRow),
-              ),
-            )
-          ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
+        FFRoute(
+          name: 'Cliente1',
+          path: '/cliente1',
+          builder: (context, params) => Cliente1Widget(
+            restauranteID: params.getParam('restauranteID', ParamType.int),
+            mesa: params.getParam('mesa', ParamType.String),
+            user: params.getParam('user', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente4',
+          path: '/cliente4',
+          builder: (context, params) => Cliente4Widget(
+            valorCarrinho: params.getParam('valorCarrinho', ParamType.double),
+            mesa: params.getParam('mesa', ParamType.String),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente5',
+          path: '/cliente5',
+          builder: (context, params) => Cliente5Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            valorCarrinho: params.getParam('valorCarrinho', ParamType.double),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedidoID:
+                params.getParam<PedidosRow>('pedidoID', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'Authlogin',
+          path: '/login',
+          builder: (context, params) => AuthloginWidget(
+            user: params.getParam('user', ParamType.int),
+            mesa: params.getParam('mesa', ParamType.String),
+            restaurante: params.getParam('restaurante', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'E02Estabelecimento',
+          path: '/e02Estabelecimento',
+          builder: (context, params) => E02EstabelecimentoWidget(
+            estabelecimentoID:
+                params.getParam('estabelecimentoID', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'E01Menu',
+          path: '/menu',
+          builder: (context, params) => const E01MenuWidget(),
+        ),
+        FFRoute(
+          name: 'sisfinanceiro',
+          path: '/financeiro',
+          builder: (context, params) => const SisfinanceiroWidget(),
+        ),
+        FFRoute(
+          name: 'SISinanceiroedisedit',
+          path: '/sISinanceiroedisedit',
+          builder: (context, params) => SISinanceiroediseditWidget(
+            restauranteID: params.getParam('restauranteID', ParamType.String),
+            financeiro: params.getParam<AssinaturasRow>(
+                'financeiro', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'Financeiro03',
+          path: '/financeiro03',
+          builder: (context, params) => const Financeiro03Widget(),
+        ),
+        FFRoute(
+          name: 'Cozinha',
+          path: '/cozinha',
+          builder: (context, params) => CozinhaWidget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'entregador1',
+          path: '/entregador1',
+          builder: (context, params) => const Entregador1Widget(),
+        ),
+        FFRoute(
+          name: 'gacom',
+          path: '/gacom',
+          builder: (context, params) => GacomWidget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'garcom2',
+          path: '/garcom2',
+          builder: (context, params) => const Garcom2Widget(),
+        ),
+        FFRoute(
+          name: 'E01Opcoes-edit',
+          path: '/options',
+          builder: (context, params) => E01OpcoesEditWidget(
+            refprato:
+                params.getParam<PratosRow>('refprato', ParamType.SupabaseRow),
+            restaurate: params.getParam<EstabelecimentoRow>(
+                'restaurate', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'pedidos',
+          path: '/pedidos',
+          builder: (context, params) => PedidosWidget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'pedido03',
+          path: '/pedido03',
+          builder: (context, params) => Pedido03Widget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'relatorio01',
+          path: '/relatorio01',
+          requireAuth: true,
+          builder: (context, params) => Relatorio01Widget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'E01user01',
+          path: '/e01user01',
+          builder: (context, params) => const E01user01Widget(),
+        ),
+        FFRoute(
+          name: 'mensagem01',
+          path: '/mensagem01',
+          builder: (context, params) => const Mensagem01Widget(),
+        ),
+        FFRoute(
+          name: 'E01Mesas',
+          path: '/e01Mesas',
+          builder: (context, params) => E01MesasWidget(
+            mesas: params.getParam<MesasRow>('mesas', ParamType.SupabaseRow),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'useroEdit',
+          path: '/pedEdit2',
+          builder: (context, params) => UseroEditWidget(
+            userID:
+                params.getParam<UsuariosRow>('userID', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente2',
+          path: '/cliente2',
+          builder: (context, params) => Cliente2Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            restaurante: params.getParam('restaurante', ParamType.int),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente3',
+          path: '/cliente3',
+          builder: (context, params) => Cliente3Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            categoria: params.getParam<CategoriaRow>(
+                'categoria', ParamType.SupabaseRow),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'AuthCreat',
+          path: '/creat',
+          builder: (context, params) => const AuthCreatWidget(),
+        ),
+        FFRoute(
+          name: 'E02Estabelecimentotrue',
+          path: '/e02Estabelecimentotrue',
+          builder: (context, params) => E02EstabelecimentotrueWidget(
+            estabelecimentoID:
+                params.getParam('estabelecimentoID', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente3pizzas2',
+          path: '/cliente3pizzas2',
+          builder: (context, params) => Cliente3pizzas2Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            categoria: params.getParam<CategoriaRow>(
+                'categoria', ParamType.SupabaseRow),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+            itempedido: params.getParam<ItensDoPedidoRow>(
+                'itempedido', ParamType.SupabaseRow),
+            sabores: params.getParam('sabores', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente3pizzas3',
+          path: '/cliente3pizzas3',
+          builder: (context, params) => Cliente3pizzas3Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            categoria: params.getParam<CategoriaRow>(
+                'categoria', ParamType.SupabaseRow),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+            itempedido: params.getParam<ItensDoPedidoRow>(
+                'itempedido', ParamType.SupabaseRow),
+            sabores: params.getParam('sabores', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'Cliente3pizzas21',
+          path: '/cliente3pizzas21',
+          builder: (context, params) => Cliente3pizzas21Widget(
+            mesa: params.getParam('mesa', ParamType.String),
+            categoria: params.getParam<CategoriaRow>(
+                'categoria', ParamType.SupabaseRow),
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+            pedido:
+                params.getParam<PedidosRow>('pedido', ParamType.SupabaseRow),
+            itempedido: params.getParam<ItensDoPedidoRow>(
+                'itempedido', ParamType.SupabaseRow),
+            sabores: params.getParam('sabores', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'E01Opcoe',
+          path: '/options-edit',
+          builder: (context, params) => E01OpcoeWidget(
+            restaurante: params.getParam<EstabelecimentoRow>(
+                'restaurante', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'SisMenu',
+          path: '/menusis',
+          builder: (context, params) => const SisMenuWidget(),
+        ),
+        FFRoute(
+          name: 'sisestabelecimento',
+          path: '/sisestabelecimento',
+          builder: (context, params) => SisestabelecimentoWidget(
+            estabelecimentoID:
+                params.getParam('estabelecimentoID', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'sisestabelecimentotrue',
+          path: '/sisestabelecimentotrue',
+          builder: (context, params) => SisestabelecimentotrueWidget(
+            estabelecimentoID:
+                params.getParam('estabelecimentoID', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'sislista',
+          path: '/sislista',
+          builder: (context, params) => const SislistaWidget(),
+        ),
+        FFRoute(
+          name: 'sisuser',
+          path: '/usersis',
+          builder: (context, params) => SisuserWidget(
+            resraurante: params.getParam<EstabelecimentoRow>(
+                'resraurante', ParamType.SupabaseRow),
+          ),
+        )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 
@@ -543,7 +539,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/auth';
+            return '/login';
           }
           return null;
         },
@@ -556,14 +552,14 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
+              ? Container(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/logo512.png',
+                      width: 300.0,
+                      height: 300.0,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )

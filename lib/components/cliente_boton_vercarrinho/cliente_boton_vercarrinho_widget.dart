@@ -17,7 +17,7 @@ class ClienteBotonVercarrinhoWidget extends StatefulWidget {
     required this.mesa,
     required this.restaurante,
     required this.pedido,
-  })  : valorCarrinho = valorCarrinho ?? 0.0;
+  }) : valorCarrinho = valorCarrinho ?? 0.0;
 
   final double valorCarrinho;
   final String? mesa;
@@ -25,7 +25,7 @@ class ClienteBotonVercarrinhoWidget extends StatefulWidget {
   final PedidosRow? pedido;
 
   @override
-  _ClienteBotonVercarrinhoWidgetState createState() =>
+  State<ClienteBotonVercarrinhoWidget> createState() =>
       _ClienteBotonVercarrinhoWidgetState();
 }
 

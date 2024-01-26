@@ -13,7 +13,7 @@ class Financeiro03Widget extends StatefulWidget {
   const Financeiro03Widget({super.key});
 
   @override
-  _Financeiro03WidgetState createState() => _Financeiro03WidgetState();
+  State<Financeiro03Widget> createState() => _Financeiro03WidgetState();
 }
 
 class _Financeiro03WidgetState extends State<Financeiro03Widget> {

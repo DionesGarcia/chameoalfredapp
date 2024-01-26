@@ -21,7 +21,7 @@ class ClienteBotonVercarrinhoadmWidget extends StatefulWidget {
     required this.cover,
     required this.embalagem,
     required this.garcom,
-  })  : valorCarrinho = valorCarrinho ?? 0.0;
+  }) : valorCarrinho = valorCarrinho ?? 0.0;
 
   final double valorCarrinho;
   final String? mesa;
@@ -33,7 +33,7 @@ class ClienteBotonVercarrinhoadmWidget extends StatefulWidget {
   final double? garcom;
 
   @override
-  _ClienteBotonVercarrinhoadmWidgetState createState() =>
+  State<ClienteBotonVercarrinhoadmWidget> createState() =>
       _ClienteBotonVercarrinhoadmWidgetState();
 }
 

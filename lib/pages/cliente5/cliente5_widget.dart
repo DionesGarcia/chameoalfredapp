@@ -32,7 +32,7 @@ class Cliente5Widget extends StatefulWidget {
   final PedidosRow? pedidoID;
 
   @override
-  _Cliente5WidgetState createState() => _Cliente5WidgetState();
+  State<Cliente5Widget> createState() => _Cliente5WidgetState();
 }
 
 class _Cliente5WidgetState extends State<Cliente5Widget> {

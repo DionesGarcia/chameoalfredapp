@@ -27,7 +27,7 @@ class PedidosWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _PedidosWidgetState createState() => _PedidosWidgetState();
+  State<PedidosWidget> createState() => _PedidosWidgetState();
 }
 
 class _PedidosWidgetState extends State<PedidosWidget>

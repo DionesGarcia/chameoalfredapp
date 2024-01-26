@@ -22,7 +22,7 @@ class NavbarWidget extends StatefulWidget {
   final String? mesa;
 
   @override
-  _NavbarWidgetState createState() => _NavbarWidgetState();
+  State<NavbarWidget> createState() => _NavbarWidgetState();
 }
 
 class _NavbarWidgetState extends State<NavbarWidget> {
@@ -223,7 +223,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
               onTap: () async {
                 await Clipboard.setData(ClipboardData(
                     text:
-                        'restaurante://restaurante.com${GoRouter.of(context).location}'));
+                        'chameoalfred://chameoalfred.com${GoRouter.of(context).location}'));
               },
               child: Column(
                 mainAxisSize: MainAxisSize.max,

@@ -29,7 +29,7 @@ class Cliente3pizzas21Widget extends StatefulWidget {
   final String? sabores;
 
   @override
-  _Cliente3pizzas21WidgetState createState() => _Cliente3pizzas21WidgetState();
+  State<Cliente3pizzas21Widget> createState() => _Cliente3pizzas21WidgetState();
 }
 
 class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
@@ -464,6 +464,11 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                     width: 60.0,
                                                                     height:
                                                                         140.0,
+                                                                    constraints:
+                                                                        const BoxConstraints(
+                                                                      minHeight:
+                                                                          140.0,
+                                                                    ),
                                                                     decoration:
                                                                         const BoxDecoration(
                                                                       borderRadius:
@@ -603,6 +608,11 @@ class _Cliente3pizzas21WidgetState extends State<Cliente3pizzas21Widget> {
                                                                     width: 20.0,
                                                                     height:
                                                                         140.0,
+                                                                    constraints:
+                                                                        const BoxConstraints(
+                                                                      minHeight:
+                                                                          140.0,
+                                                                    ),
                                                                     decoration:
                                                                         BoxDecoration(
                                                                       color: FlutterFlowTheme.of(

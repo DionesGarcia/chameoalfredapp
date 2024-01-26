@@ -10,7 +10,7 @@ class PopupSucessoMesasWidget extends StatefulWidget {
   const PopupSucessoMesasWidget({super.key});
 
   @override
-  _PopupSucessoMesasWidgetState createState() =>
+  State<PopupSucessoMesasWidget> createState() =>
       _PopupSucessoMesasWidgetState();
 }
 

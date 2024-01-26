@@ -43,11 +43,15 @@ bool comparalista(
   return lista.contains(item);
 }
 
-int mesa(String code) {
-  // receba uma string e conserve apenas os 3 primeiros caracteres
-  String firstThreeChars = code.substring(0, 3);
-  int mesaNumber = int.tryParse(firstThreeChars) ?? 0;
-  return mesaNumber;
+String mesa(String url) {
+  // only take what is between the characters *
+  String result = '';
+  if (url.contains('*')) {
+    int startIndex = url.indexOf('*') + 1;
+    int endIndex = url.lastIndexOf('*');
+    result = url.substring(startIndex, endIndex);
+  }
+  return result;
 }
 
 double? distance(
@@ -68,6 +72,17 @@ double? distance(
   String inString = d.toStringAsFixed(2); // '2.35'
   double inDouble = double.parse(inString);
   return inDouble;
+}
+
+int restaurante(String url) {
+  // only take what is between the characters +
+  int startIndex = url.indexOf('+');
+  int endIndex = url.lastIndexOf('+');
+  if (startIndex == -1 || endIndex == -1 || startIndex == endIndex) {
+    return -1;
+  }
+  String restaurantId = url.substring(startIndex + 1, endIndex);
+  return int.tryParse(restaurantId) ?? -1;
 }
 
 LatLng? coordenada(
@@ -114,4 +129,35 @@ LatLng? stringCoord(String? string) {
   final lng = double.tryParse(parts[1]);
   if (lat == null || lng == null) return null;
   return LatLng(lat, lng);
+}
+
+String url() {
+  // como gravar a url da pagina atual
+  return Uri.base.toString();
+}
+
+bool? urlCompare(
+  String? urlComparar,
+  String? urlpagina,
+) {
+  // compare dois textos e retorne boolean
+  if (urlComparar == null || urlpagina == null) {
+    return null;
+  }
+  return urlComparar.trim().toLowerCase() == urlpagina.trim().toLowerCase();
+}
+
+bool? urlcontem(String? url) {
+  // verifique se a url contem o caracter ?
+  if (url == null) {
+    return null;
+  }
+  return url.contains('?');
+}
+
+String? urlString() {
+  // transforme url em string retirando tudo antes de 40 caracteres
+  String url = 'https://www.example.com/some/path/to/a/resource';
+  String shortenedUrl = url.substring(40);
+  return shortenedUrl;
 }

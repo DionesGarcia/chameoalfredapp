@@ -26,7 +26,7 @@ class RodizioWidget extends StatefulWidget {
   final CategoriaRow? categoria;
 
   @override
-  _RodizioWidgetState createState() => _RodizioWidgetState();
+  State<RodizioWidget> createState() => _RodizioWidgetState();
 }
 
 class _RodizioWidgetState extends State<RodizioWidget> {

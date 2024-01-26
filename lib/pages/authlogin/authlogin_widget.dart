@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -16,69 +15,27 @@ class AuthloginWidget extends StatefulWidget {
   const AuthloginWidget({
     super.key,
     this.user,
+    this.mesa,
+    this.restaurante,
   });
 
   final int? user;
+  final String? mesa;
+  final int? restaurante;
 
   @override
-  _AuthloginWidgetState createState() => _AuthloginWidgetState();
+  State<AuthloginWidget> createState() => _AuthloginWidgetState();
 }
 
 class _AuthloginWidgetState extends State<AuthloginWidget> {
   late AuthloginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  LatLng? currentUserLocationValue;
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => AuthloginModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      currentUserLocationValue =
-          await getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0));
-      await showDialog(
-        context: context,
-        builder: (alertDialogContext) {
-          return AlertDialog(
-            title: Text(valueOrDefault<String>(
-              widget.user?.toString(),
-              'Vazio',
-            )),
-            content: Text(currentUserLocationValue!.toString()),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(alertDialogContext),
-                child: const Text('Ok'),
-              ),
-            ],
-          );
-        },
-      );
-      if (widget.user != null) {
-        context.pushNamed(
-          'Cliente1',
-          queryParameters: {
-            'restauranteID': serializeParam(
-              88,
-              ParamType.int,
-            ),
-            'mesa': serializeParam(
-              '01',
-              ParamType.String,
-            ),
-            'user': serializeParam(
-              widget.user,
-              ParamType.int,
-            ),
-          }.withoutNulls,
-        );
-      } else {
-        return;
-      }
-    });
 
     _model.emailTextController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
@@ -361,42 +318,17 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Expanded(
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          context.pushNamed(
-                                            'Cliente1',
-                                            queryParameters: {
-                                              'restauranteID': serializeParam(
-                                                88,
-                                                ParamType.int,
-                                              ),
-                                              'mesa': serializeParam(
-                                                '01',
-                                                ParamType.String,
-                                              ),
-                                              'user': serializeParam(
-                                                152,
-                                                ParamType.int,
-                                              ),
-                                            }.withoutNulls,
-                                          );
-                                        },
-                                        child: Text(
-                                          'Esqueci a senha',
-                                          textAlign: TextAlign.end,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: const Color(0xFF6A051D),
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                        ),
+                                      child: Text(
+                                        'Esqueci a senha',
+                                        textAlign: TextAlign.end,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: const Color(0xFF6A051D),
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -663,35 +595,24 @@ class _AuthloginWidgetState extends State<AuthloginWidget> {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     30.0, 20.0, 15.0, 30.0),
-                                child: InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    await launchURL(
-                                        'https://wa.me/42999999999');
-                                  },
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Versão 3.0.1',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 10.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Versão 1.0.6',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],

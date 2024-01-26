@@ -9,7 +9,7 @@ class PopupAguardeWidget extends StatefulWidget {
   const PopupAguardeWidget({super.key});
 
   @override
-  _PopupAguardeWidgetState createState() => _PopupAguardeWidgetState();
+  State<PopupAguardeWidget> createState() => _PopupAguardeWidgetState();
 }
 
 class _PopupAguardeWidgetState extends State<PopupAguardeWidget> {

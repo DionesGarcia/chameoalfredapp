@@ -24,7 +24,7 @@ class SISinanceiroediseditWidget extends StatefulWidget {
   final AssinaturasRow? financeiro;
 
   @override
-  _SISinanceiroediseditWidgetState createState() =>
+  State<SISinanceiroediseditWidget> createState() =>
       _SISinanceiroediseditWidgetState();
 }
 

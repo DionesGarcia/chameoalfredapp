@@ -16,7 +16,7 @@ class EditUserWidget extends StatefulWidget {
   final UsuariosRow? userid;
 
   @override
-  _EditUserWidgetState createState() => _EditUserWidgetState();
+  State<EditUserWidget> createState() => _EditUserWidgetState();
 }
 
 class _EditUserWidgetState extends State<EditUserWidget> {

@@ -27,7 +27,7 @@ class Cliente1Widget extends StatefulWidget {
   final int? user;
 
   @override
-  _Cliente1WidgetState createState() => _Cliente1WidgetState();
+  State<Cliente1Widget> createState() => _Cliente1WidgetState();
 }
 
 class _Cliente1WidgetState extends State<Cliente1Widget> {
@@ -508,7 +508,7 @@ class _Cliente1WidgetState extends State<Cliente1Widget> {
                                     await actions.criarQRcode(
                                       containerEstabelecimentoRow.banner2!,
                                       containerEstabelecimentoRow.banner1!,
-                                      'restaurante://restaurante.com${GoRouter.of(context).location}',
+                                      'chameoalfred://chameoalfred.com${GoRouter.of(context).location}',
                                     );
                                   },
                                   child: Text(

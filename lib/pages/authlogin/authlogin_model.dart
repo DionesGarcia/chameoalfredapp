@@ -4,6 +4,18 @@ import 'authlogin_widget.dart' show AuthloginWidget;
 import 'package:flutter/material.dart';
 
 class AuthloginModel extends FlutterFlowModel<AuthloginWidget> {
+  ///  Local state fields for this page.
+
+  int? user;
+
+  String url = 'https://chameoalfred.flutterflow.app/';
+
+  String mesa = '';
+
+  int rest = 0;
+
+  String url2 = '';
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

@@ -10,7 +10,7 @@ class PopupSucessoDadosAtualizadosWidget extends StatefulWidget {
   const PopupSucessoDadosAtualizadosWidget({super.key});
 
   @override
-  _PopupSucessoDadosAtualizadosWidgetState createState() =>
+  State<PopupSucessoDadosAtualizadosWidget> createState() =>
       _PopupSucessoDadosAtualizadosWidgetState();
 }
 

@@ -10,7 +10,7 @@ class HeaderEmpresaWidget extends StatefulWidget {
   const HeaderEmpresaWidget({super.key});
 
   @override
-  _HeaderEmpresaWidgetState createState() => _HeaderEmpresaWidgetState();
+  State<HeaderEmpresaWidget> createState() => _HeaderEmpresaWidgetState();
 }
 
 class _HeaderEmpresaWidgetState extends State<HeaderEmpresaWidget> {

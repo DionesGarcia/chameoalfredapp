@@ -9,7 +9,7 @@ class NavbarClienteWidget extends StatefulWidget {
   const NavbarClienteWidget({super.key});
 
   @override
-  _NavbarClienteWidgetState createState() => _NavbarClienteWidgetState();
+  State<NavbarClienteWidget> createState() => _NavbarClienteWidgetState();
 }
 
 class _NavbarClienteWidgetState extends State<NavbarClienteWidget> {

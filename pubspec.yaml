@@ -1,4 +1,4 @@
-name: restaurante
+name: chame_o_alfred
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -29,6 +29,7 @@ dependencies:
   auto_size_text: 3.0.0
   badges: 2.0.2
   cached_network_image: 3.2.1
+  collection: 1.17.2
   dropdown_button2: 2.3.9
   easy_debounce: 2.0.1
   equatable: 2.0.5
@@ -41,6 +42,7 @@ dependencies:
   firebase_performance_web: 0.1.4+16
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.1
+  flutter_native_splash: 2.3.1
   flutter_plugin_android_lifecycle: 2.0.17
   font_awesome_flutter: 10.6.0
   from_css_color: 2.0.0
@@ -89,6 +91,7 @@ dependencies:
   supabase: 1.11.11
   supabase_flutter: 1.10.24
   timeago: 3.2.2
+  universal_io: 2.2.2
   url_launcher: 6.1.10
   url_launcher_android: 6.0.27
   url_launcher_ios: 6.1.4
@@ -102,6 +105,7 @@ dependencies:
   webview_flutter_android: 3.3.1
   webview_flutter_platform_interface: 2.0.2
   webview_flutter_wkwebview: 3.1.1
+  xml: 6.3.0
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -23,7 +23,7 @@ class SisuserWidget extends StatefulWidget {
   final EstabelecimentoRow? resraurante;
 
   @override
-  _SisuserWidgetState createState() => _SisuserWidgetState();
+  State<SisuserWidget> createState() => _SisuserWidgetState();
 }
 
 class _SisuserWidgetState extends State<SisuserWidget>

@@ -10,7 +10,7 @@ class PopupLogSenhanaoconfereWidget extends StatefulWidget {
   const PopupLogSenhanaoconfereWidget({super.key});
 
   @override
-  _PopupLogSenhanaoconfereWidgetState createState() =>
+  State<PopupLogSenhanaoconfereWidget> createState() =>
       _PopupLogSenhanaoconfereWidgetState();
 }
 

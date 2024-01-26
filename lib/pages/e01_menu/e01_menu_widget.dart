@@ -17,7 +17,7 @@ class E01MenuWidget extends StatefulWidget {
   const E01MenuWidget({super.key});
 
   @override
-  _E01MenuWidgetState createState() => _E01MenuWidgetState();
+  State<E01MenuWidget> createState() => _E01MenuWidgetState();
 }
 
 class _E01MenuWidgetState extends State<E01MenuWidget> {
@@ -303,6 +303,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -423,6 +424,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -551,6 +553,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -665,6 +668,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -872,6 +876,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -984,6 +989,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                               context: context,
                                               builder: (dialogContext) {
                                                 return Dialog(
+                                                  elevation: 0,
                                                   insetPadding: EdgeInsets.zero,
                                                   backgroundColor:
                                                       Colors.transparent,
@@ -1131,6 +1137,7 @@ class _E01MenuWidgetState extends State<E01MenuWidget> {
                                                   context: context,
                                                   builder: (dialogContext) {
                                                     return Dialog(
+                                                      elevation: 0,
                                                       insetPadding:
                                                           EdgeInsets.zero,
                                                       backgroundColor:

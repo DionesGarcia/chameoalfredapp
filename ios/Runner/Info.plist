@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Restaurante</string>
+	<string>Chame o Alfred</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -37,10 +37,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>restaurante.com</string>
+        <string>chameoalfred.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>restaurante</string>
+        <string>chameoalfred</string>
         </array>
         </dict>
     </array>

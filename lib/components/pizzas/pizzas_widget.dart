@@ -26,7 +26,7 @@ class PizzasWidget extends StatefulWidget {
   final CategoriaRow? categoria;
 
   @override
-  _PizzasWidgetState createState() => _PizzasWidgetState();
+  State<PizzasWidget> createState() => _PizzasWidgetState();
 }
 
 class _PizzasWidgetState extends State<PizzasWidget> {

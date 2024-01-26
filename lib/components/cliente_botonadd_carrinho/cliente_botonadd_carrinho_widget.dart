@@ -30,7 +30,7 @@ class ClienteBotonaddCarrinhoWidget extends StatefulWidget {
   final bool? meia;
 
   @override
-  _ClienteBotonaddCarrinhoWidgetState createState() =>
+  State<ClienteBotonaddCarrinhoWidget> createState() =>
       _ClienteBotonaddCarrinhoWidgetState();
 }
 

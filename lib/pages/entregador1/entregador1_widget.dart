@@ -15,7 +15,7 @@ class Entregador1Widget extends StatefulWidget {
   const Entregador1Widget({super.key});
 
   @override
-  _Entregador1WidgetState createState() => _Entregador1WidgetState();
+  State<Entregador1Widget> createState() => _Entregador1WidgetState();
 }
 
 class _Entregador1WidgetState extends State<Entregador1Widget>

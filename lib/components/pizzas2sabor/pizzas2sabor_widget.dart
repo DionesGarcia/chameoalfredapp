@@ -31,7 +31,7 @@ class Pizzas2saborWidget extends StatefulWidget {
   final String? sabores2;
 
   @override
-  _Pizzas2saborWidgetState createState() => _Pizzas2saborWidgetState();
+  State<Pizzas2saborWidget> createState() => _Pizzas2saborWidgetState();
 }
 
 class _Pizzas2saborWidgetState extends State<Pizzas2saborWidget> {

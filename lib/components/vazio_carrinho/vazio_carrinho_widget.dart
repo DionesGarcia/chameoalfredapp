@@ -9,7 +9,7 @@ class VazioCarrinhoWidget extends StatefulWidget {
   const VazioCarrinhoWidget({super.key});
 
   @override
-  _VazioCarrinhoWidgetState createState() => _VazioCarrinhoWidgetState();
+  State<VazioCarrinhoWidget> createState() => _VazioCarrinhoWidgetState();
 }
 
 class _VazioCarrinhoWidgetState extends State<VazioCarrinhoWidget> {

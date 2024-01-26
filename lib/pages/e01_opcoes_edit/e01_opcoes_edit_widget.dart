@@ -24,7 +24,7 @@ class E01OpcoesEditWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurate;
 
   @override
-  _E01OpcoesEditWidgetState createState() => _E01OpcoesEditWidgetState();
+  State<E01OpcoesEditWidget> createState() => _E01OpcoesEditWidgetState();
 }
 
 class _E01OpcoesEditWidgetState extends State<E01OpcoesEditWidget>

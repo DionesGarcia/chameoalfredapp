@@ -9,7 +9,7 @@ class VazioFilaWidget extends StatefulWidget {
   const VazioFilaWidget({super.key});
 
   @override
-  _VazioFilaWidgetState createState() => _VazioFilaWidgetState();
+  State<VazioFilaWidget> createState() => _VazioFilaWidgetState();
 }
 
 class _VazioFilaWidgetState extends State<VazioFilaWidget> {

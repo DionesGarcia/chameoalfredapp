@@ -16,7 +16,7 @@ class AuthCreatWidget extends StatefulWidget {
   const AuthCreatWidget({super.key});
 
   @override
-  _AuthCreatWidgetState createState() => _AuthCreatWidgetState();
+  State<AuthCreatWidget> createState() => _AuthCreatWidgetState();
 }
 
 class _AuthCreatWidgetState extends State<AuthCreatWidget> {
@@ -658,6 +658,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                             builder:
                                                                 (dialogContext) {
                                                               return Dialog(
+                                                                elevation: 0,
                                                                 insetPadding:
                                                                     EdgeInsets
                                                                         .zero,
@@ -816,6 +817,7 @@ class _AuthCreatWidgetState extends State<AuthCreatWidget> {
                                                               builder:
                                                                   (dialogContext) {
                                                                 return Dialog(
+                                                                  elevation: 0,
                                                                   insetPadding:
                                                                       EdgeInsets
                                                                           .zero,

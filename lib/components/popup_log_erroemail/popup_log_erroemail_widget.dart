@@ -10,7 +10,7 @@ class PopupLogErroemailWidget extends StatefulWidget {
   const PopupLogErroemailWidget({super.key});
 
   @override
-  _PopupLogErroemailWidgetState createState() =>
+  State<PopupLogErroemailWidget> createState() =>
       _PopupLogErroemailWidgetState();
 }
 

@@ -10,7 +10,7 @@ class PopupSucessoEstabWidget extends StatefulWidget {
   const PopupSucessoEstabWidget({super.key});
 
   @override
-  _PopupSucessoEstabWidgetState createState() =>
+  State<PopupSucessoEstabWidget> createState() =>
       _PopupSucessoEstabWidgetState();
 }
 

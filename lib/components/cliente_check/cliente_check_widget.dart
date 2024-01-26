@@ -9,7 +9,7 @@ class ClienteCheckWidget extends StatefulWidget {
   const ClienteCheckWidget({super.key});
 
   @override
-  _ClienteCheckWidgetState createState() => _ClienteCheckWidgetState();
+  State<ClienteCheckWidget> createState() => _ClienteCheckWidgetState();
 }
 
 class _ClienteCheckWidgetState extends State<ClienteCheckWidget> {

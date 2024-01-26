@@ -26,7 +26,7 @@ class LanchesSem12Widget extends StatefulWidget {
   final CategoriaRow? categoria;
 
   @override
-  _LanchesSem12WidgetState createState() => _LanchesSem12WidgetState();
+  State<LanchesSem12Widget> createState() => _LanchesSem12WidgetState();
 }
 
 class _LanchesSem12WidgetState extends State<LanchesSem12Widget> {

@@ -14,7 +14,7 @@ class SisMenuWidget extends StatefulWidget {
   const SisMenuWidget({super.key});
 
   @override
-  _SisMenuWidgetState createState() => _SisMenuWidgetState();
+  State<SisMenuWidget> createState() => _SisMenuWidgetState();
 }
 
 class _SisMenuWidgetState extends State<SisMenuWidget> {

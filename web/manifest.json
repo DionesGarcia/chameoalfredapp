@@ -1,6 +1,6 @@
 {
-    "name": "Restaurante",
-    "short_name": "Restaurante",
+    "name": "Chame o Alfred",
+    "short_name": "Chame o Alfred",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

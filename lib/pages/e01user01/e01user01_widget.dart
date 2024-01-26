@@ -19,7 +19,7 @@ class E01user01Widget extends StatefulWidget {
   const E01user01Widget({super.key});
 
   @override
-  _E01user01WidgetState createState() => _E01user01WidgetState();
+  State<E01user01Widget> createState() => _E01user01WidgetState();
 }
 
 class _E01user01WidgetState extends State<E01user01Widget>

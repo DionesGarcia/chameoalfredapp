@@ -27,7 +27,7 @@ class SisestabelecimentoWidget extends StatefulWidget {
   final int? estabelecimentoID;
 
   @override
-  _SisestabelecimentoWidgetState createState() =>
+  State<SisestabelecimentoWidget> createState() =>
       _SisestabelecimentoWidgetState();
 }
 
@@ -3661,6 +3661,7 @@ class _SisestabelecimentoWidgetState extends State<SisestabelecimentoWidget> {
                                                 context: context,
                                                 builder: (dialogContext) {
                                                   return Dialog(
+                                                    elevation: 0,
                                                     insetPadding:
                                                         EdgeInsets.zero,
                                                     backgroundColor:

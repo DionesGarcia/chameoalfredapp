@@ -12,7 +12,7 @@ class Garcom2Widget extends StatefulWidget {
   const Garcom2Widget({super.key});
 
   @override
-  _Garcom2WidgetState createState() => _Garcom2WidgetState();
+  State<Garcom2Widget> createState() => _Garcom2WidgetState();
 }
 
 class _Garcom2WidgetState extends State<Garcom2Widget> {

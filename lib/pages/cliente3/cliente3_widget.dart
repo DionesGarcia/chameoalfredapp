@@ -30,7 +30,7 @@ class Cliente3Widget extends StatefulWidget {
   final PedidosRow? pedido;
 
   @override
-  _Cliente3WidgetState createState() => _Cliente3WidgetState();
+  State<Cliente3Widget> createState() => _Cliente3WidgetState();
 }
 
 class _Cliente3WidgetState extends State<Cliente3Widget> {

@@ -18,7 +18,7 @@ class E01PedidoCatWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _E01PedidoCatWidgetState createState() => _E01PedidoCatWidgetState();
+  State<E01PedidoCatWidget> createState() => _E01PedidoCatWidgetState();
 }
 
 class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
@@ -618,6 +618,7 @@ class _E01PedidoCatWidgetState extends State<E01PedidoCatWidget> {
                                   context: context,
                                   builder: (dialogContext) {
                                     return Dialog(
+                                      elevation: 0,
                                       insetPadding: EdgeInsets.zero,
                                       backgroundColor: Colors.transparent,
                                       alignment: const AlignmentDirectional(0.0, 0.0)

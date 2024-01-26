@@ -12,7 +12,7 @@ class Mensagem01Widget extends StatefulWidget {
   const Mensagem01Widget({super.key});
 
   @override
-  _Mensagem01WidgetState createState() => _Mensagem01WidgetState();
+  State<Mensagem01Widget> createState() => _Mensagem01WidgetState();
 }
 
 class _Mensagem01WidgetState extends State<Mensagem01Widget> {

@@ -27,7 +27,7 @@ class E02EstabelecimentotrueWidget extends StatefulWidget {
   final int? estabelecimentoID;
 
   @override
-  _E02EstabelecimentotrueWidgetState createState() =>
+  State<E02EstabelecimentotrueWidget> createState() =>
       _E02EstabelecimentotrueWidgetState();
 }
 
@@ -3118,6 +3118,7 @@ class _E02EstabelecimentotrueWidgetState
                                       context: context,
                                       builder: (dialogContext) {
                                         return Dialog(
+                                          elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
                                           alignment: const AlignmentDirectional(

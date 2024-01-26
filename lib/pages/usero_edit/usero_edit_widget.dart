@@ -23,7 +23,7 @@ class UseroEditWidget extends StatefulWidget {
   final UsuariosRow? userID;
 
   @override
-  _UseroEditWidgetState createState() => _UseroEditWidgetState();
+  State<UseroEditWidget> createState() => _UseroEditWidgetState();
 }
 
 class _UseroEditWidgetState extends State<UseroEditWidget> {

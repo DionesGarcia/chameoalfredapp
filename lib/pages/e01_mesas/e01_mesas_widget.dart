@@ -25,7 +25,7 @@ class E01MesasWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _E01MesasWidgetState createState() => _E01MesasWidgetState();
+  State<E01MesasWidget> createState() => _E01MesasWidgetState();
 }
 
 class _E01MesasWidgetState extends State<E01MesasWidget> {
@@ -544,6 +544,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                     context: context,
                                                     builder: (dialogContext) {
                                                       return Dialog(
+                                                        elevation: 0,
                                                         insetPadding:
                                                             EdgeInsets.zero,
                                                         backgroundColor:
@@ -600,6 +601,7 @@ class _E01MesasWidgetState extends State<E01MesasWidget> {
                                                     context: context,
                                                     builder: (dialogContext) {
                                                       return Dialog(
+                                                        elevation: 0,
                                                         insetPadding:
                                                             EdgeInsets.zero,
                                                         backgroundColor:

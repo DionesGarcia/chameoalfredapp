@@ -9,7 +9,7 @@ class CozinhapopUpWidget extends StatefulWidget {
   const CozinhapopUpWidget({super.key});
 
   @override
-  _CozinhapopUpWidgetState createState() => _CozinhapopUpWidgetState();
+  State<CozinhapopUpWidget> createState() => _CozinhapopUpWidgetState();
 }
 
 class _CozinhapopUpWidgetState extends State<CozinhapopUpWidget> {

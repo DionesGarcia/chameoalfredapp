@@ -10,7 +10,7 @@ class PopupMenuCadastroWidget extends StatefulWidget {
   const PopupMenuCadastroWidget({super.key});
 
   @override
-  _PopupMenuCadastroWidgetState createState() =>
+  State<PopupMenuCadastroWidget> createState() =>
       _PopupMenuCadastroWidgetState();
 }
 

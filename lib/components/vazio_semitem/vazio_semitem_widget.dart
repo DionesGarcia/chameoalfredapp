@@ -9,7 +9,7 @@ class VazioSemitemWidget extends StatefulWidget {
   const VazioSemitemWidget({super.key});
 
   @override
-  _VazioSemitemWidgetState createState() => _VazioSemitemWidgetState();
+  State<VazioSemitemWidget> createState() => _VazioSemitemWidgetState();
 }
 
 class _VazioSemitemWidgetState extends State<VazioSemitemWidget> {

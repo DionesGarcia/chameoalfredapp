@@ -22,7 +22,7 @@ class Relatorio01Widget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _Relatorio01WidgetState createState() => _Relatorio01WidgetState();
+  State<Relatorio01Widget> createState() => _Relatorio01WidgetState();
 }
 
 class _Relatorio01WidgetState extends State<Relatorio01Widget>

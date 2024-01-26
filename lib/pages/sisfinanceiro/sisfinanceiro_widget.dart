@@ -16,7 +16,7 @@ class SisfinanceiroWidget extends StatefulWidget {
   const SisfinanceiroWidget({super.key});
 
   @override
-  _SisfinanceiroWidgetState createState() => _SisfinanceiroWidgetState();
+  State<SisfinanceiroWidget> createState() => _SisfinanceiroWidgetState();
 }
 
 class _SisfinanceiroWidgetState extends State<SisfinanceiroWidget> {

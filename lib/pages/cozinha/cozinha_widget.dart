@@ -23,7 +23,7 @@ class CozinhaWidget extends StatefulWidget {
   final EstabelecimentoRow? restaurante;
 
   @override
-  _CozinhaWidgetState createState() => _CozinhaWidgetState();
+  State<CozinhaWidget> createState() => _CozinhaWidgetState();
 }
 
 class _CozinhaWidgetState extends State<CozinhaWidget>
