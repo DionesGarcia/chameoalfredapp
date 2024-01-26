@@ -1,4 +1,5 @@
 import 'dart:convert';
+import '../cloud_functions/cloud_functions.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -254,11 +255,6 @@ class BuscarRestaurantePorUserIDCall {
 /// Start Asaas Cesar Group Code
 
 class AsaasCesarGroup {
-  static String baseUrl = 'https://sandbox.asaas.com/api/v3/';
-  static Map<String, String> headers = {
-    'access_token':
-        '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
-  };
   static CriarPagamentoCall criarPagamentoCall = CriarPagamentoCall();
   static BuscarSaldoCesarCall buscarSaldoCesarCall = BuscarSaldoCesarCall();
   static CriarClienteCall criarClienteCall = CriarClienteCall();
@@ -276,31 +272,20 @@ class CriarPagamentoCall {
     String? customer = 'cus_000005780249',
     String? billingType = 'UNDEFINED',
   }) async {
-    final ffApiRequestBody = '''
-{
-  "customer": "$customer",
-  "value": $value,
-  "dueDate": "$dueDate",
-  "billingType": "UNDEFINED",
-  "description": "$description"
-}''';
-    return ApiManager.instance.makeApiCall(
-      callName: 'Criar pagamento',
-      apiUrl: '${AsaasCesarGroup.baseUrl}payments',
-      callType: ApiCallType.POST,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'CriarPagamentoCall',
+        'variables': {
+          'value': value,
+          'dueDate': dueDate,
+          'description': description,
+          'customer': customer,
+          'billingType': billingType,
+        },
       },
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   String? id(dynamic response) => castToType<String>(getJsonField(
@@ -327,21 +312,14 @@ class CriarPagamentoCall {
 
 class BuscarSaldoCesarCall {
   Future<ApiCallResponse> call() async {
-    return ApiManager.instance.makeApiCall(
-      callName: 'Buscar saldo cesar',
-      apiUrl: '${AsaasCesarGroup.baseUrl}finance/balance',
-      callType: ApiCallType.GET,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'BuscarSaldoCesarCall',
+        'variables': {},
       },
-      params: {},
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 }
 
@@ -351,31 +329,18 @@ class CriarClienteCall {
     String? mail = '',
     String? cpf = '',
   }) async {
-    final ffApiRequestBody = '''
-{
-  "name": "$nome",
-  "email": "$mail",
-  "cpfCnpj": "$cpf"
-  }''';
-    return ApiManager.instance.makeApiCall(
-      callName: 'Criar Cliente',
-      apiUrl: '${AsaasCesarGroup.baseUrl}customers',
-      callType: ApiCallType.POST,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
-        'accept': 'application/json',
-        'content-type': 'application/json',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'CriarClienteCall',
+        'variables': {
+          'nome': nome,
+          'mail': mail,
+          'cpf': cpf,
+        },
       },
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   String? idUser(dynamic response) => castToType<String>(getJsonField(
@@ -392,21 +357,16 @@ class VerificarPagamentoCall {
   Future<ApiCallResponse> call({
     String? id = '',
   }) async {
-    return ApiManager.instance.makeApiCall(
-      callName: 'Verificar pagamento',
-      apiUrl: '${AsaasCesarGroup.baseUrl}payments/$id',
-      callType: ApiCallType.GET,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'VerificarPagamentoCall',
+        'variables': {
+          'id': id,
+        },
       },
-      params: {},
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   String? status(dynamic response) => castToType<String>(getJsonField(
@@ -427,39 +387,24 @@ class CriarSubcontaCall {
     String? name = '',
     String? address = '',
   }) async {
-    final ffApiRequestBody = '''
-{
-  "email": "$email",
-  "loginEmail": "$loginEmail",
-  "cpfCnpj": "$cpfCnpj",
-  "mobilePhone": "$mobilePhone",
-  "province": "$province",
-  "addressNumber": "$addressNumber",
-  "postalCode": "$postalCode",
-  "address": "$address",
-  "name": "$name",
-  "companyType": "LIMITED",
-  "birthDate": "10-10-2000"
-}''';
-    return ApiManager.instance.makeApiCall(
-      callName: 'Criar subconta',
-      apiUrl: '${AsaasCesarGroup.baseUrl}accounts',
-      callType: ApiCallType.POST,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
-        'accept': 'application/json',
-        'content-type': 'application/json',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'CriarSubcontaCall',
+        'variables': {
+          'email': email,
+          'loginEmail': loginEmail,
+          'cpfCnpj': cpfCnpj,
+          'mobilePhone': mobilePhone,
+          'addressNumber': addressNumber,
+          'province': province,
+          'postalCode': postalCode,
+          'name': name,
+          'address': address,
+        },
       },
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   String? apIkey(dynamic response) => castToType<String>(getJsonField(
@@ -491,48 +436,31 @@ class CriarAssinaturaCall {
     String? phone = '',
     String? number = '',
   }) async {
-    final ffApiRequestBody = '''
-{
-  "billingType": "CREDIT_CARD",
-  "cycle": "$cycle",
-  "creditCard": {
-    "holderName": "$holderName",
-    "number": "$number",
-    "expiryMonth": "$expiryMonth",
-    "expiryYear": "$expiryYear",
-    "ccv": "$ccv"
-  },
-  "creditCardHolderInfo": {
-    "name": "$name",
-    "email": "$email",
-    "cpfCnpj": "$cpfCnpj",
-    "postalCode": "$postalCode",
-    "addressNumber": "$addressNumber",
-    "phone": "$phone"
-  },
-  "customer": "$customer",
-  "value": $value,
-  "nextDueDate": "$nextDueDate"
-}''';
-    return ApiManager.instance.makeApiCall(
-      callName: 'Criar assinatura',
-      apiUrl: '${AsaasCesarGroup.baseUrl}subscriptions',
-      callType: ApiCallType.POST,
-      headers: {
-        'access_token':
-            '\$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjEwMDg6OiRhYWNoX2M1YWNkNzJmLTE4ZDItNDc0ZS04YmI0LWNlODAwOTUxYmMxZg==',
-        'accept': 'application/json',
-        'content-type': 'application/json',
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'CriarAssinaturaCall',
+        'variables': {
+          'customer': customer,
+          'billingType': billingType,
+          'value': value,
+          'nextDueDate': nextDueDate,
+          'cycle': cycle,
+          'expiryMonth': expiryMonth,
+          'expiryYear': expiryYear,
+          'ccv': ccv,
+          'holderName': holderName,
+          'name': name,
+          'email': email,
+          'cpfCnpj': cpfCnpj,
+          'postalCode': postalCode,
+          'addressNumber': addressNumber,
+          'phone': phone,
+          'number': number,
+        },
       },
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      alwaysAllowBody: false,
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   String? erro(dynamic response) => castToType<String>(getJsonField(

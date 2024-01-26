@@ -5,12 +5,13 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-            apiKey: "AIzaSyAYcARgPg9En-VWfForsxBzCYpMv265glw",
-            authDomain: "restaurante-zw70ik.firebaseapp.com",
-            projectId: "restaurante-zw70ik",
-            storageBucket: "restaurante-zw70ik.appspot.com",
-            messagingSenderId: "984193594535",
-            appId: "1:984193594535:web:dd79129e13118dc8029782"));
+            apiKey: "AIzaSyBn7DpYy8YojK_DNgGROvDMd_x0XNrcGMs",
+            authDomain: "siagenda.firebaseapp.com",
+            projectId: "siagenda",
+            storageBucket: "siagenda.appspot.com",
+            messagingSenderId: "967655033457",
+            appId: "1:967655033457:web:879b507eb9e415736429d0",
+            measurementId: "G-W7HED61FKN"));
   } else {
     await Firebase.initializeApp();
   }

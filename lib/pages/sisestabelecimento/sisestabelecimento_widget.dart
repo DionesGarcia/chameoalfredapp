@@ -4293,298 +4293,184 @@ class _SisestabelecimentoWidgetState extends State<SisestabelecimentoWidget> {
                                           return FFButtonWidget(
                                             onPressed: () async {
                                               var shouldSetState = false;
-                                              if (isWeb) {
-                                                await showDialog(
-                                                  context: context,
-                                                  builder:
-                                                      (alertDialogContext) {
-                                                    return AlertDialog(
-                                                      title: const Text(
-                                                          'Dados salvos com sucesso!'),
-                                                      actions: [
-                                                        TextButton(
-                                                          onPressed: () =>
-                                                              Navigator.pop(
-                                                                  alertDialogContext),
-                                                          child: const Text('Ok'),
-                                                        ),
-                                                      ],
-                                                    );
-                                                  },
-                                                );
-                                                await AssinaturasTable().update(
-                                                  data: {
-                                                    'numeroCartão':
-                                                        valueOrDefault<String>(
-                                                      _model.textController18
-                                                          .text,
-                                                      'Não preenchido',
-                                                    ),
-                                                    'nomeCartão':
-                                                        valueOrDefault<String>(
-                                                      _model.textController17
-                                                          .text,
-                                                      'Não preenchido',
-                                                    ),
-                                                    'dataExp':
-                                                        valueOrDefault<String>(
-                                                      _model.textController19
-                                                          .text,
-                                                      '00/00',
-                                                    ),
-                                                    'cvv':
-                                                        valueOrDefault<String>(
-                                                      _model.textController21
-                                                          .text,
-                                                      '000',
-                                                    ),
-                                                    'restaurante_id':
-                                                        columnEstabelecimentoRow
-                                                            ?.id,
-                                                    'statusAssinatura': false,
-                                                  },
-                                                  matchingRows: (rows) =>
-                                                      rows.eq(
-                                                    'restaurante_id',
+                                              await HistricoTable().insert({
+                                                'restaurante_id':
                                                     widget.estabelecimentoID,
+                                                'filtro': 'acessos',
+                                                'ação': 'Criou dados cartão',
+                                                'data': supaSerialize<DateTime>(
+                                                    getCurrentTimestamp),
+                                                'Usuario':
+                                                    FFAppState().nomeUser,
+                                              });
+                                              await AssinaturasTable().update(
+                                                data: {
+                                                  'numeroCartão':
+                                                      valueOrDefault<String>(
+                                                    _model
+                                                        .textController18.text,
+                                                    'Não preenchido',
                                                   ),
-                                                );
-
-                                                context.pushNamed(
-                                                  'sisuser',
-                                                  queryParameters: {
-                                                    'resraurante':
-                                                        serializeParam(
-                                                      columnEstabelecimentoRow,
-                                                      ParamType.SupabaseRow,
-                                                    ),
-                                                  }.withoutNulls,
-                                                );
-                                              } else {
-                                                await HistricoTable().insert({
+                                                  'nomeCartão':
+                                                      valueOrDefault<String>(
+                                                    _model
+                                                        .textController17.text,
+                                                    'Não preenchido',
+                                                  ),
+                                                  'dataExp':
+                                                      valueOrDefault<String>(
+                                                    _model
+                                                        .textController19.text,
+                                                    '00/00',
+                                                  ),
+                                                  'cvv': valueOrDefault<String>(
+                                                    _model
+                                                        .textController21.text,
+                                                    '000',
+                                                  ),
                                                   'restaurante_id':
                                                       widget.estabelecimentoID,
-                                                  'filtro': 'acessos',
-                                                  'ação': 'Criou dados cartão',
-                                                  'data':
-                                                      supaSerialize<DateTime>(
-                                                          getCurrentTimestamp),
-                                                  'Usuario':
-                                                      FFAppState().nomeUser,
-                                                });
-                                                await AssinaturasTable().update(
+                                                  'statusAssinatura': false,
+                                                },
+                                                matchingRows: (rows) => rows.eq(
+                                                  'restaurante_id',
+                                                  widget.estabelecimentoID,
+                                                ),
+                                              );
+                                              _model.subconta =
+                                                  await AsaasCesarGroup
+                                                      .criarSubcontaCall
+                                                      .call(
+                                                email: columnEstabelecimentoRow
+                                                    ?.email,
+                                                cpfCnpj:
+                                                    columnEstabelecimentoRow
+                                                        ?.cpf,
+                                                loginEmail:
+                                                    columnEstabelecimentoRow
+                                                        ?.email,
+                                                mobilePhone:
+                                                    columnEstabelecimentoRow
+                                                        ?.cel,
+                                                addressNumber:
+                                                    columnEstabelecimentoRow
+                                                        ?.numero,
+                                                province:
+                                                    columnEstabelecimentoRow
+                                                        ?.estado,
+                                                postalCode:
+                                                    columnEstabelecimentoRow
+                                                        ?.cep,
+                                                name: columnEstabelecimentoRow
+                                                    ?.nome,
+                                                address:
+                                                    columnEstabelecimentoRow
+                                                        ?.rua,
+                                              );
+                                              shouldSetState = true;
+                                              if ((_model.subconta?.succeeded ??
+                                                  true)) {
+                                                await EstabelecimentoTable()
+                                                    .update(
                                                   data: {
-                                                    'numeroCartão':
-                                                        valueOrDefault<String>(
-                                                      _model.textController18
-                                                          .text,
-                                                      'Não preenchido',
+                                                    'apiKey': AsaasCesarGroup
+                                                        .criarSubcontaCall
+                                                        .apIkey(
+                                                      (_model.subconta
+                                                              ?.jsonBody ??
+                                                          ''),
                                                     ),
-                                                    'nomeCartão':
-                                                        valueOrDefault<String>(
-                                                      _model.textController17
-                                                          .text,
-                                                      'Não preenchido',
-                                                    ),
-                                                    'dataExp':
-                                                        valueOrDefault<String>(
-                                                      _model.textController19
-                                                          .text,
-                                                      '00/00',
-                                                    ),
-                                                    'cvv':
-                                                        valueOrDefault<String>(
-                                                      _model.textController21
-                                                          .text,
-                                                      '000',
-                                                    ),
-                                                    'restaurante_id': widget
-                                                        .estabelecimentoID,
-                                                    'statusAssinatura': false,
                                                   },
                                                   matchingRows: (rows) =>
                                                       rows.eq(
-                                                    'restaurante_id',
+                                                    'id',
                                                     widget.estabelecimentoID,
                                                   ),
                                                 );
-                                                _model.subconta =
+                                                _model.apiResultlr1 =
                                                     await AsaasCesarGroup
-                                                        .criarSubcontaCall
+                                                        .criarAssinaturaCall
                                                         .call(
+                                                  customer: buttonAssinaturasRow
+                                                      ?.idUser,
+                                                  billingType: 'CREDIT_CARD',
+                                                  value: 29.90,
+                                                  nextDueDate:
+                                                      getCurrentTimestamp
+                                                          .toString(),
+                                                  cycle: 'MONTHLY',
+                                                  expiryMonth: _model
+                                                      .textController19.text,
+                                                  expiryYear: _model
+                                                      .textController20.text,
+                                                  ccv: _model
+                                                      .textController21.text,
+                                                  holderName: _model
+                                                      .textController17.text,
+                                                  name: _model
+                                                      .textController17.text,
                                                   email:
                                                       columnEstabelecimentoRow
                                                           ?.email,
-                                                  cpfCnpj:
-                                                      columnEstabelecimentoRow
-                                                          ?.cpf,
-                                                  loginEmail:
-                                                      columnEstabelecimentoRow
-                                                          ?.email,
-                                                  mobilePhone:
-                                                      columnEstabelecimentoRow
-                                                          ?.cel,
-                                                  addressNumber:
-                                                      columnEstabelecimentoRow
-                                                          ?.numero,
-                                                  province:
-                                                      columnEstabelecimentoRow
-                                                          ?.estado,
-                                                  postalCode:
-                                                      columnEstabelecimentoRow
-                                                          ?.cep,
-                                                  name: columnEstabelecimentoRow
-                                                      ?.nome,
-                                                  address:
-                                                      columnEstabelecimentoRow
-                                                          ?.rua,
+                                                  postalCode: _model
+                                                      .textController4.text,
+                                                  addressNumber: _model
+                                                      .textController6.text,
+                                                  phone: _model
+                                                      .textController11.text,
+                                                  number: _model
+                                                      .textController18.text,
                                                 );
                                                 shouldSetState = true;
-                                                if ((_model
-                                                        .subconta?.succeeded ??
+                                                if ((_model.apiResultlr1
+                                                        ?.succeeded ??
                                                     true)) {
-                                                  await EstabelecimentoTable()
+                                                  await AssinaturasTable()
                                                       .update(
                                                     data: {
-                                                      'apiKey': AsaasCesarGroup
-                                                          .criarSubcontaCall
-                                                          .apIkey(
-                                                        (_model.subconta
+                                                      'valorAssinatura':
+                                                          AsaasCesarGroup
+                                                              .criarAssinaturaCall
+                                                              .valor(
+                                                        (_model.apiResultlr1
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                      ),
+                                                      'restaurante_id': widget
+                                                          .estabelecimentoID,
+                                                      'numeroCartão':
+                                                          AsaasCesarGroup
+                                                              .criarAssinaturaCall
+                                                              .numeroCarto(
+                                                        (_model.apiResultlr1
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                      ),
+                                                      'statusAssinatura': false,
+                                                      'dataAssinatura':
+                                                          supaSerialize<
+                                                                  DateTime>(
+                                                              getCurrentTimestamp),
+                                                      'dataExp': '',
+                                                      'cvv': _model
+                                                          .textController21
+                                                          .text,
+                                                      'nomeCartão': _model
+                                                          .textController17
+                                                          .text,
+                                                      'id_User': AsaasCesarGroup
+                                                          .criarAssinaturaCall
+                                                          .iduser(
+                                                        (_model.apiResultlr1
                                                                 ?.jsonBody ??
                                                             ''),
                                                       ),
                                                     },
                                                     matchingRows: (rows) =>
                                                         rows.eq(
-                                                      'id',
+                                                      'restaurante_id',
                                                       widget.estabelecimentoID,
                                                     ),
-                                                  );
-                                                  _model.apiResultlr1 =
-                                                      await AsaasCesarGroup
-                                                          .criarAssinaturaCall
-                                                          .call(
-                                                    customer:
-                                                        buttonAssinaturasRow
-                                                            ?.idUser,
-                                                    billingType: 'CREDIT_CARD',
-                                                    value: 29.90,
-                                                    nextDueDate:
-                                                        getCurrentTimestamp
-                                                            .toString(),
-                                                    cycle: 'MONTHLY',
-                                                    expiryMonth: _model
-                                                        .textController19.text,
-                                                    expiryYear: _model
-                                                        .textController20.text,
-                                                    ccv: _model
-                                                        .textController21.text,
-                                                    holderName: _model
-                                                        .textController17.text,
-                                                    name: _model
-                                                        .textController17.text,
-                                                    email:
-                                                        columnEstabelecimentoRow
-                                                            ?.email,
-                                                    postalCode: _model
-                                                        .textController4.text,
-                                                    addressNumber: _model
-                                                        .textController6.text,
-                                                    phone: _model
-                                                        .textController11.text,
-                                                    number: _model
-                                                        .textController18.text,
-                                                  );
-                                                  shouldSetState = true;
-                                                  if ((_model.apiResultlr1
-                                                          ?.succeeded ??
-                                                      true)) {
-                                                    await AssinaturasTable()
-                                                        .update(
-                                                      data: {
-                                                        'valorAssinatura':
-                                                            AsaasCesarGroup
-                                                                .criarAssinaturaCall
-                                                                .valor(
-                                                          (_model.apiResultlr1
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                        ),
-                                                        'restaurante_id': widget
-                                                            .estabelecimentoID,
-                                                        'numeroCartão':
-                                                            AsaasCesarGroup
-                                                                .criarAssinaturaCall
-                                                                .numeroCarto(
-                                                          (_model.apiResultlr1
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                        ),
-                                                        'statusAssinatura':
-                                                            false,
-                                                        'dataAssinatura':
-                                                            supaSerialize<
-                                                                    DateTime>(
-                                                                getCurrentTimestamp),
-                                                        'dataExp': '',
-                                                        'cvv': _model
-                                                            .textController21
-                                                            .text,
-                                                        'nomeCartão': _model
-                                                            .textController17
-                                                            .text,
-                                                        'id_User': AsaasCesarGroup
-                                                            .criarAssinaturaCall
-                                                            .iduser(
-                                                          (_model.apiResultlr1
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                        ),
-                                                      },
-                                                      matchingRows: (rows) =>
-                                                          rows.eq(
-                                                        'restaurante_id',
-                                                        widget
-                                                            .estabelecimentoID,
-                                                      ),
-                                                    );
-                                                  } else {
-                                                    await showDialog(
-                                                      context: context,
-                                                      builder:
-                                                          (alertDialogContext) {
-                                                        return AlertDialog(
-                                                          title: const Text('Erro'),
-                                                          content: Text(
-                                                              AsaasCesarGroup
-                                                                  .criarAssinaturaCall
-                                                                  .erro(
-                                                            (_model.apiResultlr1
-                                                                    ?.jsonBody ??
-                                                                ''),
-                                                          )!),
-                                                          actions: [
-                                                            TextButton(
-                                                              onPressed: () =>
-                                                                  Navigator.pop(
-                                                                      alertDialogContext),
-                                                              child: const Text('Ok'),
-                                                            ),
-                                                          ],
-                                                        );
-                                                      },
-                                                    );
-                                                  }
-
-                                                  context.pushNamed(
-                                                    'sisuser',
-                                                    queryParameters: {
-                                                      'resraurante':
-                                                          serializeParam(
-                                                        columnEstabelecimentoRow,
-                                                        ParamType.SupabaseRow,
-                                                      ),
-                                                    }.withoutNulls,
                                                   );
                                                 } else {
                                                   await showDialog(
@@ -4592,13 +4478,12 @@ class _SisestabelecimentoWidgetState extends State<SisestabelecimentoWidget> {
                                                     builder:
                                                         (alertDialogContext) {
                                                       return AlertDialog(
-                                                        title: const Text(
-                                                            'Erro ao criar conta Asaas!'),
+                                                        title: const Text('Erro'),
                                                         content: Text(
                                                             AsaasCesarGroup
-                                                                .criarSubcontaCall
+                                                                .criarAssinaturaCall
                                                                 .erro(
-                                                          (_model.subconta
+                                                          (_model.apiResultlr1
                                                                   ?.jsonBody ??
                                                               ''),
                                                         )!),
@@ -4613,11 +4498,49 @@ class _SisestabelecimentoWidgetState extends State<SisestabelecimentoWidget> {
                                                       );
                                                     },
                                                   );
-                                                  if (shouldSetState) {
-                                                    setState(() {});
-                                                  }
-                                                  return;
                                                 }
+
+                                                context.pushNamed(
+                                                  'sisuser',
+                                                  queryParameters: {
+                                                    'resraurante':
+                                                        serializeParam(
+                                                      columnEstabelecimentoRow,
+                                                      ParamType.SupabaseRow,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              } else {
+                                                await showDialog(
+                                                  context: context,
+                                                  builder:
+                                                      (alertDialogContext) {
+                                                    return AlertDialog(
+                                                      title: const Text(
+                                                          'Erro ao criar conta Asaas!'),
+                                                      content: Text(
+                                                          AsaasCesarGroup
+                                                              .criarSubcontaCall
+                                                              .erro(
+                                                        (_model.subconta
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                      )!),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  alertDialogContext),
+                                                          child: const Text('Ok'),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
+                                                );
+                                                if (shouldSetState) {
+                                                  setState(() {});
+                                                }
+                                                return;
                                               }
 
                                               if (shouldSetState) {

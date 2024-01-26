@@ -8,7 +8,7 @@ class AuthloginModel extends FlutterFlowModel<AuthloginWidget> {
 
   int? user;
 
-  String url = 'https://chameoalfred.flutterflow.app/';
+  String url = '';
 
   String mesa = '';
 

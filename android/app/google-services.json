@@ -1,26 +1,87 @@
 {
   "project_info": {
-    "project_number": "984193594535",
-    "project_id": "restaurante-zw70ik",
-    "storage_bucket": "restaurante-zw70ik.appspot.com"
+    "project_number": "967655033457",
+    "project_id": "siagenda",
+    "storage_bucket": "siagenda.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:984193594535:android:5c18551aabc06a90029782",
+        "mobilesdk_app_id": "1:967655033457:android:3eb7c08bb513db2f6429d0",
         "android_client_info": {
           "package_name": "com.chameoalfred.restaurante"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "967655033457-tc7alsjnur8c17ug1crqropobvnvnm60.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chameoalfred.restaurante",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "967655033457-22o259nonsa2gqraa9m8tgatsfduhb3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCV5AhP5zauiRLSaT_Iy7l8aHhmY_5-imk"
+          "current_key": "AIzaSyCjtpFSNloJcu4jxukaxb1lILmWCWYW3ok"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967655033457-22o259nonsa2gqraa9m8tgatsfduhb3m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "967655033457-c7drj7miv8q1avk3ksr12o1h9aa854vr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.agenda"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967655033457:android:ca834d688b6ff4406429d0",
+        "android_client_info": {
+          "package_name": "com.mycompany.agenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967655033457-22o259nonsa2gqraa9m8tgatsfduhb3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjtpFSNloJcu4jxukaxb1lILmWCWYW3ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967655033457-22o259nonsa2gqraa9m8tgatsfduhb3m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "967655033457-c7drj7miv8q1avk3ksr12o1h9aa854vr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.agenda"
+              }
+            }
+          ]
         }
       }
     }

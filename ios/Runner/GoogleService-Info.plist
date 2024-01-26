@@ -2,18 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>967655033457-q5ha0i1jgsei2kvosf3s7qhir1jrc6ig.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.967655033457-q5ha0i1jgsei2kvosf3s7qhir1jrc6ig</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>967655033457-p9k68v2p0m3agqk7dmt3rsnqo8umcupf.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDdvlp808AszOiB2HAwIlhp9LLtqtC-Hyo</string>
+	<string>AIzaSyCzEN2f8qS3agPf7hl88rnOS-RLn1VYzuM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>984193594535</string>
+	<string>967655033457</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.chameoalfred.restaurante</string>
 	<key>PROJECT_ID</key>
-	<string>restaurante-zw70ik</string>
+	<string>siagenda</string>
 	<key>STORAGE_BUCKET</key>
-	<string>restaurante-zw70ik.appspot.com</string>
+	<string>siagenda.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:984193594535:ios:3aa46281976402a9029782</string>
+	<string>1:967655033457:ios:848e59bce1e6da2c6429d0</string>
 </dict>
 </plist>
